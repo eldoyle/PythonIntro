@@ -11,7 +11,7 @@ objectives:
 keypoints:
 - "First key point."
 ---
-##Creating Variables
+## Creating Variables
 
 If we want to, we can essentially use Python as a fancy calculator:
 ~~~
