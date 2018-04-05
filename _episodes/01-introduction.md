@@ -1,11 +1,12 @@
 ---
 title: "Introduction"
-teaching: 0
+teaching: 30
 exercises: 0
 questions:
-- "Key question"
+- "Why learn Python?"
 objectives:
-- "First objective."
+- "Understand the purpose of this lesson"
 keypoints:
-- "First key point."
+- "The best way to learn to code is by actually writing code."
+- "You don't have to remember every single detail of each episode or exercise."
 ---
