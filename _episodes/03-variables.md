@@ -4,6 +4,7 @@ teaching: 0
 exercises: 0
 questions:
 - "How do we store data in variabes?"
+
 objectives:
 - "Be able to create variables"
 - "Understand that different types of variables store different kinds of information"
@@ -24,3 +25,10 @@ returns the output
 12
 ~~~
 {: .output}
+
+Here's another example:
+If I type 
+~~~
+636/8
+~~~
+{: .language-python}
