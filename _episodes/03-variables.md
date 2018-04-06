@@ -129,3 +129,54 @@ Returns the output
 ~~~
 {: .output}
 
+## Types of variables (ints, floats, strings)
+
+Python lets us make different “types” of variables.  So far you have seen ints (short for integers, numbers without decimal points) and floats (floating point numbers, numbers with decimal points).  Python also allows you to make variables that are strings (strings of text, very useful in Biology when dealing with sequence data) and other types of variables that we will introduce you to later.
+
+~~~
+name = 'Erin'
+word = 'image'
+~~~
+{: .language-python}
+
+You can use many of the same operators on text strings that you can on floats or ints:
+
+~~~
+name + word
+~~~
+{: .language-python}
+Returns the output
+~~~
+'Erinimage'
+~~~
+{: .output}
+
+~~~
+name * 2
+~~~
+{: .language-python}
+Returns the output
+~~~
+'ErinErin'
+~~~
+{: .output}
+
+However, not all operators are supported for all combinations of variables:
+
+~~~
+name + remainder
+~~~
+{: .language-python}
+
+Will result in an error message
+~~~
+Traceback (most recent call last):
+
+  File "<ipython-input-28-5359e87c9757>", line 1, in <module>
+    name + remainder
+
+TypeError: cannot concatenate 'str' and 'float' objects
+~~~
+{: .output}
+
+Since Python doesn’t know exactly how to add a word to a number, it returns an error message.  Error messages are usually very descriptive, and can tell you a lot about problems in your code!
