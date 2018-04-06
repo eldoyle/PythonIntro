@@ -100,3 +100,32 @@ Returns the output
 Notice that the value for mm2PerPixel changed, but the value for AreaInPixels did not!  If we imagine the variable as a sticky note with a name written on it, assignment is like putting the sticky note on a particular value:
 
 This means that assigning a value to one variable does not change the values of other variables.  Since AreaInPixels doesn’t remember where it came from, it isn’t automatically updated when mm2PerPixel changes.  This is different from the way spreadsheets work.
+
+## Mathematical operations
+
+Python allows us to use all of the usual mathematical operators to perform operations on numbers and variables.  You have already seen addition (+), multiplication (*) and division (/).
+
+~~~
+AreaSquared = AreaInMm**2
+AreaSquared
+~~~
+{: .language-python}
+Returns the output
+~~~
+36838.39164889
+~~~
+{: .output}
+
+The modulus operator (%) may also be useful, it returns the remainder from division.
+
+~~~
+remainder = 10.0%8
+remainder
+~~~
+{: .language-python}
+Returns the output
+~~~
+2.0
+~~~
+{: .output}
+
