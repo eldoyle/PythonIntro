@@ -3,10 +3,10 @@ title: "Lists and Indexing"
 teaching: 0
 exercises: 0
 questions:
-- "How do we store data in variabes?"
+- "Add question"
 
 objectives:
-- 
+- Add main objective
 - 
 - 
 keypoints:
