@@ -186,3 +186,21 @@ Since Python doesn’t know exactly how to add a word to a number, it returns an
 Variables should be given descriptive names.  Python requires that variable names must begin with a letter.  They are also case sensitive (Text, text, and tEXT are all different variables).  Beyond this, Python doesn’t care what you call your variables, you could name them all after different kinds of fruit if you want!  However, this would be very confusing when you went back later to look at your code.
 
 You should do your best to give your variables descriptive, useful names that describe the data they hold.  In the DIVAS project, variables should start with a lowercase letter, and capitalize each successive letter (“camel case”).
+
+## Examples/Exercises
+SWC example: Check your understanding
+
+
+> ## Variable Switching
+> Draw diagrams showing what variables refer to what values after each statement in the following program:
+> ~~~
+> mass = 47.5
+> age = 122
+> mass = mass * 2.0
+> age = age - 20
+> ~~~
+> {: .language-python}
+> > ## Solution
+> > Write out solution
+> {: .solution}
+{: .challenge}
