@@ -22,7 +22,6 @@ keypoints:
 > density2 = 3.28
 > ~~~
 > {: .language-python}
-
 > write code to “switch” the values so that the final result is that
 > ~~~
 > density1 = 3.28
