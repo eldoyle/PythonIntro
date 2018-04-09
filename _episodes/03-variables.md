@@ -204,3 +204,16 @@ SWC example: Check your understanding
 > > Write out solution
 > {: .solution}
 {: .challenge}
+
+> ## SWC Example: Sorting Out References
+> What does the following program print out?  Why?
+> ~~~
+> first, second = 'Grace', 'Hopper'
+> third, fourth = second, first
+> print(third, fourth)
+> ~~~
+> {: .language-python}
+> > ## Solution
+> > Write out solution
+> {: .solution}
+{: .challenge}
