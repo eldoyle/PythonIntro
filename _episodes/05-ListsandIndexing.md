@@ -99,3 +99,48 @@ Returns the output
 ~~~
 {: .output}
 
+## 0-based list indexing
+
+We can also access specific items of the list based on their position in the list.  We can use the list name followed by the number of the position we want in square brackets.
+
+## Accessing 1 object
+What do you think samples[1] will result in?
+
+~~~
+samples[1]
+~~~
+{: .language-python}
+
+Returns the output
+~~~
+'Trial293'
+~~~
+{: .output}
+
+Notice that giving the index “1” returned the second item in the list.  This is because Python (like many programming languages) begins counting at 0.  
+
+How would you get the first item in the list samples?  How would you get the last item?
+
+~~~
+samples[0]
+~~~
+{: .language-python}
+
+Returns the output
+~~~
+'Trial16'
+~~~
+{: .output}
+
+Seperate the two questions to split out these two seperate coding instructions??
+
+~~~
+samples[2]
+~~~
+{: .language-python}
+
+Returns the output
+~~~
+'Trial17'
+~~~
+{: .output}
