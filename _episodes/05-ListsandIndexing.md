@@ -144,3 +144,47 @@ Returns the output
 'Trial17'
 ~~~
 {: .output}
+
+Note that we can always use the index -1  to get the last item of a list if we don’t know it’s length
+
+~~~
+samples[-1]
+~~~
+{: .language-python}
+
+Returns the output
+~~~
+'Trial17'
+~~~
+{: .output}
+
+We can use this to replace specific items in the list.  For example,
+
+~~~
+print("List before:", samples)
+~~~
+{: .language-python}
+
+Returns the output
+~~~
+('List before:', ['Trial16', 'Trial293', 'Trial17'])
+~~~
+{: .output}
+
+~~~
+samples[2] = 'Trial216'
+~~~
+{: .language-python}
+
+~~~
+print("List after:", samples)
+~~~
+{: .language-python}
+
+Returns the output
+~~~
+('List after:', ['Trial16', 'Trial293', 'Trial216'])
+~~~
+{: .output}
+
+
