@@ -93,3 +93,13 @@ print('We are done checking if/else conditions')
 > > Write out solution
 > {: .solution}
 {: .challenge}
+
+## Comparison operators (==, <, >, <=, >=, !=) and booleans
+We have already seen the comparison operators < (less than) and == (used for checking equality, not the same as the = assignment operator)
+Other possible operators are:
++ > greater than
++ < less than
++ >= greater than or equal to
++ <= less than or equal to
++ == is equal to
++ != is not equal to
