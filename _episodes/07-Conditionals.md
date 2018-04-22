@@ -75,3 +75,21 @@ else:
 print('We are done checking if/else conditions')
 ~~~
 {: .language-python}
+
+> ## SWC “How many paths”
+> Consider the code below.  Which letters (A, B, and/or C) would be printed?  Why?
+> ~~~
+> if 4 > 5:
+>    print('A')
+> elif 4 == 5:
+>    print('B')
+> elif 6 < 5:
+>    print('C')
+>	else:
+>	    print(“none of these is true”)
+> ~~~
+> {: .language-python}
+> > ## Solution
+> > Write out solution
+> {: .solution}
+{: .challenge}
