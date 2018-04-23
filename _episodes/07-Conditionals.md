@@ -14,7 +14,7 @@ Conditionals are another powerful tool to use in our computer programs: they all
 
 We use the Syntax
 ~~~
-**if <condition>:
+if <condition>:
 	do this if condition 1 is true
 else:
 		do this if the condition is not true
