@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Conditionals"
 teaching: 30
 exercises: 0
 questions:
@@ -97,7 +97,7 @@ print('We are done checking if/else conditions')
 ## Comparison operators (==, <, >, <=, >=, !=) and booleans
 We have already seen the comparison operators < (less than) and == (used for checking equality, not the same as the = assignment operator)
 Other possible operators are:
-+ > greater than
++ '>' greater than
 + < less than
 + >= greater than or equal to
 + <= less than or equal to
