@@ -1,7 +1,7 @@
 ---
 title: "Variables"
 teaching: 0
-exercises: 0
+exercises: 30
 questions:
 - "How do we store data in variabes?"
 
