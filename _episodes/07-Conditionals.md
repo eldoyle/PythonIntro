@@ -17,7 +17,7 @@ We use the Syntax
 if <condition>:
 	do this if condition 1 is true
 else:
-		do this if the condition is not true
+	do this if the condition is not true
 		
 this is not part of the if/else block and will always be executed
 ~~~
