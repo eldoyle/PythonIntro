@@ -103,3 +103,25 @@ Other possible operators are:
 + <= less than or equal to
 + == is equal to
 + != is not equal to
+
+## Booleans
+`True` and `False` are special words in Python called booleans which represent true and false statements. However, they aren’t the only values in Python that are true and false. In fact, any value can be used in an if or elif.
+
+After reading and running the code below, explain what the rule is for which values are considered true and which are considered false.
+~~~
+if '':
+    print('empty string is true')
+if 'word':
+    print('word is true')
+if []:
+    print('empty list is true')
+if [1, 2, 3]:
+    print('non-empty list is true')
+if 0:
+    print('zero is true')
+if 1:
+    print('one is true')
+ ~~~
+ {: .language-python}
+ 
+ 
