@@ -105,7 +105,7 @@ This means that assigning a value to one variable does not change the values of 
 
 ## Mathematical operations
 
-Python allows us to use all of the usual mathematical operators to perform operations on numbers and variables.  You have already seen addition (+), multiplication (*) and division (/).
+Python allows us to use all of the usual mathematical operators to perform operations on numbers and variables.  You have already seen addition `(+)`, multiplication `(*)` and division `(/)`.
 
 ~~~
 AreaSquared = AreaInMm**2
