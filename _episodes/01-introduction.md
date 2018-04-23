@@ -13,3 +13,7 @@ keypoints:
 <a href="{{ page.root }}/fig/IMG_20180122_150900813_HDR.jpg">
   <img src="{{ page.root }}/ PythonIntro/fig/IMG_20180122_150900813_HDR.jpg" alt="Mesa the cat approves" />
 </a>
+
+Inline-style: 
+![alt text]({{ page.root }}/fig/IMG_20180122_150900813_HDR.jpg "Cat Picture")
+
