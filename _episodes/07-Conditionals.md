@@ -122,6 +122,33 @@ if 0:
 if 1:
     print('one is true')
  ~~~
- {: .language-python}
+{: .language-python}
  
- 
+> ## Example/exercise Combining loops and conditionals
+> Sorting image files into bins
+> 
+> Imagine that we have a list of image files that are different types of images (you will learn more about the different image formats later in the week).  
+> You have the following list of image names and three empty lists.
+> ~~~
+> images = ['image1.png', 'image2.jpg', 'image3.bmp', 'image4.jpg', 'image5.png']
+>
+> bmps = []
+> pngs = []
+> jpgs = []
+> ~~~
+> {: .language-python}
+>
+> Write code to put each of the image names in images into the appropriate list.  Your code should 
+> 1) loop through all of the images.
+> 2) For each image, check the file extension (the part after the “.”) and append the filename to the appropriate list
+> 3) print the final lists.  They should have these values:
+> ~~~
+> bmps = ['image3.bmp']
+> jpgs = ['image2.jpg', 'image4.jpg']
+> pngs = ['image1.png', 'image5.png']
+> ~~~
+> {: .language-python}
+> > ## Solution
+> > Write out solution
+> {: .solution}
+{: .challenge}
