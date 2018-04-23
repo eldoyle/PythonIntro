@@ -220,7 +220,7 @@ SWC example: Check your understanding
 > > ~~~
 > > (‘Hopper’, Grace’)
 > > ~~~
-> > To understand what is happening, you can think of the first line of code as storing the value “Grace” somewhere in your computer’s memory and then assigning it the handle first.  At the same time, it stores the value “Hopper” and assigns it the handle second.  Then, the second line of code creates new handles pointing to those same values.  So third points at the same value/memory location as second (“Hopper”) and fourth points at the same value/location as first (“Grace”).
+> > To understand what is happening, you can think of the first line of code as storing the value “Grace” somewhere in your computer’s memory and then assigning it the handle `first`.  At the same time, it stores the value “Hopper” and assigns it the handle `second`.  Then, the second line of code creates new handles pointing to those same values.  So `third` points at the same value/memory location as `second` (“Hopper”) and `fourth` points at the same value/location as `first` (“Grace”).
 > {: .solution}
 {: .challenge}
 
