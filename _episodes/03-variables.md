@@ -10,8 +10,8 @@ objectives:
 - "Understand that different types of variables store different kinds of information"
 - "Be able to perform simple arithmatic operations on variables"
 keypoints:
-- "Creating variables allows you to "reuse" a number or value in multiple locations in your code"
-- "Python stores different kinds of information (text, numbers, decimal numbers, and others) as different "types" of variables"
+- "Creating variables allows you to \"reuse\" a number or value in multiple locations in your code"
+- "Python stores different kinds of information (text, numbers, decimal numbers, and others) as different \"types\" of variables"
 - "You should give your variables descriptive names! This will make your code easier to read!"
 ---
 ## Creating Variables
