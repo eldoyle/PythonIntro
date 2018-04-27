@@ -3,14 +3,16 @@ title: "Lists and Indexing"
 teaching: 0
 exercises: 0
 questions:
-- "Add question"
+- "How can we group similar values into one variable?"
 
 objectives:
-- Add main objective
-- 
-- 
+- "Learn to create lists to group similar values or items together"
+- "Learn to modify lists by adding or deleting items"
+- "Be able to access a specific item or items in a list using list indexing"
 keypoints:
-- "First key point."
+- "Lists can be used to group numbers (ints or floats), strings, or other kinds of values together in one variable"
+- "Lists are ordered- objects stay in the order you add them"
+- "Lists are indexed using 0-based indexing"
 ---
 ## Numbers and strings let us store 1 piece of data in a single variable.  However, it is often useful to store multiple pieces of data in a single variable.  For example, image we have root areas for 4 different roots.  Instead of making 4 different variables, we can use a list to keep them all together.  This is also handy because we only have to keep track of one variable name! 
 
