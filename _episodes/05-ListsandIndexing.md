@@ -32,7 +32,7 @@ print('Sample names are:', samples)
 ~~~
 {: .language-python}
 
-## Add/delete objects (list.append(value), list.remove(value)
+4. Add/delete objects (list.append(value), list.remove(value)
 
 Unlike floats, ints, and strings, lists can be modified after we make them.  For example, we can add objects using the append command
 
@@ -101,11 +101,11 @@ Returns the output
 ~~~
 {: .output}
 
-## 0-based list indexing
+5. 0-based list indexing
 
-We can also access specific items of the list based on their position in the list.  We can use the list name followed by the number of the position we want in square brackets.
+..* We can also access specific items of the list based on their position in the list.  We can use the list name followed by the number of the position we want in square brackets.
 
-## Accessing 1 object
+..* Accessing 1 object
 What do you think samples[1] will result in?
 
 ~~~
