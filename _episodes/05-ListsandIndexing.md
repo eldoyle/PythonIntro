@@ -14,11 +14,11 @@ keypoints:
 - "Lists are ordered- objects stay in the order you add them"
 - "Lists are indexed using 0-based indexing"
 ---
-## Numbers and strings let us store 1 piece of data in a single variable.  However, it is often useful to store multiple pieces of data in a single variable.  For example, image we have root areas for 4 different roots.  Instead of making 4 different variables, we can use a list to keep them all together.  This is also handy because we only have to keep track of one variable name! 
+1. Numbers and strings let us store 1 piece of data in a single variable.  However, it is often useful to store multiple pieces of data in a single variable.  For example, image we have root areas for 4 different roots.  Instead of making 4 different variables, we can use a list to keep them all together.  This is also handy because we only have to keep track of one variable name! 
 
-## Lists are created using square brackets, with the items separated by commas
+2. Lists are created using square brackets, with the items separated by commas
 
-## Creating a list (populated or empty)
+3. Creating a list (populated or empty)
 ~~~
 areas = [6929.6, 8536.47, 11359.3, 17743.4]
 print('Areas are:', areas)
