@@ -189,4 +189,41 @@ Returns the output
 ~~~
 {: .output}
 
+6. Accessing a range of objects (up to, but not inclusive)
+We can also use the same syntax to return a slice or subsection of the list.  We separate the first and last indices for the items we want with a colon.  Note that the second index is up to, but not inclusive.  For example,
+~~~
+ areas[0:2]
+ ~~~
+{: .language-python}
+
+Returns the output
+~~~
+ [6929.6, 8536.47]
+~~~ 
+{: .output}
+
+This returns a list of areas[0] and areas[1].  It does not include areas[2].
+
+If we want to start at the beginning of the list, we can leave out the first coordinate.  Similarly, if we want to start our slice at a specific index and go to the end of the list, we can leave out the second coordinate.
+~~~
+areas[:2]
+~~~
+{: .language-python}
+
+Returns the output
+~~~
+[6929.6, 8536.47]
+~~~
+{: .output}
+
+~~~
+areas[1:]
+~~~
+{: .language-python}
+
+Returns the output
+~~~
+[8536.47, 11359.3, 17743.4]
+~~~
+{: .output}
 
