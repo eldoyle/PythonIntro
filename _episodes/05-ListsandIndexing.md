@@ -227,3 +227,19 @@ Returns the output
 ~~~
 {: .output}
 
+7. Len() function
+We may not always know (or remember) the length of a list.  If we need to get this number, we can use the len() function to find it.
+~~~
+len(areas)
+~~~
+{: .language-python}
+
+Returns the output
+~~~
+4
+~~~~
+{: .output}
+
+Note that this returns the expected length of the list.  Even though 'areas[3]' is the last item of the list (0-based counting!), the length is returned as 4.
+
+8. We can also use similar indexing principles to access specific characters or substrings of a string variable 
