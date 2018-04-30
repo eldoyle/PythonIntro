@@ -99,7 +99,7 @@ We have already seen the comparison operators < (less than) and == (used for che
 Other possible operators are:
 + `>` greater than
 + < less than
-+ >= greater than or equal to
++ `>=` greater than or equal to
 + <= less than or equal to
 + == is equal to
 + != is not equal to
