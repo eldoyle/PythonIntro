@@ -71,3 +71,25 @@ However, this violates all of our rules about good variable names!  In general, 
 
 ## Examples/Exercies
 Finish
+
+## Using a loop to update a variable
+Sometimes, you may need to set up a variable outside of the loop (for example, a counter), and then update it with each run through the loop:
+~~~
+length = 0
+for vowel in 'aeiou':
+    length = length + 1
+
+print('There are', length, 'vowels')
+~~~
+{: .language-python}
+
+It’s worth tracing the execution of this little program step by step. Since there are five characters in 'aeiou', the statement on line 3 will be executed five times. The first time around, length is zero (the value assigned to it on line 1) and vowel is 'a'. The statement adds 1 to the old value of length, producing 1, and updates length to refer to that new value. The next time around, vowel is 'e' and length is 1, so length is updated to be 2. After three more updates, length is 5; since there is nothing left in 'aeiou' for Python to process, the loop finishes and the print statement on line 4 tells us our final answer.
+
+Note that a loop variable is just a variable that’s being used to record progress in a loop. It still exists after the loop is over, and we can re-use variables previously defined as loop variables as well:
+~~~
+letter = 'z'
+for letter in 'abc':
+    print(letter)
+print('after the loop, letter is', letter)
+~~~
+{: .language-python}
