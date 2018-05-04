@@ -71,4 +71,40 @@ At minimum, include a block comment at the beginning of your script explaining t
 
 NEED TO REFORMAT
 
-## Examples/Exercises
+> ## Examples/Exercises
+> Modify the script above to include appropriate comments
+> ~~~ 
+> """
+> Created on Mon Apr 24 21:15:50 2017
+> 
+> @author: erin.doyle
+> """
+> 
+> AreaInPixels = 6929
+> mm2PerPixel = 0.0277
+> AreaInMM = AreaInPixels*mm2PerPixel
+> print(AreaInMM)
+> ~~~
+> {: .language-python}
+> > ## Solution
+> > ~~~
+> > """
+> > Created on Mon Apr 24 21:15:50 2017
+> > 
+> > @author: erin.doyle
+> > 
+> > A script to convert measured area in pixels to actual area in mm2
+> > """
+> > #Set variables and conversion factors
+> > AreaInPixels = 6929 #example of an end-of-line comment
+> > mm2PerPixel = 0.0277 #Python ignores everything after the '#'
+> > 
+> > #Convert from pixels to mm2
+> > AreaInMM = AreaInPixels*mm2PerPixel
+> > 
+> > #Print the final area in mm2
+> > print("The area in mm2 is", AreaInMM) #print description + number
+> > ~~~
+> > {: .language-python}
+> {: .solution}
+{: .challenge}
