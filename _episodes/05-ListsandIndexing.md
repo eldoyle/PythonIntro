@@ -32,7 +32,7 @@ print('Sample names are:', samples)
 ~~~
 {: .language-python}
 
-4. Add/delete objects (list.append(value), list.remove(value)
+Add/delete objects (list.append(value), list.remove(value)
 
 Unlike floats, ints, and strings, lists can be modified after we make them.  For example, we can add objects using the append command
 
@@ -103,9 +103,9 @@ Returns the output
 
 5. 0-based list indexing
 
-..* We can also access specific items of the list based on their position in the list.  We can use the list name followed by the number of the position we want in square brackets.
+..1. We can also access specific items of the list based on their position in the list.  We can use the list name followed by the number of the position we want in square brackets.
 
-..* Accessing 1 object
+..2. Accessing 1 object
 What do you think samples[1] will result in?
 
 ~~~
@@ -242,4 +242,4 @@ Returns the output
 
 Note that this returns the expected length of the list.  Even though 'areas[3]' is the last item of the list (0-based counting!), the length is returned as 4.
 
-8. We can also use similar indexing principles to access specific characters or substrings of a string variable 
+We can also use similar indexing principles to access specific characters or substrings of a string variable 
