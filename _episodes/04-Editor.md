@@ -13,11 +13,11 @@ keypoints:
 - "First key point."
 ---
 
-Rather than running this code one line at a time, we could write it in the Editor window, save it, and run everything at once.
+1. Rather than running this code one line at a time, we could write it in the Editor window, save it, and run everything at once.
 
-Spyder will run your code in order, line by line, from top to bottom.
+2. Spyder will run your code in order, line by line, from top to bottom.
 
-Example- same as code above to convert area in pixels to mm2.  Create a new script file by clicking the blank page button on the top left.  Then, type in the following commands:
+3. Example- same as code above to convert area in pixels to mm2.  Create a new script file by clicking the blank page button on the top left.  Then, type in the following commands:
 ~~~
 """
 Created on Mon Apr 24 21:15:50 2017
