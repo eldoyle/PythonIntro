@@ -115,3 +115,9 @@ print('after the loop, letter is', letter)
 > > Add solution
 > {: .solution}
 {: .challenge}
+
+> Modify your range code to print all of the even numbers between 1 and 10 (inclusive):  2, 4, 6, 8, 10
+> > ## Solution
+> > Add solution
+> {: .solution}
+{: .challenge}
