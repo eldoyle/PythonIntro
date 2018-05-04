@@ -30,9 +30,9 @@ a= 17
 if a < 10:
 	print("the number is less than 10")
 else:
-	print(“the number is 10 or greater”)
+	print("the number is 10 or greater")
 
-print(“this will always get printed”)
+print("this will always get printed")
 ~~~
 {: .language-python}
 
@@ -86,7 +86,7 @@ print('We are done checking if/else conditions')
 > elif 6 < 5:
 >    print('C')
 >	else:
->	    print(“none of these is true”)
+>	    print("none of these is true")
 > ~~~
 > {: .language-python}
 > > ## Solution
