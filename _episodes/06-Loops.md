@@ -107,3 +107,11 @@ print('after the loop, letter is', letter)
 > > Add solution
 > {: .solution}
 {: .challenge}
+
+> SWC Exercise: Reverse a String
+> Knowing that two strings can be concatenated using the + operator, write a loop that takes a string and produces a new string with the characters in reverse order, so 'Newton' becomes 'notweN'
+> Hint: don’t forget that you can use + to concatenate (add) strings
+> > ## Solution
+> > Add solution
+> {: .solution}
+{: .challenge}
