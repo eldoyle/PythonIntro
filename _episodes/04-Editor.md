@@ -44,3 +44,13 @@ Later, when we use scripts to open files or import functions from other .py file
 
 > When you save your program, make sure the name ends in the file extension “.py”.  This tells  your computer that this is a Python script.  It will also enable color coding in Spyder.  In fact, if you open a script in Spyder and don’t see color coding, the first thing you should check is for the “.py” extension.
 {: .callout}
+
+## The print() statement
+1. The last line of the script contains a new command: print().  When running code as a script, the values of variables or computations are not automatically displayed (trying running the script above without that line!).  If you want to show a variable or print some other output, you can use the print() command.  print() goes on its own line, with whatever you want to print inside the parenthesis.
+2. The output of the print statement will be printed in the console.
+3. We can make the print statement more informative, if we want to.  For example, we could combine a descriptive text string with the variable that we wish to print.
+> Example- change the last line of the script to
+~~~
+print("The area in mm2 is", AreaInMM)
+~~~
+{: .language-python}
