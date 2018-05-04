@@ -3,14 +3,15 @@ title: "Running code in the editor"
 teaching: 0
 exercises: 0
 questions:
-- "What is the question?"
+- "How can I use the editor window to write and run multiple lines of code at once?"
 
 objectives:
-- What are the main objectives?
-- 
-- 
+- "Be able to write and run a Python script"
+
 keypoints:
-- "First key point."
+- "A script is a file that contains multiple lines of code
+- "A script can be run all at once rather than writing and running one line at a time"
+- "A script can be reused over and over again"
 ---
 
 1. Rather than running this code one line at a time, we could write it in the Editor window, save it, and run everything at once.
