@@ -109,3 +109,28 @@ NEED TO REFORMAT
 > > {: .language-python}
 > {: .solution}
 {: .challenge}
+
+> ## Example
+> In a previous example, you wrote code to take 2 variables and “switch” their values, so that
+> `density1 = 4.59`
+> `density2 = 3.28`
+> 
+> Became
+> 
+> `density1 = 3.28`
+> `density2 = 4.59`
+>Now, take that code and convert it to a script.  Your script should 1) include comments descriptive comments 2) print out useful statement explaining what the values of the variables are both before and after the switch.
+> > ## Solution
+> > #print values before switching:
+> > print(“Before switching, density1 is”, density1, “and density2 is”, density2) 
+> >
+> >
+> > #Swap variables
+> > temp1 = density1 #create a temporary variable to store density 1
+> > density1 = density2 #reassign density1
+> > density2 = temp1 #Assign density2 to the value in the temp variable
+> > 
+> > #print values after
+> > print(“After switching, density1 is”, density1, “and density2 is”, density2)
+> {: .solution}
+{: .challenge}
