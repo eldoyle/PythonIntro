@@ -127,7 +127,6 @@ begins counting at 0.
 
 > ## List Indexing
 > How would you get the first item in the list `samples`?  How would you get the last item?
-> 
 > > ## Solution
 > > ~~~
 > > print(samples[0]) #Returns the first item, at index position 0
@@ -158,7 +157,6 @@ begins counting at 0.
 > # List Indexing With Negative Numbers
 > How would you use negative numbers to get the next-to-last item in the list `samples`?  How would you get the third-to-last 
 > item?
-> 
 > > ## Solution
 > > ~~~
 > > print(samples[-2]) #Returns the next-to-last item
