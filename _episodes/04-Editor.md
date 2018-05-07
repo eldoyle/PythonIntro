@@ -52,12 +52,12 @@ By default, the Working Directory is where Spyder will save your scripts and loo
 directory by using the buttons at the top-right of Spyder.  It is a good idea to create one folder that you can easily find to
 store all of your Python projects.  On the DIVAS VM, your working directory is automatically set to </home/diva>.
 
-> ### Know your Working Directory
+> ## Know your Working Directory
 > Later, when we use scripts to open files or import functions from other .py files, you will need to either 1) Make sure the 
 > file you are trying to open/import is located in the same folder as the script you are running OR 2) supply the full path to > > the file.
 {: .callout}
 
-> ### .py files
+> ## .py files
 > When you save your program, make sure the name ends in the file extension “.py”.  This tells  your computer that this is a 
 > Python script.  It will also enable color coding in Spyder.  In fact, if you open a script in Spyder and don’t see color 
 > coding, the first thing you should check is for the “.py” extension.
