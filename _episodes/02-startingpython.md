@@ -54,6 +54,8 @@ code (debugging).
 using the buttons at the top-left of Spyder.  It is a good idea to create one folder that you can easily find to store all of 
 your Python projects.   On the DIVAS VM, your working directory is automatically set to <Path>. We will reset this to be 
 home/Desktop/workshops/<your_directory>
+  
+![TheSpyderWindowLayout](../fig/SpyderWindowSetup.jpg)
 
 
 
