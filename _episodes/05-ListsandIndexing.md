@@ -3,22 +3,27 @@ title: "Lists and Indexing"
 teaching: 0
 exercises: 0
 questions:
-- "How can we group similar values into one variable?"
+- "How can we group similar values or data into one variable?"
 
 objectives:
-- "Learn to create lists to group similar values or items together"
+- "Create lists to group similar values or items together"
 - "Learn to modify lists by adding or deleting items"
-- "Be able to access a specific item or items in a list using list indexing"
+- "Be able to access a specific item or items in a list using list indexing and slicing"
 keypoints:
 - "Lists can be used to group numbers (ints or floats), strings, or other kinds of values together in one variable"
 - "Lists are ordered- objects stay in the order you add them"
 - "Lists are indexed using 0-based indexing"
 ---
-1. Numbers and strings let us store 1 piece of data in a single variable.  However, it is often useful to store multiple pieces of data in a single variable.  For example, image we have root areas for 4 different roots.  Instead of making 4 different variables, we can use a list to keep them all together.  This is also handy because we only have to keep track of one variable name! 
+## Lists
+The variable types we have seen so far, such as floats, ints, and strings let us store one piece of data in a single variable.  
+However, it is often useful to store multiple pieces of data in a single variable.  For example, image we have root areas for 
+four different roots.  Instead of making four different variables, we can use a list to keep them all together.  This is handy 
+because we only have to keep track of one variable name! In the [next lesson]({{ page.root }}\06-Loops) you'll learn how to 
+perform the same operations on each item in a list.
 
-2. Lists are created using square brackets, with the items separated by commas
-
-3. Creating a list (populated or empty)
+### Creating lists
+Lists are denoted using square brackets, with the items separated by commas.  The code below will create and print a populated
+list called `areas`.
 ~~~
 areas = [6929.6, 8536.47, 11359.3, 17743.4]
 print('Areas are:', areas)
@@ -32,10 +37,19 @@ print('Sample names are:', samples)
 ~~~
 {: .language-python}
 
+It can also be useful to make an empty list:
+~~~
+plateCounts = []
+print('The plate counts are:', plateCounts)
+~~~
+{: .language-python}
+This will seem more useful after we have talked about adding items to lists!
+
+### Modifying lists: adding, removing, and altering values
 Add/delete objects (list.append(value), list.remove(value)
 
-Unlike floats, ints, and strings, lists can be modified after we make them.  For example, we can add objects using the append command
-
+Unlike floats, ints, and strings, lists can be modified after we make them.  For example, we can add objects using the append 
+command:
 ~~~ 
 print('Before:', samples)
 ~~~
@@ -47,13 +61,14 @@ Returns the output
 ~~~
 {: .output}
 
+Now, add an item:
 ~~~
 samples.append('Trial17')
 print("After:", samples)
 ~~~ 
 {: .language-python}
 
-Returns the output
+This returns the output
 ~~~
 ('After:', ['Trial16', 'Trial20', 'Trial293', 'Trial17'])
 ~~~
@@ -101,96 +116,89 @@ Returns the output
 ~~~
 {: .output}
 
-5. 0-based list indexing
+### 0-based list indexing
+We can also access specific items of the list based on their position in the list.  We can use the list name followed by the 
+number of the position we want in square brackets.
 
-..1. We can also access specific items of the list based on their position in the list.  We can use the list name followed by the number of the position we want in square brackets.
-
-..2. Accessing 1 object
-What do you think samples[1] will result in?
-
+What do you think `samples[1]` will result in?
 ~~~
-samples[1]
+print(samples[1])
 ~~~
 {: .language-python}
 
-Returns the output
+This code returns the output
 ~~~
 'Trial293'
 ~~~
 {: .output}
 
-Notice that giving the index “1” returned the second item in the list.  This is because Python (like many programming languages) begins counting at 0.  
+Notice that giving the index “1” returned the second item in the list.  This is because Python (like many programming languages) 
+begins counting at 0.  
 
-How would you get the first item in the list samples?  How would you get the last item?
+> # List Indexing
+> How would you get the first item in the list `samples`?  How would you get the last item?
+> 
+> > ## Solution
+> > ~~~
+> > print(samples[0]) #Returns the first item, at index position 0
+> > print(samples[2]) #Returns the first item, at index position 2 (the list contains 3 items)
+> > ~~~
+> > {: .languate-python}
+> > `samples[0]` returns the output `'Trial16'` and `samples[2]` returns the output `'Trial17'`.
+> {: .solution}
+{: .challenge}
+
+> ## Using -1 and negative indexes to count backwards
+> The index -1 is a special index that always refers to the last item of the list.
+> Similarly, we can use other negative numbers to count backwards from the end of a list.  This can be very useful if we know 
+> we want to get items from the end of a list, but we don't know the list's length!
+> 
+> ~~~
+> print(samples[-1])
+> ~~~
+> {: .language-python}
+>
+> Returns the output
+> ~~~
+> 'Trial17'
+> ~~~
+> {: .output}
+{: .callout}
+
+> # List Indexing With Negative Numbers
+> How would you use negative numbers to get the next-to-last item in the list `samples`?  How would you get the third-to-last 
+> item?
+> 
+> > ## Solution
+> > ~~~
+> > print(samples[-2]) #Returns the next-to-last item
+> > print(samples[-3]) #Returns the third-to-last item (which is the same as the first item in this example)
+> > ~~~
+> > {: .languate-python}
+> > `samples[-2]` returns the output `'Trial293'` and `samples[-3]` returns the output `'Trial16'`.
+> {: .solution}
+{: .challenge}
+
+We can also use list indexing to replace specific items in the list.  For example,
 
 ~~~
-samples[0]
-~~~
-{: .language-python}
-
-Returns the output
-~~~
-'Trial16'
-~~~
-{: .output}
-
-Seperate the two questions to split out these two seperate coding instructions??
-
-~~~
-samples[2]
-~~~
-{: .language-python}
-
-Returns the output
-~~~
-'Trial17'
-~~~
-{: .output}
-
-Note that we can always use the index -1  to get the last item of a list if we don’t know it’s length
-
-~~~
-samples[-1]
-~~~
-{: .language-python}
-
-Returns the output
-~~~
-'Trial17'
-~~~
-{: .output}
-
-We can use this to replace specific items in the list.  For example,
-
-~~~
+samples = ['Trial16', 'Trial293', 'Trial17']
 print("List before:", samples)
-~~~
-{: .language-python}
-
-Returns the output
-~~~
-('List before:', ['Trial16', 'Trial293', 'Trial17'])
-~~~
-{: .output}
-
-~~~
 samples[2] = 'Trial216'
-~~~
-{: .language-python}
-
-~~~
 print("List after:", samples)
 ~~~
 {: .language-python}
 
 Returns the output
 ~~~
+('List before:', ['Trial16', 'Trial293', 'Trial17'])
 ('List after:', ['Trial16', 'Trial293', 'Trial216'])
 ~~~
 {: .output}
 
-6. Accessing a range of objects (up to, but not inclusive)
-We can also use the same syntax to return a slice or subsection of the list.  We separate the first and last indices for the items we want with a colon.  Note that the second index is up to, but not inclusive.  For example,
+### Accessing a range of objects with slicing (up to, but not inclusive)
+We can also use the same syntax to return a slice or subsection of the list.  We separate the first and last indices for the 
+items we want with a colon.  Note that the second index is up to, but not inclusive.  For example,
 ~~~
  areas[0:2]
  ~~~
