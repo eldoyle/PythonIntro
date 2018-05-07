@@ -46,7 +46,7 @@ you can easily access them.
 
 * The console: This is where we can write and run code one line at a time.  If you are running a script in the Editor window of 
 Spyder, this is also where any output or error messages will appear.  IMPORTANT: Code written here will not be saved.
-The editor window: This is where we can write and save longer pieces of code that include multiple lines/commands.  This is 
+* The editor window: This is where we can write and save longer pieces of code that include multiple lines/commands.  This is 
 where we will eventually be writing most of our code.
 * File and Variable Explorers: Can be used for exploring the folder you are working in, and for understanding the behavior of your 
 code (debugging).
