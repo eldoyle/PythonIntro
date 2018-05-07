@@ -237,14 +237,79 @@ We can also use similar indexing principles to access specific characters or sub
 > ## Indexing characters in a string
 > Assume you have the following variable: 
 > `element = 'oxygen'`
-> What are the values of  
+> What are the values of the following?   
 >     1. `element[:4]`  
 >     2. `element[4:]`  
 >     3. `element[:]`  
 > > ## Solution
 > > Create code with print statements to try this out.
-> > 1. `element[:4]` starts at the beginning of the list and goes up to (but does not include) position 4, returning `'elem'`
-> > 2. `element[4:]` starts at position 4 (`'e'`) and goes through the end of the string, returning `'ent'`
-> > 3. `element[:]` starts at the beginning and goes through the end of the string, returning `'element'`
+> > 1. `element[:4]` starts at the beginning of the list and goes up to (but does not include) position 4, returning `'oxyg'`
+> > 2. `element[4:]` starts at position 4 (`'e'`) and goes through the end of the string, returning `'en'`
+> > 3. `element[:]` starts at the beginning and goes through the end of the string, returning `'oxygen'`
+> {: .solution}
+{: .challenge}
+
+> ## String and list indices
+> Assume you have the following variable: 
+> `element = 'oxygen'`
+> Explain what `element[1:-1]` does.
+> > ## Solution
+> > If you create and run code with a print statement, you'll get the following output:
+> > `element[1:-1]` will return all but the first and last characters: `'xyge'`.  
+> > 
+> > Remember that position 1 is the *second* character of the string (0-based counting!) and that the slice goes *up to*, but 
+> > *doesn't include* the character at the index position after the colon.  Since e`lement[-1]` refers to the last character, 
+> > the slice will stop just before `n`, and only include up to the next-to-last position.
+> {: .solution}
+{: .challenge}
+
+> ## Adding a value to a list
+> Assume you have the following list: 
+> `areas = [8536.47, 11359.3, 17743.4]'  
+> Create a new empty list  
+> areas2 = []  
+> Now add items to `areas2` so that it is identical to `areas` except that `7798.02` has been inserted between `8536.47` and 
+> `11359.3`.  You should refer to the list `areas` and avoid typing in numbers whenever possible.
+> 
+> The final value of `areas2` should be `areas2 = [8536.47, 7798.02, 11359.3, 17743.4]`
+> > ## Solution
+> > ~~~ 
+> > #Create the list areas
+> > areas = [8536.47, 11359.3, 17743.4]
+> > 
+> > #Create the empty list areas2
+> > areas2 = []
+> > 
+> > #Now, add items to areas2
+> > areas2.append(areas[0])
+> > areas2.append(7798.02)
+> > areas2.append(areas[1])
+> > areas2.append(areas[2])
+> > 
+> > #print areas and areas2
+> > print('the value of areas is', areas)
+> > print('the value of areas2 is', areas2)
+> > ~~~
+> > {: .language-python}
+> > Note that this did not change the original list areas!
+> >
+> > You could also do it like this, using the `.insert()` command
+> > ~~~ 
+> > #Create the list areas
+> > areas = [8536.47, 11359.3, 17743.4]
+> > 
+> > #Create the list areas2 by copying areas
+> > areas2 = areas
+> > 
+> > #Now, use the insert command to insert the new number at index 1
+> > areas2.insert(1, 7798.02)
+> > 
+> > #print areas and areas2
+> > print('the value of areas is', areas)
+> > print('the value of areas2 is', areas2)
+> > ~~~
+> > However, this will also change the original list `areas`!  This is because `areas2=areas` does not create a brand-new copy
+> > of the list.  Instead, it points to the same location in memory as the original variable name `areas`.
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
