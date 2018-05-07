@@ -157,21 +157,30 @@ print('after the loop, letter is', letter)
 ~~~
 {: .language-python}
 
-## Examples
-> SWC Exercise: From 1 to N
+## Exercises
+> ## From 1 to N
 > Python has a built-in function called `range` that creates a sequence of numbers. range can accept 1-3 parameters. 
 > 
-> If one parameter is input, `range` creates an array of that length, starting at zero and incrementing by 1. If 2 parameters are input, > `range` starts at the first and ends just before the second, incrementing by one. If `range` is passed 3 parameters, it starts at the  > first one, ends just before the second one, and increments by the third one. 
+> If one parameter is input, `range` creates an array of that length, starting at zero and incrementing by 1. If 2 parameters 
+> are input, > `range` starts at the first and ends just before the second, incrementing by one. If `range()` is passed 3 
+> parameters, it starts at the first one, ends just before the second one, and increments by the third one. 
 > 
 > For example, `range(3)` produces the numbers 0, 1, 2.  `range(2, 5)` produces 2, 3, 4, and `range(3, 10, 3)` produces 3, 6, 9. 
 > 
 > Using `range`, write a loop that uses range to print the first 3 natural numbers: 1, 2, 3.
 > > ## Solution
-> > Add solution
+> > ~~~
+> > #Create the range
+> > numbers = range(1,4) #note that we have to add one to the top number
+> > 
+> > for number in numbers: #for loop: numberS is the range, number is one item
+> >      print(number)
+> > ~~~
+> > {: .language-python
 > {: .solution}
 {: .challenge}
 
-> SWC Exercise: Reverse a String
+> ## Reverse a String
 > Knowing that two strings can be concatenated using the + operator, write a loop that takes a string and produces a new string with the characters in reverse order, so 'Newton' becomes 'notweN'
 > Hint: don’t forget that you can use + to concatenate (add) strings
 > > ## Solution
