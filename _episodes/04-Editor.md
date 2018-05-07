@@ -156,16 +156,27 @@ script.
 > Now, take that code and convert it to a script.  Your script should 1) include descriptive comments and 2) print out 
 > a useful statement explaining what the values of the variables are both before and after the switch.
 > > ## Solution
+> > Here is one way to do it:
+> > ~~~
+> > """
+> > A script to swap the values of two variables, density1 and density2
+> > """
+> > 
+> > #Create initial variables
+> > density1 = 4.59
+> > density2 = 3.28
+> > 
 > > #print values before switching:
 > > print(“Before switching, density1 is”, density1, “and density2 is”, density2) 
 > >
-> >
 > > #Swap variables
-> > temp1 = density1 #create a temporary variable to store density 1
-> > density1 = density2 #reassign density1
+> > temp1 = density1 #create a temporary variable to store density1
+> > density1 = density2 #reassign variable name density1 to the value stored in density2
 > > density2 = temp1 #Assign density2 to the value in the temp variable
 > > 
 > > #print values after
 > > print(“After switching, density1 is”, density1, “and density2 is”, density2)
+> > ~~~
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
