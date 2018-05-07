@@ -44,18 +44,25 @@ This will start the Spyder application.  Note: depending on your settings, this 
 The following Spyder features/tabs/windows will be the most useful to you.  You will want to set up your Spyder screen so that 
 you can easily access them.
 
-* The console: This is where we can write and run code one line at a time.  If you are running a script in the Editor window of 
-Spyder, this is also where any output or error messages will appear.  IMPORTANT: Code written here will not be saved.
-* The editor window: This is where we can write and save longer pieces of code that include multiple lines/commands.  This is 
-where we will eventually be writing most of our code.
-* File and Variable Explorers: Can be used for exploring the folder you are working in, and for understanding the behavior of your 
-code (debugging).
-* The Working Directory is where Spyder will save your scripts and look for files.  You can change your working directory by 
-using the buttons at the top-left of Spyder.  It is a good idea to create one folder that you can easily find to store all of 
-your Python projects.   On the DIVAS VM, your working directory is automatically set to <Path>. We will reset this to be 
-home/Desktop/workshops/<your_directory>
+* The console (bottom panel in the image): This is where we can write and run code one line at a time.  If you are running a 
+script in the Editor window of Spyder, this is also where any output or error messages will appear.  IMPORTANT: Code written 
+here will not be saved.
+* The editor window (top left panel in the image): This is where we can write and save longer pieces of code that include 
+multiple lines/commands.  This is where we will eventually be writing most of our code.
+* File and Variable Explorers (top right panel, use the tabs to switch): Can be used for exploring the folder you are working 
+in, and for understanding the behavior of your code (debugging).
+* The Working Directory (top right address bar) is where Spyder will save your scripts and look for files.  You can change your 
+working directory by using the buttons at the top-left of Spyder.  It is a good idea to create one folder that you can easily 
+find to store all of your Python projects.   On the DIVAS VM, your working directory is automatically set to <Path>. We will 
+reset this to be home/Desktop/workshops/<your_directory>
   
 ![TheSpyderWindowLayout](../fig/SpyderWindowSetup.jpg)
+
+> ## Changing the layout of Spyder
+> You can easily change which panels Spyder shows you and where they are located.  To choose to show or not show a particular
+> panel, use the View-> Panes menu to check panels you want displayed and uncheck panels you don't want to see.
+> Panels can be moved to new locations by clicking and holding the panel's top bar and then dragging it to the desired location.
+{: .callout}
 
 
 
