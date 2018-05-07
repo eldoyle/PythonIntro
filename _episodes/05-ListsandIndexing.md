@@ -238,9 +238,9 @@ We can also use similar indexing principles to access specific characters or sub
 > Assume you have the following variable: 
 > `element = 'oxygen'`
 > What are the values of
->     1. `element[:4]`
->     2. `element[4:]`
->     3. `element[:]`
+>     1. `element[:4]`  
+>     2. `element[4:]`  
+>     3. `element[:]`  
 > > ## Solution
 > > Create code with print statements to try this out.
 > > 1. `element[:4]` starts at the beginning of the list and goes up to (but does not include) position 4, returning `'elem'`
