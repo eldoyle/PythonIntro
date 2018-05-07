@@ -29,12 +29,6 @@ In the lesson on [Variables]({{ page.root }}/03-variables) we we wrote code to c
 Create a new script file by clicking the blank page button on the top left.  Then, type in the following lines of code:
 
 ~~~
-"""
-Created on Mon Apr 24 21:15:50 2017
-
-@author: erin.doyle
-"""
-
 AreaInPixels = 6929
 mm2PerPixel = 0.0277
 AreaInMM = AreaInPixels*mm2PerPixel
@@ -122,14 +116,8 @@ At minimum, include a block comment at the beginning of your script explaining t
 script.
 
 > ## Examples/Exercises
-> Modify the script above to include appropriate comments
+> Modify the script below to include appropriate comments and a descriptive print statement.
 > ~~~ 
-> """
-> Created on Mon Apr 24 21:15:50 2017
-> 
-> @author: erin.doyle
-> """
-> 
 > AreaInPixels = 6929
 > mm2PerPixel = 0.0277
 > AreaInMM = AreaInPixels*mm2PerPixel
@@ -160,15 +148,13 @@ script.
 {: .challenge}
 
 > ## Example
-> In a previous example, you wrote code to take 2 variables and “switch” their values, so that
-> `density1 = 4.59`
-> `density2 = 3.28`
-> 
-> Became
-> 
-> `density1 = 3.28`
-> `density2 = 4.59`
->Now, take that code and convert it to a script.  Your script should 1) include comments descriptive comments 2) print out useful statement explaining what the values of the variables are both before and after the switch.
+> In a previous example from the lesson on [Variables]({{ page.root }}/03-variables), you wrote code to take twp variables and 
+> “switch” their values, so that 
+> `density1 = 4.59` and `density2 = 3.28`
+> became
+> `density1 = 3.28` and `density2 = 4.59`
+> Now, take that code and convert it to a script.  Your script should 1) include descriptive comments and 2) print out 
+> a useful statement explaining what the values of the variables are both before and after the switch.
 > > ## Solution
 > > #print values before switching:
 > > print(“Before switching, density1 is”, density1, “and density2 is”, density2) 
