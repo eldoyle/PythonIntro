@@ -14,11 +14,20 @@ keypoints:
 - "A script can be reused over and over again"
 ---
 
-1. Rather than running this code one line at a time, we could write it in the Editor window, save it, and run everything at once.
+## Writing scripts
 
-2. Spyder will run your code in order, line by line, from top to bottom.
+Rather than running our code one line at a time, we could write it in the Editor window, save it, and run everything at once.
+A script is a file that contains multiple line of code.  Scripts have many advantages over working in the console: they can be 
+saved and worked on over time (useful for writing all but the tiniest programs!), and they can be reused.  This means that you
+don't have to type the same commands over and over!
 
-3. Example- same as code above to convert area in pixels to mm2.  Create a new script file by clicking the blank page button on the top left.  Then, type in the following commands
+When you run a script, Spyder will run your code in order, line by line, from top to bottom.
+
+### Script example
+In the lesson on Variables we we wrote code to convert an area in pixels to are in mm2.  Let's convert it to a script.
+
+Create a new script file by clicking the blank page button on the top left.  Then, type in the following lines of code:
+
 ~~~
 """
 Created on Mon Apr 24 21:15:50 2017
@@ -33,44 +42,75 @@ print(AreaInMM)
 ~~~ 
 {: .language-python}
 
-### Run the program by clicking the green arrow button at the top of the Spyder window.
+Run the program by clicking the green arrow button at the top of the Spyder window.
 
-* The first time you run a script, Spyder will ask you to save your code.  This is when you can choose where to save it
+### Where do scripts get saved?
 
-* By default, the Working Directory is where Spyder will save your scripts and look for files.  You can change your working directory by using the buttons at the top-left of Spyder.  It is a good idea to create one folder that you can easily find to store all of your Python projects.   On the DIVAS VM, your working directory is automatically set to </home/diva>.
+The first time you run a script, Spyder will ask you to save your code.  This is when you can choose where to save it.
 
-Later, when we use scripts to open files or import functions from other .py files, you will need to either 1) Make sure the file you are trying to open/import is located in the same folder as the script you are running OR 2) supply the full path to the file.
+By default, the Working Directory is where Spyder will save your scripts and look for files.  You can change your working
+directory by using the buttons at the top-right of Spyder.  It is a good idea to create one folder that you can easily find to
+store all of your Python projects.  On the DIVAS VM, your working directory is automatically set to </home/diva>.
+
+> ### Know your Working Directory
+> Later, when we use scripts to open files or import functions from other .py files, you will need to either 1) Make sure the 
+> file you are trying to open/import is located in the same folder as the script you are running OR 2) supply the full path to > > the file.
 {: .callout}
 
-
-> When you save your program, make sure the name ends in the file extension “.py”.  This tells  your computer that this is a Python script.  It will also enable color coding in Spyder.  In fact, if you open a script in Spyder and don’t see color coding, the first thing you should check is for the “.py” extension.
+> ### .py files
+> When you save your program, make sure the name ends in the file extension “.py”.  This tells  your computer that this is a 
+> Python script.  It will also enable color coding in Spyder.  In fact, if you open a script in Spyder and don’t see color 
+> coding, the first thing you should check is for the “.py” extension.
 {: .callout}
 
-### The print() statement
-1. The last line of the script contains a new command: print().  When running code as a script, the values of variables or computations are not automatically displayed (trying running the script above without that line!).  If you want to show a variable or print some other output, you can use the print() command.  print() goes on its own line, with whatever you want to print inside the parenthesis.
-2. The output of the print statement will be printed in the console.
-3. We can make the print statement more informative, if we want to.  For example, we could combine a descriptive text string with the variable that we wish to print.
-> Example- change the last line of the script to
-~~~
-print("The area in mm2 is", AreaInMM)
-~~~
-{: .language-python}
+### The ```print()``` statement
+The last line of the script contains a new command: ```print()```.  When running code as a script, the values of variables or 
+computations are not automatically displayed (trying running the script above without that line!).  If you want to show a 
+variable or print some other output, you can use the ```print()``` command.  ```print()``` goes on its own line, with whatever 
+you want to print inside the parentheses.
 
-## Good practices- commenting code
-* Python doesn’t care about picking good variable names, whether or not you break up chunks of code with whitespace, or whether or not you include helpful notes to yourself or other users.  However, all of these things will make a difference to a human reader.  You should always write your code for a human audience- specifically yourself or someone else who might pick up your project months or years from now and need to figure out what your code actually does
+The output of the print statement will be printed in the console.
 
-1. To include the readability and usefulness of your code, you should
-..1. Break up long pieces of code logically, using empty lines (whitespace).  Try to break up your code into chunks based on function.
-..2. Include comments.  The # symbol indicates that everything that comes after it on a line of code is a comment.  The comment will be ignored by Python, but it can provide useful information to future users of your code (including you!).  At a minimum, you should include
-...1. A comment line at the beginning of each section of code explaining what the section is doing
-...2. Comments at the end of lines if the line of code does something unusual or interesting
+> ### Using informative print statements
+> We can make the print statement more informative by including some explanatory text.  For example, we could combine a 
+> descriptive text string with the variable that we wish to print.  This will prevent you from printing out multiple numbers or 
+> variables with no indication of which one is which!
+>
+> As an example, change the last line of the script above to read
+> ~~~
+> print("The area in mm2 is", AreaInMM)
+> ~~~
+> {: .language-python}
+>
+> Then run the script.  You should get a more informative output statement!
+{: .callout}
 
-Put the comment on the line above if it is long
-Anything that will be important to remember later should be commented!  You will not remember why you made that choice 3 days, months, or years later!
-Python also allows you to include longer comments a block comments (such as the block comment automatically generated by Spyder at the top of a script).  
-At minimum, include a block comment at the beginning of your script explaining the name, usage, and the purpose/goal of the script.
+## Good practices- Write your code for a human, not a computer!
 
-NEED TO REFORMAT
+Python doesn’t care about picking good variable names, whether or not you break up chunks of code with whitespace, or whether or 
+not you include helpful notes to yourself or other users.  However, all of these things will make a difference to a human 
+reader.  You should always write your code for a human audience- specifically yourself or someone else who might pick up your 
+project months or years from now and need to figure out what your code actually does.
+
+To include the readability and usefulness of your code, you should
+1. Break up long pieces of code logically, using empty lines (whitespace).  Try to break up your code into chunks based on 
+function.
+2. Include comments.  The ```#``` symbol indicates that everything that comes after it on a line of code is a comment.  The 
+comment will be ignored by Python, but it can provide useful information to future users of your code (including you!).  At a 
+minimum, you should include
+..* A comment line at the beginning of each section of code explaining what the section is doing
+..* Comments at the end of lines if the line of code does something unusual or interesting
+..* Put the comment on the line above if it is long
+
+Anything that will be important to remember later should be commented!  You will not remember why you made that choice 3 days, 
+months, or years later!
+
+Python also allows you to include longer comments a block comments (such as the block comment automatically generated by Spyder 
+at the top of a script).  Block comments are denoted by three double quotes at the beginning of the block comment ```"""``` and three 
+double quotes at the end. 
+
+At minimum, include a block comment at the beginning of your script explaining the name, usage, and the purpose/goal of the 
+script.
 
 > ## Examples/Exercises
 > Modify the script above to include appropriate comments
