@@ -24,7 +24,7 @@ don't have to type the same commands over and over!
 When you run a script, Spyder will run your code in order, line by line, from top to bottom.
 
 ### Script example
-In the lesson on [Variables]({{ page.root }}/03-variables) we we wrote code to convert an area in pixels to area in mm2.  Let's convert it to a script.
+In the lesson on [Variables]({{ page.root }}/03-variables/) we we wrote code to convert an area in pixels to area in mm2.  Let's convert it to a script.
 
 Create a new script file by clicking the blank page button on the top left.  Then, type in the following lines of code:
 
