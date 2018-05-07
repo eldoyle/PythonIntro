@@ -100,9 +100,9 @@ descriptive names that will make it clear what your code is doing.
 > #Print the final area in mm2
 > print('The area in mm2 is', AreaInMM) 
 > ~~~
-> {: language-python}
+> {: .language-python}
 > Write a new script that uses a for loop to compute and print the area in mm2 for all of the areas stored in the list 
-> `areas = [6929.6, 8536.47, 11359.3, 17743.4]`
+> `areas = [6929.6, 8536.47, 11359.3, 17743.4]`  
 > ## Solution
 > > 
 > > ~~~
