@@ -71,7 +71,7 @@ you want to print inside the parentheses.
 
 The output of the print statement will be printed in the console.
 
-> ### Using informative print statements
+> ## Using informative print statements
 > We can make the print statement more informative by including some explanatory text.  For example, we could combine a 
 > descriptive text string with the variable that we wish to print.  This will prevent you from printing out multiple numbers or 
 > variables with no indication of which one is which!
@@ -96,7 +96,7 @@ To include the readability and usefulness of your code, you should
 1. Use good variable names (see the [previous lesson]({{ page.root }}/03-variables) for examples.
 2. Break up long pieces of code logically, using empty lines (whitespace).  Try to break up your code into chunks based on 
 function.
-3. Include comments.  The ```#``` symbol indicates that everything that comes after it on a line of code is a comment.  The 
+3. Include comments.  The `#` symbol indicates that everything that comes after it on a line of code is a comment.  The 
 comment will be ignored by Python, but it can provide useful information to future users of your code (including you!).  At a 
 minimum, you should include
 ..* A comment line at the beginning of each section of code explaining what the section is doing
