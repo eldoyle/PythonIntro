@@ -1,25 +1,26 @@
 ---
-title: "Loops"
+title: "For Loops"
 teaching: 0
 exercises: ""
 questions:
-- "Add Questions"
-
+- "How can I repeat the same operations on every item in a list?"
 objectives:
-- "Add Objectives"
-- ""
-- ""
+- "Understand basic loop syntax"
+- "Be able to explain the role of the loop variable"
+- "Be able to write simple loops that operate on strings or lists"
 keypoints:
-- "Add Keypoints"
-- ""
-- ""
+- "Loops require careful attention to spacing and indentation"
+- "The loop variable takes on the value of each item in the object we are looping over, one at a time"
+- "You must refer to the loop variable in the code written under the for loop statement"
 ---
-## Making the computer repeat things
+## For loops: Making the computer repeat things
 
-This is where being able to write your own code gets really powerful!  Often, we will need to repeat the same calculation over and over, or repeat the same analysis workflow on multiple different files.  Loops are one tool that allows us to repeat things.
+This is where being able to write your own code gets really powerful!  Often, we will need to repeat the same calculation over 
+and over, or repeat the same analysis workflow on multiple different files.  Loops are one tool that allows us to repeat things.
 
-Note: Because properly using loops requires careful attention to spacing and indentation, will work primarily from scripts.
+Because properly using loops requires careful attention to spacing and indentation, will work primarily from scripts.
 
+Here is a simple example.
 ~~~
 #One way to print every letter in a word
 word = 'lead'
@@ -31,8 +32,10 @@ print(word[3])
 ~~~
 {: .language-python}
 
-However, this is a very inefficient approach!  If the word gets much longer, then we are better off typing out the letters ourselves.  Or what if we don’t know how long the word is?
+However, this is a very inefficient approach!  If the word gets much longer, we are better off typing out the letters ourselves.  
+Or what if we don’t know how long the word is?
 
+Here is a much better way to do things.  Notice that we don't even have to know the length of the string stored in `word2`:
 ~~~
 #A much better way to print every letter in the word
 word2 = 'oxygen'
@@ -47,15 +50,23 @@ This approach is much more efficient:  We only have type a few lines of code and
 
 ## Loop variables
 The general format of a loop is this:
-`for thing in element: #element is a list, string, etc  
-			Do something to thing
-			Can be multiple lines
+~~~
+for thing in element: #element is a list, string, etc  
+	Do something to thing
+	Can be multiple lines
+	All of these lines will be executed for each thing in the string/list/whatever
 
-#This is not part of the loop (is not indented)`
+This is not part of the loop (is not indented)
+Code written like this will only be executed after the loop is finished
+~~~
+{: language-python}
 
-In the example above, `thing` is the loop variable.  It will take on multiple values while the loop is running.  In our oxygen example, letter will be ‘o’ the first time through the loop, ‘x’, the second time, and so on, until the last time through when it takes on the value ‘n’.
+In the example above, `thing` is the loop variable.  It will take on multiple values while the loop is running.  In our oxygen 
+example, `letter` will be ‘o’ the first time through the loop, ‘x’, the second time, and so on, until the last time through when 
+it takes on the value ‘n’.
 
-We can name the loop variable anything we want, such as `banana` or `fuzzyKittens`, as long as we refer to it inside the body of the loop!
+We can name the loop variable anything we want, such as `banana` or `fuzzyKittens`, as long as we refer to it inside the body of 
+the loop!
 
 ~~~
 #A much better way to print every letter in the word
