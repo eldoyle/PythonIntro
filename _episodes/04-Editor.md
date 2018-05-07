@@ -57,10 +57,10 @@ store all of your Python projects.  On the DIVAS VM, your working directory is a
 > coding, the first thing you should check is for the “.py” extension.
 {: .callout}
 
-### The ```print()``` statement
-The last line of the script contains a new command: ```print()```.  When running code as a script, the values of variables or 
+### The `print()` statement
+The last line of the script contains a new command: `print()`.  When running code as a script, the values of variables or 
 computations are not automatically displayed (trying running the script above without that line!).  If you want to show a 
-variable or print some other output, you can use the ```print()``` command.  ```print()``` goes on its own line, with whatever 
+variable or print some other output, you can use the `print()` command.  `print()` goes on its own line, with whatever 
 you want to print inside the parentheses.
 
 The output of the print statement will be printed in the console.
@@ -167,7 +167,7 @@ script.
 > > density2 = 3.28
 > > 
 > > #print values before switching:
-> > print(“Before switching, density1 is”, density1, “and density2 is”, density2) 
+> > print('Before switching, density1 is', density1, 'and density2 is', density2) 
 > >
 > > #Swap variables
 > > temp1 = density1 #create a temporary variable to store density1
@@ -175,7 +175,7 @@ script.
 > > density2 = temp1 #Assign density2 to the value in the temp variable
 > > 
 > > #print values after
-> > print(“After switching, density1 is”, density1, “and density2 is”, density2)
+> > print('After switching, density1 is', density1, 'and density2 is', density2)
 > > ~~~
 > > {: .language-python}
 > {: .solution}
