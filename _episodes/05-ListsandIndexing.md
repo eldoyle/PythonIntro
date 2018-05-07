@@ -258,16 +258,16 @@ We can also use similar indexing principles to access specific characters or sub
 > > `element[1:-1]` will return all but the first and last characters: `'xyge'`.  
 > > 
 > > Remember that position 1 is the *second* character of the string (0-based counting!) and that the slice goes *up to*, but 
-> > *doesn't include* the character at the index position after the colon.  Since e`lement[-1]` refers to the last character, 
-> > the slice will stop just before `n`, and only include up to the next-to-last position.
+> > *doesn't include* the character at the index position after the colon.  Since `element[-1]` refers to the last character, 
+> > the slice will stop just before `'n'`, and only include up to the 'e' at the next-to-last position.
 > {: .solution}
 {: .challenge}
 
 > ## Adding a value to a list
 > Assume you have the following list: 
-> `areas = [8536.47, 11359.3, 17743.4]'  
+> `areas = [8536.47, 11359.3, 17743.4]`  
 > Create a new empty list  
-> areas2 = []  
+> `areas2 = []`  
 > Now add items to `areas2` so that it is identical to `areas` except that `7798.02` has been inserted between `8536.47` and 
 > `11359.3`.  You should refer to the list `areas` and avoid typing in numbers whenever possible.
 > 
