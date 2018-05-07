@@ -268,8 +268,8 @@ We can also use similar indexing principles to access specific characters or sub
 > `areas = [8536.47, 11359.3, 17743.4]`  
 > Create a new empty list  
 > `areas2 = []`  
-> Now add items to `areas2` so that it is identical to `areas` except that `7798.02` has been inserted between `8536.47` and 
-> `11359.3`.  You should refer to the list `areas` and avoid typing in numbers whenever possible.
+> Now add items to `areas2` so that it is identical to `areas` except that 7798.02 has been inserted between 8536.47 and 
+> 11359.3.  You should refer to the list `areas` and avoid typing in numbers whenever possible.
 > 
 > The final value of `areas2` should be `areas2 = [8536.47, 7798.02, 11359.3, 17743.4]`
 > > ## Solution
