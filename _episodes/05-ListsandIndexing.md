@@ -154,7 +154,7 @@ begins counting at 0.
 > {: .output}
 {: .callout}
 
-> # List Indexing With Negative Numbers
+> ## List Indexing With Negative Numbers
 > How would you use negative numbers to get the next-to-last item in the list `samples`?  How would you get the third-to-last 
 > item?
 > > ## Solution
@@ -162,7 +162,7 @@ begins counting at 0.
 > > print(samples[-2]) #Returns the next-to-last item
 > > print(samples[-3]) #Returns the third-to-last item (which is the same as the first item in this example)
 > > ~~~
-> > {: .languate-python}
+> > {: .language-python}
 > > `samples[-2]` returns the output `'Trial293'` and `samples[-3]` returns the output `'Trial16'`.
 > {: .solution}
 {: .challenge}
@@ -185,10 +185,11 @@ Returns the output
 {: .output}
 
 ### Accessing a range of objects with slicing (up to, but not inclusive)
-We can also use the same syntax to return a slice or subsection of the list.  We separate the first and last indices for the 
+We can also use similar syntax to return a slice or subsection of the list.  We separate the first and last indices for the 
 items we want with a colon.  Note that the second index is up to, but not inclusive.  For example,
 ~~~
- areas[0:2]
+areas = [6929.6, 8536.47, 11359.3, 17743.4]
+areas[0:2]
  ~~~
 {: .language-python}
 
@@ -198,44 +199,36 @@ Returns the output
 ~~~ 
 {: .output}
 
-This returns a list of areas[0] and areas[1].  It does not include areas[2].
+This returns a list of `areas[0]` and `areas[1]`.  It does not include `areas[2]`.
 
 If we want to start at the beginning of the list, we can leave out the first coordinate.  Similarly, if we want to start our slice at a specific index and go to the end of the list, we can leave out the second coordinate.
 ~~~
-areas[:2]
+print(areas[:2])
+print(areas[1:])
 ~~~
 {: .language-python}
 
 Returns the output
 ~~~
 [6929.6, 8536.47]
-~~~
-{: .output}
-
-~~~
-areas[1:]
-~~~
-{: .language-python}
-
-Returns the output
-~~~
 [8536.47, 11359.3, 17743.4]
 ~~~
 {: .output}
 
-7. Len() function
-We may not always know (or remember) the length of a list.  If we need to get this number, we can use the len() function to find it.
+### Finding the length of a list 
+We may not always know (or remember) the length of a list.  If we need to get this number, we can use the `len()` function to 
+find it.
 ~~~
-len(areas)
+print('The length of areas is:', len(areas))
 ~~~
 {: .language-python}
 
 Returns the output
 ~~~
-4
+The length of areas is 4
 ~~~~
 {: .output}
 
-Note that this returns the expected length of the list.  Even though 'areas[3]' is the last item of the list (0-based counting!), the length is returned as 4.
+Note that this returns the expected length of the list.  Even though `areas[3]` is the last item of the list (0-based counting!), the length is returned as 4.
 
 We can also use similar indexing principles to access specific characters or substrings of a string variable 
