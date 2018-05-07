@@ -104,7 +104,6 @@ descriptive names that will make it clear what your code is doing.
 > Write a new script that uses a for loop to compute and print the area in mm2 for all of the areas stored in the list 
 > `areas = [6929.6, 8536.47, 11359.3, 17743.4]`  
 > ## Solution
-> > 
 > > ~~~
 > > """
 > > Created on Mon Apr 24 21:15:50 2017
@@ -116,7 +115,7 @@ descriptive names that will make it clear what your code is doing.
 > > 
 > > #Set variables and conversion factors
 > > areas = [6929.6, 8536.47, 11359.3, 17743.4]
-> > mm2PerPixel = 0.0277 #Python ignores everything after '#'
+> > mm2PerPixel = 0.0277
 > > 
 > > #Convert from pixels to mm2
 > > for area in areas:
