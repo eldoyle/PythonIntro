@@ -94,17 +94,6 @@ We can also modify a list by removing items
 
 ~~~
 print("Samples before:", samples)
-~~~
-{: .language-python}
-
-Returns the output
-~~~
-('Samples before:', ['Trial16', 'Trial20', 'Trial293', 'Trial17'])
-~~~
-{: .output}
-
-
-~~~
 samples.remove('Trial20')
 print("Samples after:", samples)
 ~~~
@@ -112,6 +101,7 @@ print("Samples after:", samples)
 
 Returns the output
 ~~~
+('Samples before:', ['Trial16', 'Trial20', 'Trial293', 'Trial17'])
 ('Samples after:', ['Trial16', 'Trial293', 'Trial17'])
 ~~~
 {: .output}
@@ -143,7 +133,7 @@ begins counting at 0.
 > > print(samples[0]) #Returns the first item, at index position 0
 > > print(samples[2]) #Returns the first item, at index position 2 (the list contains 3 items)
 > > ~~~
-> > {: .languate-python}
+> > {: .language-python}
 > > `samples[0]` returns the output `'Trial16'` and `samples[2]` returns the output `'Trial17'`.
 > {: .solution}
 {: .challenge}
