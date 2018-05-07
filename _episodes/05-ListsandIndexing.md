@@ -232,3 +232,19 @@ The length of areas is 4
 Note that this returns the expected length of the list.  Even though `areas[3]` is the last item of the list (0-based counting!), the length is returned as 4.
 
 We can also use similar indexing principles to access specific characters or substrings of a string variable 
+
+## Exercises
+> ## Indexing characters in a string
+> Assume you have the following variable: 
+> `element = 'oxygen'`
+> What are the values of
+>     1. `element[:4]`
+>     2. `element[4:]`
+>     3. `element[:]`
+> > ## Solution
+> > Create code with print statements to try this out.
+> > 1. `element[:4]` starts at the beginning of the list and goes up to (but does not include) position 4, returning `'elem'`
+> > 2. `element[4:]` starts at position 4 (`'e'`) and goes through the end of the string, returning `'ent'`
+> > 3. `element[:]` starts at the beginning and goes through the end of the string, returning `'element'`
+> {: .solution}
+{: .challenge}
