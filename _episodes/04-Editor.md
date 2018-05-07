@@ -93,9 +93,10 @@ reader.  You should always write your code for a human audience- specifically yo
 project months or years from now and need to figure out what your code actually does.
 
 To include the readability and usefulness of your code, you should
-1. Break up long pieces of code logically, using empty lines (whitespace).  Try to break up your code into chunks based on 
+1. Use good variable names (see the [previous lesson]({{ page.root }}/03-variables) for examples.
+2. Break up long pieces of code logically, using empty lines (whitespace).  Try to break up your code into chunks based on 
 function.
-2. Include comments.  The ```#``` symbol indicates that everything that comes after it on a line of code is a comment.  The 
+3. Include comments.  The ```#``` symbol indicates that everything that comes after it on a line of code is a comment.  The 
 comment will be ignored by Python, but it can provide useful information to future users of your code (including you!).  At a 
 minimum, you should include
 ..* A comment line at the beginning of each section of code explaining what the section is doing
