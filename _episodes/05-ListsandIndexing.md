@@ -237,7 +237,7 @@ We can also use similar indexing principles to access specific characters or sub
 > ## Indexing characters in a string
 > Assume you have the following variable: 
 > `element = 'oxygen'`
-> What are the values of
+> What are the values of  
 >     1. `element[:4]`  
 >     2. `element[4:]`  
 >     3. `element[:]`  
