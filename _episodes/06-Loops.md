@@ -18,7 +18,7 @@ keypoints:
 This is where being able to write your own code gets really powerful!  Often, we will need to repeat the same calculation over 
 and over, or repeat the same analysis workflow on multiple different files.  Loops are one tool that allows us to repeat things.
 
-Because properly using loops requires careful attention to spacing and indentation, will work primarily from scripts.
+Because properly using loops requires careful attention to spacing and indentation, we will work primarily from scripts.
 
 Here is a simple example.
 ~~~
@@ -78,13 +78,59 @@ print('Done with the for loop')
 ~~~
 {: .language-python}
 
-However, this violates all of our rules about good variable names!  In general, you should try to give your loop variables descriptive names that will make it clear what your code is doing.
+However, this violates all of our rules about good variable names!  In general, you should try to give your loop variables 
+descriptive names that will make it clear what your code is doing.
 
-## Examples/Exercies
-Finish
+> ## Looping over a list
+> Previously, we used this code to convert area in pixels to area in mm2:
+> ~~~ 
+> """
+> Created on Mon Apr 24 21:15:50 2017
+> @author: erin.doyle
+> A script to convert measured area in pixels to actual area in mm2
+> """
+> 
+> #Set variables and conversion factors
+> AreaInPixels = 6929 
+> mm2PerPixel = 0.0277 
+> 
+> #Convert from pixels to mm2
+> AreaInMM = AreaInPixels*mm2PerPixel
+> 
+> #Print the final area in mm2
+> print('The area in mm2 is', AreaInMM) 
+> ~~~
+> {: language-python}
+> Write a new script that uses a for loop to compute and print the area in mm2 for all of the areas stored in the list 
+> `areas = [6929.6, 8536.47, 11359.3, 17743.4]`
+> ## Solution
+> > 
+> > ~~~
+> > """
+> > Created on Mon Apr 24 21:15:50 2017
+> > 
+> > @author: erin.doyle
+> > 
+> > A script to convert measured area in pixels to actual area in mm2
+> > """
+> > 
+> > #Set variables and conversion factors
+> > areas = [6929.6, 8536.47, 11359.3, 17743.4]
+> > mm2PerPixel = 0.0277 #Python ignores everything after '#'
+> > 
+> > #Convert from pixels to mm2
+> > for area in areas:
+> > areaInMm = area*mm2PerPixel
+> > 
+> > #Print the final area in mm2
+> > print('area in pixels is :' + str(area) + 'The area in mm2 is'  + str(AreaInMm)) #print description + number
+> > {: .language-python}
+> {: .solution}
+{: .challenge}
 
 ## Using a loop to update a variable
-Sometimes, you may need to set up a variable outside of the loop (for example, a counter), and then update it with each run through the loop:
+Sometimes, you may need to set up a variable outside of the loop (for example, a counter), and then update it with each run 
+through the loop:
 ~~~
 length = 0
 for vowel in 'aeiou':
