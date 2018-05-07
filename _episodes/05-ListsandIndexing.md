@@ -125,7 +125,7 @@ This code returns the output
 Notice that giving the index “1” returned the second item in the list.  This is because Python (like many programming languages) 
 begins counting at 0.  
 
-> # List Indexing
+> ## List Indexing
 > How would you get the first item in the list `samples`?  How would you get the last item?
 > 
 > > ## Solution
