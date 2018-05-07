@@ -192,7 +192,7 @@ later to look at your code.
 
 You should do your best to give your variables descriptive, useful names that describe the data they hold.  
 
-> ##DIVAS variable name conventions
+> ## DIVAS variable name conventions
 > In the DIVAS project, variables should start with a lowercase letter, and capitalize each successive letter (“camel case”).
 > For example, `plateArea`, or `colonyCount`.
 {: .callout}
