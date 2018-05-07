@@ -15,7 +15,7 @@ keypoints:
 - "Code should be written in an IDE like Spyder or by using a plain text editor" 
 ---
 
-##Introduction to Python and the Spyder environment
+## Introduction to Python and the Spyder environment
 
 Spyder is an Integrated Development Environment (IDE) used for writing/developing code.  Technically, you could write your code 
 using any old text editor (for example, nano, that we will use in the Unix shell lessons).  However, an IDE like Spyder has some nice features that will make it easier to see the structure of your code, track variables, and find obvious errors/bugs.
@@ -25,7 +25,7 @@ using any old text editor (for example, nano, that we will use in the Unix shell
 > other features that Python will not be able to deal with.  Stick to Spyder or a plain text editor (saves to a .txt format)!  
 {: .callout}
 
-###Starting Spyder
+### Starting Spyder
 
 In the DIVAs VM, we will start Spyder from the command line.
 
@@ -39,7 +39,7 @@ This will start the Spyder application.  Note: depending on your settings, this 
 > If you want to start Spyder and leave that command line terminal available, use the command ```spyder &```.
 {: .callout}
 
-###Useful Spyder Features
+### Useful Spyder Features
 
 The following Spyder features/tabs/windows will be the most useful to you.  You will want to set up your Spyder screen so that 
 you can easily access them.
