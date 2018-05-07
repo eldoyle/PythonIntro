@@ -124,6 +124,7 @@ descriptive names that will make it clear what your code is doing.
 > > 
 > > #Print the final area in mm2
 > > print('area in pixels is :' + str(area) + 'The area in mm2 is'  + str(AreaInMm)) #print description + number
+> > ~~~
 > > {: .language-python}
 > {: .solution}
 {: .challenge}
