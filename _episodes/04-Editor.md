@@ -9,7 +9,7 @@ objectives:
 - "Be able to write and run a Python script"
 
 keypoints:
-- "A script is a file that contains multiple lines of code
+- "A script is a file that contains multiple lines of code"
 - "A script can be run all at once rather than writing and running one line at a time"
 - "A script can be reused over and over again"
 ---
