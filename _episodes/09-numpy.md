@@ -14,7 +14,7 @@ keypoints:
 operations on rows and columns of the data"
 ---
 
-In the lesson on [Files]({{ page.root }}/ReadingandWritingTextFiles) we saw one way to deal with a .csv-formatted data file.  
+In the lesson on [Files]({{ page.root }}/08-ReadingandWritingTextFiles) we saw one way to deal with a .csv-formatted data file.  
 However, Python has some built in libraries that allow us to handle a data table much more easily.
 
 ## Libraries
