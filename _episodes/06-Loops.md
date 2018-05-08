@@ -195,12 +195,6 @@ print('after the loop, letter is', letter)
 > string with the characters in reverse order, so `'Newton'` becomes `'notweN'`.
 > Hint: don’t forget that you can use + to concatenate (add) strings together!
 > > ## Solution
-> > Add solution
-> {: .solution}
-{: .challenge}
-
-> Modify your range code to print all of the even numbers between 1 and 10 (inclusive):  2, 4, 6, 8, 10
-> > ## Solution
 > > ~~~
 > > #Create an empty string that we will add on to
 > > newWord = ''
