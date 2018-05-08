@@ -119,3 +119,73 @@ command `print(data[0,0])` which returns
 > {: .solution}
 {: .challenge}
 
+We can also use this indexing to access subsections or whole rows and columns of the array.
+
+`print(data[2,:])` will return all of row 2  
+`print(data[:,2])` will return all of column 2 
+
+`print(data[0:2,1:3])` will print the first two rows of the array (0:2), columns 1 and 2 only (1:3).  
+
+Remember that the indexing is 0-based, and the ranges are up to but not inclusive, so that 1:3 gets columns 1 and 2 but not 
+column 3.
+
+> ## Taking a subset
+> How would you print out the last two columns of the middle two rows of the array `data`?
+>
+> Your output should look like this:
+> > [[ 82.3171  185.823]
+> > [ 64.7318 151.812]]
+> {: .output}
+> > ## Solution:
+> > `print(data[1:3, 8:10])` will print the values that you want.  Since the array has 4 rows, the middle rows are located at 
+> > indexes 1 and 2 (remember: 0-based indexing).  We include 1:3 because indexing is *up to, but not inclusive*.  Similarly,
+> > since we have 10 columns, 8:10 will return the last two columns, located at indexes 8 and 9.
+> {: .solution}
+{: .challenge}
+
+## Calling Functions on the Numpy array
+Python is able to do simple arithmetic operations on numpy arrays.  For example, we can multiply each value in the array * 2
+~~~
+doubledata = data*2
+print(data)
+print(doubledata)
+~~~
+{: .language-python}
+
+We can do similar operations using `+`, `-`, and `/` (the division operator).
+
+However, we often want to do more complicated operations, such as taking an average, or finding the minimum or maximum value.
+For example, the code below will find the average value of the entire dataset.
+~~~
+print(np.mean(data))
+~~~
+{: .language-python}
+
+`mean` is a something called a **function**.  Functions are built-in operations that can do things with variables.  All 
+functions have the name of the function (in this case, *np.mean*) followed by a set of parentheses ().  The text inside the 
+parentheses is called the function's **argument**, and it tells Python what to do the operation on.  After completing the 
+operation, the function returns a specified **output** (in this case, a number representing the average of the data). 
+
+Functions are useful because they can condense many lines of code into one simple command that we can call.
+
+You have already seen some functions: `split()` for breaking apart strings is one example; `print()` and `open()` are other 
+examples.
+
+`.shape` is not a function (it lacks parenthesis).  Instead, it is a piece of information about data that was created when we 
+created the numpy area.  It describes data, like an adjective describes a noun.  These descriptive pieces of information are 
+called **attributes**.
+
+Other useful functions include the following:
+~~~
+maxval = np.max(data) #returns the maximum value
+minval = np.min(data) #returns the minimum value
+stdev = np.std(data)  #returns the standard deviation of all values
+
+print('maximum value:', maxval)
+print('minimum value:', minval)
+print('standard deviation:', stdev)
+~~~
+{: .language-python}
+
+
+
