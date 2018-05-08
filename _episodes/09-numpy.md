@@ -106,5 +106,16 @@ command `print(data[0,0])` which returns
 > {: .solution}
 {: .challenge}
 
-
+> ## The very end
+> How would you print out the last (bottom right) number of the array?
+> > ## Solution
+> > `print(data[3,9])` prints out **168** which is the tenth and last value (index 9) in the fourth, bottom row (index 3).
+> > Note that you could also have done something like this if you did already know the number of rows and colunmns:
+> > ~~~
+> > nRows = data.shape[0] #gets the number of rows
+> > nCols = data.shape[1] #gets the number of columns
+> > print(data[nRows-1, nCols-1]) #subtract 1 to adjust for 0-based indexing
+> > ~~~
+> {: .solution}
+{: .challenge}
 
