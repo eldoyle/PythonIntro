@@ -103,12 +103,10 @@ descriptive names that will make it clear what your code is doing.
 > {: .language-python}
 > Write a new script that uses a for loop to compute and print the area in mm2 for all of the areas stored in the list 
 > `areas = [6929.6, 8536.47, 11359.3, 17743.4]`  
-> 
 > ## Solution
 > > ~~~
 > > """
 > > Created on Mon Apr 24 21:15:50 2017
-> > 
 > > @author: erin.doyle
 > > 
 > > A script to convert measured area in pixels to actual area in mm2
@@ -120,10 +118,10 @@ descriptive names that will make it clear what your code is doing.
 > > 
 > > #Convert from pixels to mm2
 > > for area in areas:
-> > areaInMm = area\*mm2PerPixel
+> >      areaInMm = area\*mm2PerPixel
 > > 
-> > #Print the final area in mm2
-> > print('area in pixels is :' + str(area) + 'The area in mm2 is'  + str(AreaInMm)) #print description + number
+> >      #Print the final area in mm2
+> >      print('area in pixels is :' + str(area) + 'The area in mm2 is'  + str(AreaInMm)) #print description + number
 > > ~~~
 > > {: .language-python}
 > {: .solution}
