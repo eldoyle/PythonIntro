@@ -200,7 +200,7 @@ the only values in Python that are true and false. In fact, any value can be use
 > {: .language-python}
 >
 > Write code to put each of the image names in `images` into the appropriate list.  Your code should 
-> 1) loop through all of the images.
+> 1) Loop through all of the images.
 > 2) For each image, check the file extension (the part after the "."), and append the filename to the appropriate list
 > 3) Print the final lists.  They should have these values:
 > > bmps = ['image3.bmp']  
