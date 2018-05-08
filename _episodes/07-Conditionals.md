@@ -3,11 +3,16 @@ title: "Conditionals"
 teaching: 30
 exercises: 0
 questions:
-- ""
+- "How can I make my program make choices?"
 objectives:
-- ""
+- "Understand the syntax and indentation of an if statement"
+- "Know when to use `if`, `elif`, and `else`"
+- "Be able to explain which statements in the if statement block will be executed"
 keypoints:
-- 
+- "If/elif/else statements allow your program to do different things if different conditions are met"
+- "If/elif/else blocks require careful attention to indentation"
+- "In an if/elif/else block, the code underneath the first condition that is true will be executed"
+- "Code under other conditions will not be executed, even if they are also true"
 ---
 
 Conditionals are another powerful tool to use in our computer programs: they allow the program to make choices and run part of the code only if a specific condition or conditions are met
