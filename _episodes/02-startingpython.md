@@ -4,7 +4,6 @@ teaching: 0
 exercises: 0
 questions:
 - "Where and how do I write and run Python code?"
-- "How do I start Spyder?"
 objectives:
 - "Understand the difference between and IDE (Spyder) and a language (Python)"
 - "Be able to start the Spyder IDE"
