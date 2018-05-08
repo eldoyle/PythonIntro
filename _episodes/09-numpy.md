@@ -75,7 +75,7 @@ a mix of text strings and numbers
     * Note that if we are reading in a csv file that contains only numbers (no column names or row names, we can omit the last 
     two arguments skiprows and usecols)
 
-Also notice that numpy.loadtxt() handled all of the file opening and parsing for us in a single command!
+Also notice that *np.loadtxt()* handled all of the file opening and parsing for us in a single command!
 
 ## Locating specific values within the numpy array
 
