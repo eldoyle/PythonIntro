@@ -230,6 +230,7 @@ the only values in Python that are true and false. In fact, any value can be use
 > > print('bmps: ', bmps)
 > > print('pngs: ', pngs)
 > > print('jpgs: ', jpgs)
+> > ~~~
 > > {: .language-python}
 > {: .solution}
 {: .challenge}
