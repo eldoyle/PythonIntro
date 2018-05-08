@@ -63,7 +63,7 @@ The expression `np.loadtxt(...)` is a **function** call that asks Python to run 
 the numpy library (which we asked Python to abbeviate as *np*). This dotted notation is used everywhere in Python to refer to
 the parts of things as thing.component.
 
-We supplied *numpy.loadtxt* with 4 parameters: 
+We supplied *np.loadtxt* with 4 parameters: 
 * fname is the name of the file we want to read
 * delimiter is the text that separates values on a line (in this case a comma). 
 
