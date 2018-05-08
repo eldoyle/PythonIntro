@@ -10,12 +10,11 @@ objectives:
 - "Perform simple mathematical operations on the data or subsets of the data"
 keypoints:
 - "Libraries contain specialized functions that can be imported and used in your code"
-- "Numpy allows you to easily read in a .csv-formatted data file and perform "
-- "In an if/elif/else block, the code underneath the first condition that is true will be executed"
-- "Code under other conditions will not be executed, even if they are also true"
+- "The numpy library contains functions that allow you to easily read in a .csv-formatted data file and perform simple 
+operations on rows and columns of the data"
 ---
 
-In the lesson on [Files]({{ page.root }}\ReadingandWritingTextFiles) we saw one way to deal with a .csv-formatted data file.  
+In the lesson on [Files]({{ page.root }}/ReadingandWritingTextFiles) we saw one way to deal with a .csv-formatted data file.  
 However, Python has some built in libraries that allow us to handle a data table much more easily.
 
 ## Libraries
@@ -32,16 +31,16 @@ This will let us call functions in the numpy library as `np.<function>()`.
 ## Using the numpy library to load a dataset
 We are going to look at the file DIRT_output_selected_images_simple.csv.
 Open the file and take it look. We will use the numpy library to load specific columns:  
-X_PIXEL: x pixels in scale marker
-Y_PIXEL: y pixels in scale marker
-X_SCALE: mm per pixel (x)
-Y_SCALE: mm per pixel (y)
-DIA_STEM: stem diameter
-DIA_STEM_ SIMPLE: stem diameter
-AREA: the number of root (light) pixels
-AVG_DENSITY: the ratio of root to background pixels within the root ball
-WIDTH_MED: the median width of the rootball
-WIDTH_MAX: the maximum width of the rootball
+X_PIXEL: x pixels in scale marker  
+Y_PIXEL: y pixels in scale marker  
+X_SCALE: mm per pixel (x)  
+Y_SCALE: mm per pixel (y)  
+DIA_STEM: stem diameter  
+DIA_STEM_ SIMPLE: stem diameter  
+AREA: the number of root (light) pixels  
+AVG_DENSITY: the ratio of root to background pixels within the root ball  
+WIDTH_MED: the median width of the rootball  
+WIDTH_MAX: the maximum width of the rootball  
 
 The code below will open and load the datafile.
 ~~~
@@ -77,4 +76,35 @@ a mix of text strings and numbers
     two arguments skiprows and usecols)
 
 Also notice that numpy.loadtxt() handled all of the file opening and parsing for us in a single command!
+
+## Locating specific values within the numpy array
+
+The command `data.shape` will return a tuple that tells us the number of rows and columns in our numpy data array:
+~~~
+import numpy as np
+
+data = np.loadtxt(fname = 'DIRT_output_selected_images_simple.csv', delimiter =',', skiprows = 1, usecols=(1,2,3,4,5,6,7,8,9,10))
+
+print(data.shape)
+~~~
+{: .language-python}
+
+This useful command can be used to quickly check that our data was read in correctly.  The output `(4,10)` tells us that we have 
+an array of data with 4 rows and 10 columns.
+
+We can look up specific values in the array using indexing.  For example, we can look up the very first element by using the 
+command `print(data[0,0])` which returns
+> 165
+{: .output}
+
+> ## Rows and Columns
+> What does `print(data[2,0])` return?  What does it tell you about the indexing (which number is the row and which number is 
+> the column?
+> > ## Solution
+> > `print(data[2,0])` prints out **168** which is the first value (index 0) in the third row (index 2).
+> > In general, numpy arrays are indexed by *[row, column]*, using zero-based indexing.
+> {: .solution}
+{: .challenge}
+
+
 
