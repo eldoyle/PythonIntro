@@ -133,7 +133,7 @@ column 3.
 > How would you print out the last two columns of the middle two rows of the array `data`?
 >
 > Your output should look like this:
-> > [[ 82.3171  185.823]
+> > [[ 82.3171  185.823]  
 > > [ 64.7318 151.812]]
 > {: .output}
 > > ## Solution:
@@ -171,9 +171,9 @@ Functions are useful because they can condense many lines of code into one simpl
 You have already seen some functions: `split()` for breaking apart strings is one example; `print()` and `open()` are other 
 examples.
 
-`.shape` is not a function (it lacks parenthesis).  Instead, it is a piece of information about data that was created when we 
-created the numpy area.  It describes data, like an adjective describes a noun.  These descriptive pieces of information are 
-called **attributes**.
+`.shape` is not a function (it lacks parentheses and an argument).  Instead, it is a piece of information about data that was 
+created when we created the numpy area.  It describes data, like an adjective describes a noun.  These descriptive pieces of 
+information are called **attributes**.
 
 Other useful functions include the following:
 ~~~
@@ -186,6 +186,39 @@ print('minimum value:', minval)
 print('standard deviation:', stdev)
 ~~~
 {: .language-python}
+
+## Applying functions to an axis
+Of course, none of the examples above makes much sense for our data, since we have different kinds of data in each column of our 
+array. `maxval = np.max(data)`, `minval = np.min(data)`, and `stdev = np.std(data)`each applied the function to the entire data 
+set.  
+
+What if we want to apply the function to each row or each column individually?
+One way is to create a variable storing just the row or column we are interested in.
+~~~
+widths = data[:,8] #the widths column
+avgWidth = np.mean(widths)
+print('The average width is: ', str(avgWidth))
+~~~
+{: .language-python}
+
+However, this will quickly get awkward and cumbersome if we need to do this for every column or row in a large dataset 
+(although, we could use a for loop).  A more  efficient way is to apply the function over each row or each column by specifying 
+an axis.
+
+The code below will return the maximum value of each column and the average value of each row in `data`, respectively.
+~~~
+print(np.max(data, axis=0))  #axis=0 applies the function to each column
+print(np.mean(data, axis=1)) #axis=1 applies the function to each row
+~~~
+{: .language-python}
+
+> ## Applying functions to subsets of data
+> 1. Create a new dataset called `data2` that contains only the last 6 columns of the dataset `data`
+> 2. Compute the minimum value for each column in `data2` and the standard deviation for each row.
+> > ## Solution
+> > Write solution
+> {: .solution}
+{: .challenge}
 
 
 
