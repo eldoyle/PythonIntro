@@ -172,9 +172,9 @@ the only values in Python that are true and false. In fact, any value can be use
 > {: .language-python}
 > > ## Solution
 > > The code above should generate the following output:
-> > > number is smaller than 10
-> > > number is smaller than 20
-> > > number is smaller than 30
+> > > number is smaller than 10  
+> > > number is smaller than 20  
+> > > number is smaller than 30  
 > > {: .output}
 > > The first three if statements are independent of each other.  They will all be checked, regardless of whether or not a
 > > previous if statment was true.  The `elif` and `else` statements go with the third `if` statement.  `elif` will only be
@@ -203,12 +203,10 @@ the only values in Python that are true and false. In fact, any value can be use
 > 1) loop through all of the images.
 > 2) For each image, check the file extension (the part after the "."), and append the filename to the appropriate list
 > 3) Print the final lists.  They should have these values:
-> ~~~
-> bmps = ['image3.bmp']
-> jpgs = ['image2.jpg', 'image4.jpg']
-> pngs = ['image1.png', 'image5.png']
-> ~~~
-> {: .language-python}
+> > bmps = ['image3.bmp']
+> > jpgs = ['image2.jpg', 'image4.jpg']
+> > pngs = ['image1.png', 'image5.png']
+> {: .output}
 > > ## Solution
 > > ~~~
 > > images = ['image1.png', 'image2.jpg', 'image3.bmp', 'image4.jpg', 'image5.png']
@@ -232,5 +230,6 @@ the only values in Python that are true and false. In fact, any value can be use
 > > print('bmps: ', bmps)
 > > print('pngs: ', pngs)
 > > print('jpgs: ', jpgs)
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
