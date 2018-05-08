@@ -103,7 +103,8 @@ descriptive names that will make it clear what your code is doing.
 > {: .language-python}
 > Write a new script that uses a for loop to compute and print the area in mm2 for all of the areas stored in the list 
 > `areas = [6929.6, 8536.47, 11359.3, 17743.4]`  
-> ## Solution
+> 
+> > ## Solution
 > > ~~~
 > > """
 > > Created on Mon Apr 24 21:15:50 2017
@@ -142,8 +143,19 @@ print('There are', length, 'vowels')
 It’s worth tracing the execution of this little program step by step. Since there are five characters in 'aeiou', the statement 
 on line 3 will be executed five times. The first time around, length is zero (the value assigned to it on line 1) and vowel is 
 'a'. The statement adds 1 to the old value of length, producing 1, and updates length to refer to that new value. The next time 
-around, vowel is 'e' and length is 1, so length is updated to be 2. After three more updates, length is 5; since there is 
-nothing left in 'aeiou' for Python to process, the loop finishes and the print statement on line 4 tells us our final answer.
+around, vowel is 'e' and length is 1, so length is updated to be 2.  The trace below walks you through this process.
+
+|                     | vowel | length |
+| ------------------  |-------| -------|
+| Before the loop:    | n/a   | 0      |
+| During the loop:    | a     | 0 + 1 = 1 |
+|                     | e     | 1 + 1 = 2 |
+|                     | i     | 2 + 1 = 3 |
+|                     | o     | 3 + 1 = 4 |
+|                     | u     | 4 + 1 = 5 |
+| After the loop:     | u     | 5 |
+
+After three more updates, length is 5; Since there is nothing left in 'aeiou' for Python to process, the loop finishes and the print statement on line 4 tells us our final answer.
 
 Note that a loop variable is just a variable that’s being used to record progress in a loop. It still exists after the loop is 
 over, and we can re-use variables previously defined as loop variables as well:
@@ -174,13 +186,14 @@ print('after the loop, letter is', letter)
 > > for number in numbers: #for loop: numberS is the range, number is one item
 > >      print(number)
 > > ~~~
-> > {: .language-python
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
 > ## Reverse a String
-> Knowing that two strings can be concatenated using the + operator, write a loop that takes a string and produces a new string with the characters in reverse order, so 'Newton' becomes 'notweN'
-> Hint: don’t forget that you can use + to concatenate (add) strings
+> Knowing that two strings can be concatenated using the + operator, write a for loop that takes a string and produces a new 
+> string with the characters in reverse order, so `'Newton'` becomes `'notweN'`.
+> Hint: don’t forget that you can use + to concatenate (add) strings together!
 > > ## Solution
 > > Add solution
 > {: .solution}
@@ -188,6 +201,35 @@ print('after the loop, letter is', letter)
 
 > Modify your range code to print all of the even numbers between 1 and 10 (inclusive):  2, 4, 6, 8, 10
 > > ## Solution
-> > Add solution
+> > ~~~
+> > #Create an empty string that we will add on to
+> > newWord = ''
+> > 
+> > #Loop through word, adding each letter to the end of the string
+> > for letter in word:
+> >     newWord = newWord + letter #The order of these is important!
+> >     
+> > print(newWord) #Print the final value of newWord
+> > ~~~
+> > {: .language-python}
+> {: .solution}
+{: .challenge}
+
+> ## Adding up a range of numbers
+> Modify your range code from the first exercise to add up all of the even numbers between 1 and 10 (inclusive)
+> > ## Solution
+> > ~~~
+> > #Create the range
+> > numbers = range(2,11,2) #note that we have to add one to the top number of the range.  The second 2 is the "step" size.
+> > 
+> > #Create a variable total to store the sum
+> > total = 0
+> > for number in numbers: #for loop: numberS is the range, number is one item
+> >      total = total + number
+> > 
+> > #after going through all of the numbers, print the final total
+> > print(total)
+> > ~~~
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
