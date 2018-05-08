@@ -216,7 +216,7 @@ print(np.mean(data, axis=1)) #axis=1 applies the function to each row
 > 1. Create a new dataset called `data2` that contains only the last 6 columns of the dataset `data`
 > 2. Compute the minimum value for each column in `data2` and the standard deviation for each row.
 > > ## Solution
-> > Write solution
+> > Write solution  
 > {: .solution}
 {: .challenge}
 
