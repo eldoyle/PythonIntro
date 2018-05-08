@@ -155,7 +155,7 @@ around, vowel is 'e' and length is 1, so length is updated to be 2.  The trace b
 |                     | u     | 4 + 1 = 5 |
 | After the loop:     | u     | 5 |
 
-After three more updates, length is 5; Since there is nothing left in 'aeiou' for Python to process, the loop finishes and the print statement on line 4 tells us our final answer.
+After three more updates, length is 5; Since there is nothing left in 'aeiou' for Python to process, the loop finishes and the print statement on the last line tells us our final answer.
 
 Note that a loop variable is just a variable that’s being used to record progress in a loop. It still exists after the loop is 
 over, and we can re-use variables previously defined as loop variables as well:
