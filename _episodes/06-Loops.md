@@ -210,7 +210,7 @@ print('after the loop, letter is', letter)
 {: .challenge}
 
 > ## Adding up a range of numbers
-> Modify your range code from the first exercise to add up all of the even numbers between 1 and 10 (inclusive)
+> Modify your range code from the first exercise to add up all of the even numbers between 1 and 10 (inclusive): 2, 4, 6, 8, 10.
 > > ## Solution
 > > ~~~
 > > #Create the range
