@@ -157,3 +157,15 @@ Go open the file you just wrote and and check that the lines are spaced correctl
 
 Just like Python automatically reads files in as strings, the `write()`command expects to only write strings.  If we want to write numbers to a file, we will need to “cast” them as strings using the command `str()`.
 
+> numbers = range(0, 10)
+> 
+> filename = “output_numbers.txt”
+> 
+> #w tells python we are opening the file to write into it
+> outfile = open(filename, ‘w’)
+> 
+> for number in numbers:
+> 	outfile.write(str(number)
+> 
+> outfile.close() #Close the file when we’re done!
+> {: .callout}
