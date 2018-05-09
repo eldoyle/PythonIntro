@@ -72,3 +72,37 @@ infile.close()`
 Notice that  the `infile.read()`command started at the third line of the file, where the first two `infile.readline()` commands left off. 
 
 In general, if you want to switch between the different commands, you should close the file and then open it again to start over.
+
+Add New header here?
+`infile.readlines()` will read all of the lines into a list, where each line of the file is an item in the list.  This is extremely useful, because it will allow us to loop through each line of the file.
+
+`#Create a variable for the file name
+filename = “Root_Density_Data_full.csv”
+
+#Open the file
+infile = open(filename, ‘r’) 
+
+lines = infile.readlines() 
+
+for line in lines:
+	if ‘C’ in line:
+		print(line) #print lines for control condition
+
+infile.close()`
+
+Since our data is in a .csv file, we can use the `split` command to separate each line of the file into a list.  This can be useful if we want to access specific columns of the file.  
+
+`#Create a variable for the file name
+filename = “Root_Density_Data_full.csv”
+
+#Open the file
+infile = open(filename, ‘r’) 
+
+lines = infile.readlines() 
+
+for line in lines:
+	sline = line.split(‘,’)
+		print(sline) #each line is now a list
+
+infile.close()`
+  
