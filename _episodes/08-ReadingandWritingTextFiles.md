@@ -106,3 +106,16 @@ for line in lines:
 
 infile.close()`
   
+> ## Example
+> For each line in the file, the MAX_WIDTH is stored in the 10th column (index 4 with our 0-based counting). 
+> 
+> When we called the readlines() command in the previous code, Python read in the contents of the file as a string.  If we want Python  > to recognize something as a number, we need to tell it this!  
+> 
+> For example, float(‘5.0’) will tell Python to treat the text string ‘5.0’ as the number 5.0.  int(sline[4]) will tell Python to treat > the text string stored in the 5th position of the list sline as an integer (non-decimal) number.
+> 
+> Modify the code above to only print the line if the MAX_WIDTH is less than 200.
+> > ## Solution
+> > Write solution  
+> {: .solution}
+{: .challenge}
+
