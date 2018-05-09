@@ -138,7 +138,7 @@ Just like reading a file, we will open and write the file in multiple steps.  Fi
 > {: .callout}
 
 ### Newline characters
-When you examine the file you just wrote, all of the text is on the same line!  This is because we must tell Python where to start on a new line by using the special string character \n.  This newline character will tell Python exactly when to start each new line.
+When you examine the file you just wrote, all of the text is on the same line!  This is because we must tell Python where to start on a new line by using the special string character `\n.`  This newline character will tell Python exactly when to start each new line.
 
 > ### Newline characters
 > filename = “output_newlines.txt”
