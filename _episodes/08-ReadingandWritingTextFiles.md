@@ -153,3 +153,7 @@ When you examine the file you just wrote, all of the text is on the same line!  
 > {: .callout}
 
 Go open the file you just wrote and and check that the lines are spaced correctly.
+
+
+Just like Python automatically reads files in as strings, the `write()`command expects to only write strings.  If we want to write numbers to a file, we will need to “cast” them as strings using the command `str()`.
+
