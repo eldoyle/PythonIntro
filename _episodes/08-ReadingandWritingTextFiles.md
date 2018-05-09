@@ -120,3 +120,19 @@ infile.close()`
 > {: .solution}
 {: .challenge}
 
+### Writing to a file
+Often, we will want to write data to a new file.  This is especially useful if we have done a lot of computations or data processing that we want to be able to come back to later. 
+
+Just like reading a file, we will open and write the file in multiple steps.  First, we will create a variable to hold the name of the file that we want to open.  Next, we will call a command to open the file.  Finally, we will actually write the data into the file. When we are done, we should remember to close the file!
+
+> ## Closing the File
+> filename = “output.txt”
+> 
+> #w tells python we are opening the file to write into it
+> outfile = open(filename, ‘w’)
+> 
+> outfile.write(“This is the first line of the file”)
+> outfile.write(“This is the second line of the file”)
+> 
+> outfile.close() #Close the file when we’re done!
+> {: .callout}
