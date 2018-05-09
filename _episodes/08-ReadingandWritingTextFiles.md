@@ -169,3 +169,14 @@ Just like Python automatically reads files in as strings, the `write()`command e
 > 
 > outfile.close() #Close the file when we’re done!
 > {: .callout}
+
+> ## Example
+> Go open the file you just wrote.  You will see that all of the numbers are written on the same line.
+> 
+> Modify the code to write each number on its own line.
+> > ## Solution
+> > Write out solution
+> {: .solution}
+{: .challenge}
+
+
