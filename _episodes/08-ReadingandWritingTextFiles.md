@@ -30,21 +30,22 @@ We will open and read the file in three steps.  First, we will create a variable
 
 You can think of these three steps as being similar to checking out a book from the library.  First, you have to go to the catalog or database to find out which book you need.  Then, you have to go and get it off the shelf.  But in order to actually look at the information in the book, you actually have to read the words!
 
-`#Create a variable for the file name
-filename = “Root_Density_Data_full.csv”
-
-#Open the file
-#r tells Python we are opening the file to read it
-
-infile = open(filename, ‘r’) 
-#Store the file data in a variable
-data = infile.read()
-
-#Print the data in the file
-print(data)
-
-#close the file
-infile.close()`
+> #Create a variable for the file name
+> filename = “Root_Density_Data_full.csv”
+> 
+> #Open the file
+> #r tells Python we are opening the file to read it
+> 
+> infile = open(filename, ‘r’) 
+> #Store the file data in a variable
+> data = infile.read()
+>
+> #Print the data in the file
+> print(data)
+> 
+> #close the file
+> infile.close()`
+{: .callout}
 
 ### There are a variety of commands to read in data from files.  
 
