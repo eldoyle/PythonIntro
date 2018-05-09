@@ -179,4 +179,12 @@ Just like Python automatically reads files in as strings, the `write()`command e
 > {: .solution}
 {: .challenge}
 
-
+> ##Example
+> Read in the data from the file DIRT_output_selected_images_simple.csv that we have been working with.  Use .readlines() to create a list of lines in the file.  Then use a for loop to allow you to loop through each line one at a time.
+> 
+> Write a new csv-formatted file that only contains the rows with MAX_WIDTH less than 200 .
+> Challenge: Write a new csv-formatted file that contains only the rows with MAX_WIDTH less than 200 and includes only the columns for AREA, AVG_DENSITY, and MAX_WIDTH.
+> > ## Solution
+> > Write out solution
+> {: .solution}
+{: .challenge}
