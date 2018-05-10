@@ -37,7 +37,7 @@ Set working directory (top right corner of the Spyder window) to
 
 This is also where we will have to save and run our file opening script.
 
-## Opening and reading files is a three-step process
+### Opening and reading files is a three-step process
 We will open and read the file in three steps.
 1. We will create a variable to hold the name of the file that we want to open.  
 2. We will call a open to open the file.  
@@ -49,7 +49,7 @@ catalog or database to find out which book you need (the filename).  Then, you h
 book up (the *open* function).  Finally, to gain any information from the book, you have to read the words (the *read* 
 function)!
 
-###Here is an example of opening, reading, and closing a file.
+Here is an example of opening, reading, and closing a file.
 ~~~
 #Create a variable for the file name
 filename = 'Root_Density_Data_full.csv' #This is simply a string of text
@@ -64,15 +64,15 @@ data = infile.read()
 print(data)
 
 #close the file
-infile.close()`
+infile.close()
 ~~~
 {: .language-python}
 Once we have read the data in the file into our variable *data*, we can treat it like any other variable in our code.
 
 > ## Use consistent names to make your code clearer
 > It is a good idea to develop some consistent habits about the way you open and read files.  Using the same (or similar!) 
-> variable names will make it easier for you to keep track of which variable is the name of the file, which variable is the
-> opened file object, and which variable contains the read-in data.
+> variable names each time will make it easier for you to keep track of which variable is the name of the file, which variable 
+> is the opened file object, and which variable contains the read-in data.
 >
 > In these examples, we will use `filename` for the text string containing the file name, `infile` for the open file object from 
 > which we can read in data, and `data` for the variable holding the contents of the file.
@@ -105,17 +105,19 @@ infile.close()
 {: .language-python}
 
 Notice that  the `infile.read()`command started at the third line of the file, where the first two `infile.readline()` commands 
-left off.  You can think of it like this: when the file is opened, a pointer or cursor is placed at the top left corner of the f
-file (the beginning of the first line).  Any time a *read* function is called, the cursor or pointer advances from where it 
-already is.  The first `infile.readline()` started at the beginning of the file and advanced to the end of the first line.  Now, 
-the pointer is positioned at the beginning of the second line.  The second `infile.readline()` advanced to the end of the second 
-line of the file, and left the pointer positioned at the beginning of the third line.  The `infile.read()` began from this 
+left off.  
+
+Think of it like this: when the file is opened, a pointer is placed at the top left corner of the file at the beginning of the 
+first line.  Any time a *read* function is called, the cursor or pointer advances from where it already is.  The first 
+`infile.readline()` started at the beginning of the file and advanced to the end of the first line.  Now, the pointer is 
+positioned at the beginning of the second line.  The second `infile.readline()` advanced to the end of the second line of the 
+file, and left the pointer positioned at the beginning of the third line. `infile.read()` began from this 
 position, and advanced through to the end of the file.
 
 In general, if you want to switch between the different kinds of *read* commands, you should close the file and then open it 
 again to start over.
 
-## Reading all of the lines of a file
+### Reading all of the lines of a file into a list
 `infile.readlines()` will read all of the lines into a list, where each line of the file is an item in the list.  This is 
 extremely useful, because once we have read the file in this way, we can loop through each line of the file and process it.
 This approach works well on data files where the data is organized into columns similar to a spreadsheet, because it is likely
@@ -124,15 +126,15 @@ that we will want to handle each line in the same way.
 The example below demonstrates this approach:
 ~~~
 #Create a variable for the file name
-filename = “Root_Density_Data_full.csv”
+filename = "Root_Density_Data_full.csv"
 
 #Open the file
-infile = open(filename, ‘r’) 
+infile = open(filename, 'r') 
 
 lines = infile.readlines() 
 
 for line in lines: #lines is a list with each item representing a line of the file
-	if ‘C’ in line:
+	if 'C' in line:
 		print(line) #print lines for control condition
 
 infile.close() #close the file when you're done!
@@ -145,10 +147,10 @@ useful if we want to access specific columns of the file.
 
 ~~~
 #Create a variable for the file name  
-filename = “Root_Density_Data_full.csv”
+filename = "Root_Density_Data_full.csv"
 
 #Open the file
-infile = open(filename, ‘r’) 
+infile = open(filename, 'r') 
 
 lines = infile.readlines() 
 
@@ -164,19 +166,19 @@ infile.close()  #Always close the file!
 > At first glance, the variable name `sline` in the example above may not make much sense.  In fact, we chose it to be an 
 > abbreviation for "split line", which exactly describes the contents of the variable.
 > 
-> You don't have to use this naming convention if you don't want to, but you should work to use consistent variable names for 
+> You don't have to use this naming convention if you don't want to, but you should work to use consistent variable names 
 > across your code for common operations like this.  It will make it much easier to open an old script and quickly understand
 > exactly what it is doing.
 {: .callout}
   
 > ## Converting text to numbers
-> When we called the readlines() command in the previous code, Python read in the contents of the file as a string.  If we want 
-> Python to recognize something as a number, we need to tell it this!  
+> When we called the `readlines()` command in the previous code, Python read in the contents of the file as a string.  If we 
+> want our code to recognize something in the file as a number, we need to tell it this!  
 > 
-> For example, float(‘5.0’) will tell Python to treat the text string ‘5.0’ as the number 5.0.  int(sline[4]) will tell Python 
-> to treatthe text string stored in the 5th position of the list sline as an integer (non-decimal) number.
+> For example, `float(‘5.0’)` will tell Python to treat the text string '5.0' as the number 5.0.  `int(sline[4])` will tell 
+> our code to treat the text string stored in the 5th position of the list *sline* as an integer (non-decimal) number.
 > 
-> For each line in the file, the MAX_WIDTH is stored in the 10th column (index 4 with our 0-based counting). 
+> For each line in the file, the MAX_WIDTH is stored in the 10th column (index 4 with our 0-based counting).  
 > Modify the code above to print the line only if the MAX_WIDTH is less than 200.
 > > ## Solution
 > > Write solution  
