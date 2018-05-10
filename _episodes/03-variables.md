@@ -16,25 +16,25 @@ keypoints:
 ---
 ## Creating Variables
 
-If we want to, we can essentially use Python as a fancy calculator:
+If we want to, we can essentially use Python as a fancy calculator.  Type the command below into the Spyder console and press 
+`Enter':
 ~~~
 5 + 7
 ~~~
 {: .language-python}
 
-Returns the output
+You should see the result returned as output in the console:
 ~~~
 12
 ~~~
 {: .output}
 
-Here's another example:
-If I type 
+Here's another example.  If I type: 
 ~~~
 636/8
 ~~~
 {: .language-python}
-Returns the output
+I should get back the output 
 ~~~
 79
 ~~~
@@ -42,14 +42,18 @@ Returns the output
 
 However, this isn’t very efficient.  The real value of using Spyder/Python for something like this is that we can store that value in a variable and use it again later.
 
-Imagine that we have computed a root area in pixels from one of our images and we want to convert it to actual area in square mm.  From the scale marker in our image, we also know the area in mm of each pixel.  We can create variables for each of these values.
+Imagine that we have computed colony area in pixels from one of our plate images and we want to convert it to actual area in 
+square mm.  Based on the size properties of our image or some kind of scale marker, we have figured out the number of pixels.
+That corresponds to a square mm of area.  We can create variables for each of these values and use them to do calculations.
+
+Type the commands below in the console, hitting `Enter` after each line.
 ~~~
 AreaInPixels = 6929
 mm2PerPixel = 0.0277
 AreaInPixels*mm2PerPixel
 ~~~
 {: .language-python}
-Returns the output
+This will return the value of the last calculation:
 ~~~
 191.9333
 ~~~
@@ -72,12 +76,16 @@ Returns the output
 ~~~
 {: .output}
 
-## The = assignment operator
+### The assignment operator, `=`
 
-A variable is just a name for a value, like x or AreaInMm.  We assign a variable name to a value by using the assignment operator, =.  This is not the same as saying that the variable name equals the value.  Later, when we use test for equality, we will use a different operator (==).
+A variable is just a name for a value, like x or AreaInMm.  We assign a variable name to a value by using the assignment 
+operator, `=`.  This is not the same as saying that the variable name equals the value.  Later, when we use test for equality, 
+we will use a different operator (==).
 
-The variable name is just a convenient handle that we assign to, and can use to refer to, a value.  You can change the value assigned to a variable at any time, just by reassigning it.
+The variable name is just a convenient handle that we assign to, and can use to refer to, a value.  You can change the value 
+assigned to a variable at any time, just by reassigning it.
 
+This code
 ~~~
 mm2PerPixel = 0.03
 mm2PerPixel
@@ -88,25 +96,35 @@ Returns the output
 0.03
 ~~~
 {: .output}
+The value of *mm2PerPixel* has been updated.
 
+Now, check the value of *areaInPixels*
 ~~~
 AreaInPixels
 ~~~
 {: .language-python}
-Returns the output
+It still has the same value:
 ~~~
 6929
 ~~~
 {: .output}
 
-Notice that the value for mm2PerPixel changed, but the value for AreaInPixels did not!  If we imagine the variable as a sticky note with a name written on it, assignment is like putting the sticky note on a particular value:
+The value for mm2PerPixel changed, but the value for AreaInPixels did not!  If we imagine the variable as a sticky note with a 
+name written on it, assignment is like putting the sticky note on a particular value:
 
-This means that assigning a value to one variable does not change the values of other variables.  Since AreaInPixels doesn’t remember where it came from, it isn’t automatically updated when mm2PerPixel changes.  This is different from the way spreadsheets work.
+This means that **assigning a value to one variable does not change the values of other variables**.  Since AreaInPixels doesn’t 
+remember where it came from, it isn’t automatically updated when mm2PerPixel changes.  This is different from the way 
+spreadsheets work.
 
-## Mathematical operations
+### Mathematical operations
 
-Python allows us to use all of the usual mathematical operators to perform operations on numbers and variables.  You have already seen addition `(+)`, multiplication `(*)` and division `(/)`.
-
+Python uses all of the usual mathematical operators to perform operations on numbers and variables.  You have 
+already seen addition several  
+* `+` addition
+* `*`multiplication 
+* `/` division
+* `**` exponentiation
+* `%`, the modulus operator (pronounced "mod") , which returns the remainder from division
 ~~~
 AreaSquared = AreaInMm**2
 AreaSquared
@@ -117,8 +135,6 @@ Returns the output
 36838.39164889
 ~~~
 {: .output}
-
-The modulus operator (%) may also be useful, it returns the remainder from division.
 
 ~~~
 remainder = 10.0%8
@@ -131,9 +147,12 @@ Returns the output
 ~~~
 {: .output}
 
-## Types of variables (ints, floats, strings)
+### Different types of variables store different types of data
 
-Python lets us make different “types” of variables.  So far you have seen ints (short for integers, numbers without decimal points) and floats (floating point numbers, numbers with decimal points).  Python also allows you to make variables that are strings (strings of text, very useful in Biology when dealing with sequence data) and other types of variables that we will introduce you to later.
+Python lets us make different “types” of variables.  So far you have seen ints (short for integers, numbers without decimal 
+points) and floats (floating point numbers, numbers with decimal points).  Python also allows you to make variables that are 
+strings (strings of text, very useful in Biology when dealing with sequence data) and other types of variables that we will 
+introduce you to later.
 
 ~~~
 name = 'Erin'
@@ -151,7 +170,8 @@ Returns the output
 ~~~
 'Erinimage'
 ~~~
-{: .output}
+{: .output}  
+
 
 ~~~
 name * 2
@@ -183,23 +203,23 @@ TypeError: cannot concatenate 'str' and 'float' objects
 
 Since Python doesn’t know exactly how to add a word to a number, it returns an error message.  Error messages are usually very descriptive, and can tell you a lot about problems in your code!
 
-## Good practices- variable names
+### Good practices- variable names
 
 Variables should be given descriptive names.  Python requires that variable names must begin with a letter.  They are also case 
-sensitive (Text, text, and tEXT are all different variables).  Beyond this, Python doesn’t care what you call your variables, 
-you could name them all after different kinds of fruit if you want!  However, this would be very confusing when you went back 
+sensitive (Text, text, and tEXT are all different variables).  Beyond this, Python doesn’t care what you call your variables.  
+You could name them all after different kinds of fruit if you want!  However, this would be very confusing when you went back 
 later to look at your code.
 
 You should do your best to give your variables descriptive, useful names that describe the data they hold.  
 
 > ## DIVAS variable name conventions
-> In the DIVAS project, variables should start with a lowercase letter, and capitalize each successive letter (“camel case”).
+> In the DIVAS project, variables should start with a lowercase letter, and capitalize the first letter of each successive 
+> word (“camel case”).  
+> 
 > For example, `plateArea`, or `colonyCount`.
 {: .callout}
 
 ## Examples/Exercises
-SWC example: Check your understanding
-
 
 > ## Variable Switching
 > Draw diagrams showing what variables refer to what values after each statement in the following program:
@@ -211,11 +231,19 @@ SWC example: Check your understanding
 > ~~~
 > {: .language-python}
 > > ## Solution
-> > Write out solution
+> > On line 1 of the code, the value **47.5** is assigned to the variable `mass`.  Similarly, line 2 assigns **122** to the
+> > variable name `age`.
+> > 
+> > On line 3, `mass` is reassigned.  This line of code takes the value stored in `mass` (currently 47.5), multiplies it by 2,
+> > and then stores the new value **95** to the variable name `mass`.  The effect is that the value stored in `mass` is updated 
+> > to be **95**.  
+> > 
+> > The 4th line similarly takes the old value of `age`, subtracts 20, and reassigns the variable name age to point to this new
+> > value (102).
 > {: .solution}
 {: .challenge}
 
-> ## SWC Example: Sorting Out References
+> ## Sorting Out References
 > What does the following program print out?  Why?
 > ~~~
 > first, second = 'Grace', 'Hopper'
