@@ -28,27 +28,29 @@ def fahr_to_kelvin(temp):
 ~~~
 {: .language-python}
 
-The function contains the keyword `def`, a function name (in this case, `fahr_to_kelvin`), and the **input parameters** that 
-must be passed to the function listed inside of the parentheses.  The inputs are the values or data that the function will 
+The function contains the keyword `def` and a function name (in this case, `fahr_to_kelvin`).  The **input parameters** that 
+must be passed to the function are listed inside of the parentheses.  The inputs are the values or data that the function will 
 operate *on*.  It also contains a return statement, which tells us what value function will output.
 
 Notice that typing the function doesn’t do anything.  In order to use the function, we have to **call** it, or tell Python to 
-perform the function on an input.  To call it, we use the name of the function, along with the desired **input (in this case,
+perform the function on an input.  To call it, we use the name of the function with the desired inputs inside the parentheses
+(in this case, a number representing a temperature in degrees Fahrenheit).
 ~~~
 fahr_to_kelvin(0)
 fahr_to_kelvin(-324)
 ~~~
 {: .language-python}
-The value inside of the parenthesis will be the value of the variable `temp` in the function definition above.
+The value inside of the parentheses is a placeholder variable.  It is the value that will be assigned to the variable name 
+`temp` in the function definition above.
 
-Now, if we need to redo this calculation over and over on differernt numbers, we can just call the function instead of typing in 
+Now, if we need to redo this calculation over and over on different numbers, we can just call the function instead of typing in 
 the entire calculation and potentially making mistakes.
 
 > ## Temperature conversion
 > Create a second function that will convert temperatures from Fahrenheit to Celsius.  Test your function on a few different 
 > numbers.
 > > ## Solution
-> > The code below show you how to write the function and then call it:
+> > The code below shows you how to write the function and then call it:
 > > ~~~
 > > def fahr_to_celsius(temp):
 > >      return (temp - 32) * (5/9)
@@ -65,7 +67,8 @@ the entire calculation and potentially making mistakes.
 
 > ## Temperature conversion, part 2
 > Create a new function that will take a temperature in Fahrenheit, convert it to both Kelvin and Celsius, and then return 
-> a list of the three temperatures in this order:  [original Fahrenheit, Kelvin, and Celsius].  
+> a list of the three temperatures in this order:  
+> [original Fahrenheit, Kelvin, and Celsius].  
 > > ## Solution
 > > Here is one way to do it:
 > > ~~~
@@ -79,7 +82,7 @@ the entire calculation and potentially making mistakes.
 > > {: .language-python}
 > > If you need some test values, try the following:  
 > > `temp_converter(212)` should return *[212, 373.15, 100]*  
-> > `temp_converter(32)` should return *[32, 373.15, 0]* 
+> > `temp_converter(32)` should return *[32, 373.15, 0]*   
 > > `temp_converter(82)` should return *[82, 300.928, 27.778]* 
 > {: .solution}
 {: .challenge}
@@ -128,5 +131,7 @@ print(fahr_to_kelvin(15))
 > > temp_converter(72)
 > > ~~~
 > > {: .language-python}
+> {: .solution}
+{: .challenge}
 
 
