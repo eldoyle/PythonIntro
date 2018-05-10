@@ -39,6 +39,82 @@ fahr_to_kelvin(0)
 fahr_to_kelvin(-324)
 ~~~
 {: .language-python}
+The value inside of the parenthesis will be the value of the variable `temp` in the function definition above.
 
 Now, if we need to redo this calculation over and over on differernt numbers, we can just call the function instead of typing in 
 the entire calculation and potentially making mistakes.
+
+> ## Temperature conversion
+> Create a second function that will convert temperatures from Fahrenheit to Celsius.  Test your function on a few different 
+> numbers.
+> > ## Solution
+> > The code below show you how to write the function and then call it:
+> > ~~~
+> > def fahr_to_celsius(temp):
+> >      return (temp - 32) * (5/9)
+> > 
+> > fahr_to_celsius(72)
+> > ~~~
+> > {: .language-python}
+> > If you need some test values, try the following:  
+> > `fahr_to_celsius(212)` should return *100*  
+> > `fahr_to_celsius(32)` should return *0*  
+> > `fahr_to_celsius(82)` should return *27.778*  
+> {: .solution}
+{: .challenge}
+
+> ## Temperature conversion, part 2
+> Create a new function that will take a temperature in Fahrenheit, convert it to both Kelvin and Celsius, and then return 
+> a list of the three temperatures in this order:  [original Fahrenheit, Kelvin, and Celsius].  
+> > ## Solution
+> > Here is one way to do it:
+> > ~~~
+> > def temp_converter(ftemp):
+> >      ctemp = (ftemp - 32) * (5/9)
+> >      ktemp = ctemp + 273.15
+> >      return [ftemp, ktemp, ctemp]
+> > 
+> > temp_converter(72)
+> > ~~~
+> > {: .language-python}
+> > If you need some test values, try the following:  
+> > `temp_converter(212)` should return *[212, 373.15, 100]*  
+> > `temp_converter(32)` should return *[32, 373.15, 0]* 
+> > `temp_converter(82)` should return *[82, 300.928, 27.778]* 
+> {: .solution}
+{: .challenge}
+
+## Importing functions
+Now that we have written a few functions, we can even import them and use them in other scripts!
+
+1. Save your current file as *funtion_examples.py*.  
+2. Open a new script file in Spyder.  
+3.  At the top of your script, include this line:
+~~~
+from functions_examples import fahr_to_kelvin
+~~~
+{: .language-python}
+
+Now, we can use our *fahr_to_kelvin* function in our new script!
+print(fahr_to_kelvin(15))
+
+> ## Importing functions
+> Open an new script.  Modify the temperature conversion function that we wrote above to return the original fahrenheit, Kelvin, 
+> and Celsius temperatures to import and use the functions `fahr_to_kelvin` and `fahr_to_celsius`.
+> > ## Solution
+> > ~~~
+> > from function_examples import fahr_to_kelvin
+> > from temp_conversion import fahr_to_celsius #Change temp_converion to the name of the script file with this function
+> > 
+> > #Define the function
+> > def temp_converter(ftemp):
+> >      ctemp = fahr_to_celius(ftemp)
+> >      ktemp = fahr_to_kelvin(ftemp)
+> >      return [temp, ktemp, ctemp]
+> > 
+> > #call the function
+> > temp_converter(72)
+> > ~~~
+> > {: .language-python}
+
+
