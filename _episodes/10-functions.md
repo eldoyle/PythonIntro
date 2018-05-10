@@ -114,8 +114,8 @@ print(fahr_to_kelvin(15))
 
 
 > ## Importing functions
-> Open an new script.  Modify the temperature conversion function that we wrote above to return the original fahrenheit, Kelvin, 
-> and Celsius temperatures to import and use the functions `fahr_to_kelvin` and `fahr_to_celsius`.
+> Open a new script.  Take the temperature conversion function that we wrote above to return the original fahrenheit, Kelvin, 
+> and Celsius temperatures and modify it to import and use the functions `fahr_to_kelvin` and `fahr_to_celsius`.
 > > ## Solution
 > > ~~~
 > > from function_examples import fahr_to_kelvin
