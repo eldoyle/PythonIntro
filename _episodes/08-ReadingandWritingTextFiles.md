@@ -198,37 +198,37 @@ Just like reading a file, we will open and write the file in multiple steps.
 
 The code below gives an example of writing to a file:
 ~~~
-filename = “output.txt”
+filename = "output.txt"
 
 #w tells python we are opening the file to write into it
-outfile = open(filename, ‘w’)
+outfile = open(filename, 'w')
 
-outfile.write(“This is the first line of the file”)
-outfile.write(“This is the second line of the file”)
+outfile.write("This is the first line of the file")
+outfile.write("This is the second line of the file")
 
 outfile.close() #Close the file when we’re done!
 ~~~
 {: .language-python}
 
 > ## Where did my file end up?
-> Anytime you open a new file and write to it, the file will be saved in your current working directory, unless you specified a
+> Any time you open a new file and write to it, the file will be saved in your current working directory, unless you specified a
 > different path in the file name.
 {: .callout}
 
 ### Newline characters
 When you examine the file you just wrote, you will see that all of the text is on the same line!  This is because we must tell 
-Python when to start on a new line by using the special string character `\n.`  This newline character will tell Python exactly 
-where to start each new line.
+Python when to start on a new line by using the special string character `'\n'`.  This newline character will tell Python 
+exactly where to start each new line.
 
 The example below demonstrates how to use newline characters:
 ~~~
-filename = “output_newlines.txt”
->
+filename = 'output_newlines.txt'
+
 #w tells python we are opening the file to write into it
-outfile = open(filename, ‘w’)
+outfile = open(filename, 'w')
  
-outfile.write(“This is the first line of the file\n”)
-outfile.write(“This is the second line of the file\n”)
+outfile.write("This is the first line of the file\n")
+outfile.write("This is the second line of the file\n")
 
 outfile.close() #Close the file when we’re done!
 ~~~
@@ -250,7 +250,7 @@ filename = "output_numbers.txt"
 outfile = open(filename, 'w')
 
 for number in numbers:
-	outfile.write(str(number)
+	outfile.write(str(number))
 
 outfile.close() #Close the file when we’re done!
 ~~~
@@ -285,8 +285,9 @@ outfile.close() #Close the file when we’re done!
 > open the file.  
 > `'r'` indicates we are opening the file to read data from it.  
 > `'w'` indicates we are opening the file to write data into it.
-> Be **very, very careful** when opening an existing file in *'w'* mode.  **`'w'` will over-write any data that is already in 
-> the file!** The overwritten data will be lost!
+> 
+> Be **very, very careful** when opening an existing file in *'w'* mode.  
+> **`'w'` will over-write any data that is already in the file!** The overwritten data will be lost!
 > 
 > If you want to add on to what is already in the file (instead of erasing and over-writing it), you can open the file in 
 > *append mode* by using the `'a'` parameter instead.
