@@ -95,8 +95,20 @@ from functions_examples import fahr_to_kelvin
 ~~~
 {: .language-python}
 
-Now, we can use our *fahr_to_kelvin* function in our new script!
+Now, we can use our *fahr_to_kelvin* function in our new script!  
+~~~
 print(fahr_to_kelvin(15))
+~~~
+{: .language-python}
+
+> ## Saving in the working directory
+> In order to import functions from another script, the script **must be saved in the same folder** as the script you are 
+> running.  Otherwise, Python won't know where to look for the file to import the function you want.
+> 
+> If the script with functions to be imported is in another folder, you will have to supply the complete path to the file
+> as part of the import statement.
+{: .callout}
+
 
 > ## Importing functions
 > Open an new script.  Modify the temperature conversion function that we wrote above to return the original fahrenheit, Kelvin, 
