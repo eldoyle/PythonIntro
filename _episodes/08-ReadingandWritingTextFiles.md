@@ -45,7 +45,7 @@ We will open and read the file in three steps.
 
 And then, there's one more step to do!
 
-4. When we are done, we should remember to close the file!
+* When we are done, we should remember to close the file!
 
 You can think of these three steps as being similar to checking out a book from the library.  First, you have to go to the 
 catalog or database to find out which book you need (the filename).  Then, you have to go and get it off the shelf and open the 
