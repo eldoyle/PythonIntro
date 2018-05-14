@@ -18,9 +18,9 @@ In the lesson on [Files]({{ page.root }}/08-ReadingandWritingTextFiles) we saw o
 However, Python has some built in libraries that allow us to handle a data table much more easily.
 
 ## Libraries
-A library is a set of functions that you can import and use in your code.  Typically, libraries contain functions that not all 
-users would typically need.  Thus, there are many libraries available that are designed for specialized tasks.  Tomorrow, you will 
-begin working with the OpenCV library, which contains many functions that are useful for image processing.
+A library is a set of functions that you can import and use in your code.  Usually, libraries contain functions that not all 
+users will regularly need.  Thus, there are many libraries available that are designed for specialized tasks.  Tomorrow, you 
+will begin working with the OpenCV library, which contains many functions that are useful for image processing.
 
 Today, we are going to use the library **numpy**, which contains many tools for analyzing data stored in a table (like a csv 
 file!).
@@ -61,7 +61,8 @@ numpy library.  Now, anytime you want to use a numpy function, you only have to 
 
 The expression `np.loadtxt(...)` is a **function** call that asks Python to run the function named *loadtxt* which is part of 
 the numpy library (which we asked Python to abbeviate as *np*). This dotted notation is used everywhere in Python to refer to
-the parts of things as thing.component.
+the component parts of things as thing.component (in this case, *libraryName.functionName()*, since the function is a part of 
+the library).
 
 We supplied *np.loadtxt* with 4 parameters: 
 * fname is the name of the file we want to read
@@ -69,9 +70,9 @@ We supplied *np.loadtxt* with 4 parameters:
 
 These both need to be character strings, so we put them in quotes.
 
-* skiprows = 1 tells python to skip the first row of the file that contains the column names (numpy can only handle numbers, not 
-a mix of text strings and numbers
-* usecols=(...) tells Python to only read in these columns
+* skiprows = 1 tells python to skip 1 row of the file that contains the column names (numpy can only handle numbers, not 
+a mix of text strings and numbers).
+* usecols=(...) tells Python to only read in these columns.
     * Note that if we are reading in a csv file that contains only numbers (no column names or row names, we can omit the last 
     two arguments skiprows and usecols)
 
@@ -95,7 +96,8 @@ an array of data with 4 rows and 10 columns.
 We can look up specific values in the array using indexing.  For example, we can look up the very first element by using the 
 command `print(data[0,0])` which returns
 > 165
-{: .output}
+{: .output}  
+
 
 > ## Rows and Columns
 > What does `print(data[2,0])` return?  What does it tell you about the indexing (which number is the row and which number is 
@@ -109,7 +111,8 @@ command `print(data[0,0])` which returns
 > ## The very end
 > How would you print out the last (bottom right) number of the array?
 > > ## Solution
-> > `print(data[3,9])` prints out **168** which is the tenth and last value (index 9) in the fourth, bottom row (index 3).
+> > `print(data[3,9])` prints out **168** which is the tenth and last value (index 9) in the fourth, bottom row (index 3).  
+> > 
 > > Note that you could also have done something like this if you did already know the number of rows and colunmns:
 > > ~~~
 > > nRows = data.shape[0] #gets the number of rows
@@ -121,8 +124,8 @@ command `print(data[0,0])` which returns
 
 We can also use this indexing to access subsections or whole rows and columns of the array.
 
-`print(data[2,:])` will return all of row 2  
-`print(data[:,2])` will return all of column 2 
+`print(data[2,:])` will return all of row 2.  
+`print(data[:,2])` will return all of column 2. 
 
 `print(data[0:2,1:3])` will print the first two rows of the array (0:2), columns 1 and 2 only (1:3).  
 
@@ -143,7 +146,7 @@ column 3.
 > {: .solution}
 {: .challenge}
 
-## Calling Functions on the Numpy array
+## Calling Functions on the numpy array
 Python is able to do simple arithmetic operations on numpy arrays.  For example, we can multiply each value in the array * 2
 ~~~
 doubledata = data*2
@@ -171,9 +174,9 @@ Functions are useful because they can condense many lines of code into one simpl
 You have already seen some functions: `split()` for breaking apart strings is one example; `print()` and `open()` are other 
 examples.
 
-`.shape` is not a function (it lacks parentheses and an argument).  Instead, it is a piece of information about data that was 
-created when we created the numpy area.  It describes data, like an adjective describes a noun.  These descriptive pieces of 
-information are called **attributes**.
+`.shape` is not a function (it lacks parentheses and an argument).  Instead, it is a piece of information about the variable 
+*data* that was created when we created the numpy array.  It describes the variable *data*, just like an adjective describes a 
+noun.  These descriptive pieces of information are called **attributes**.
 
 Other useful functions include the following:
 ~~~
