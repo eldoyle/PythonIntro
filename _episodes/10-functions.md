@@ -93,7 +93,7 @@ Now that we have written a few functions, we can even import them and use them i
 
 1. Save your current file as *function_examples.py*.  
 2. Open a new script file in Spyder.  
-3.  At the top of your script, include this line:
+3. At the top of your script, include this line:
 ~~~
 from function_examples import fahr_to_kelvin
 ~~~
