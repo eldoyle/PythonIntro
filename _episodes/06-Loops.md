@@ -95,7 +95,7 @@ descriptive names that will make it clear what your code is doing.
 > mm2PerPixel = 0.0277 
 > 
 > #Convert from pixels to mm2
-> AreaInMM = AreaInPixels\*mm2PerPixel
+> AreaInMM = AreaInPixels*mm2PerPixel
 > 
 > #Print the final area in mm2
 > print('The area in mm2 is', AreaInMM) 
