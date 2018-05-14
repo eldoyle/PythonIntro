@@ -41,7 +41,10 @@ This is also where we will have to save and run our file opening script.
 We will open and read the file in three steps.
 1. We will create a variable to hold the name of the file that we want to open.  
 2. We will call a open to open the file.  
-3. We will call a function to actually read the data in the file and store it in a variable so that we can process it.  
+3. We will call a function to actually read the data in the file and store it in a variable so that we can process it. 
+
+And then, there's one more step to do!
+
 4. When we are done, we should remember to close the file!
 
 You can think of these three steps as being similar to checking out a book from the library.  First, you have to go to the 
@@ -175,7 +178,7 @@ infile.close()  #Always close the file!
 > When we called the `readlines()` command in the previous code, Python read in the contents of the file as a string.  If we 
 > want our code to recognize something in the file as a number, we need to tell it this!  
 > 
-> For example, `float(‘5.0’)` will tell Python to treat the text string '5.0' as the number 5.0.  `int(sline[4])` will tell 
+> For example, `float('5.0')` will tell Python to treat the text string '5.0' as the number 5.0.  `int(sline[4])` will tell 
 > our code to treat the text string stored in the 5th position of the list *sline* as an integer (non-decimal) number.
 > 
 > For each line in the file, the MAX_WIDTH is stored in the 10th column (index 4 with our 0-based counting).  
@@ -192,7 +195,7 @@ processing and we want to be able to save it and come back to it later.
 ### Writing a file is the same multi-step process
 Just like reading a file, we will open and write the file in multiple steps.  
 1. Create a variable to hold the name of the file that we want to open.  Often, this will be a new file that doesn't yet exist.
-2. Call a function to open the file.  this time, we will specify that we are opening the file to write into it!
+2. Call a function to open the file.  This time, we will specify that we are opening the file to write into it!
 3. Write the data into the file. This requires some careful attention to formatting.
 4. When we are done, we should remember to close the file!
 
@@ -212,7 +215,7 @@ outfile.close() #Close the file when we’re done!
 
 > ## Where did my file end up?
 > Any time you open a new file and write to it, the file will be saved in your current working directory, unless you specified a
-> different path in the file name.
+> different path in the variable *filename*.
 {: .callout}
 
 ### Newline characters
@@ -237,8 +240,8 @@ outfile.close() #Close the file when we’re done!
 Go open the file you just wrote and and check that the lines are spaced correctly.
 
 ### Writing numbers to files
-Just like Python automatically reads files in as strings, the `write()`command expects to only write strings.  If we want to 
-write numbers to a file, we will need to “cast” them as strings using the command `str()`.
+Just like Python automatically reads files in as strings, the `write()`function expects to only write strings.  If we want to 
+write numbers to a file, we will need to “cast” them as strings using the function `str()`.
 
 The code below shows an example of this:
 ~~~
@@ -257,7 +260,7 @@ outfile.close() #Close the file when we’re done!
 {: .language-python}
 
 > ## Writing new lines and numbers
-> Go and the file you just wrote.  You will see that all of the numbers are written on the same line.
+> Go open and examine the file you just wrote.  You will see that all of the numbers are written on the same line.
 > 
 > Modify the code to write each number on its own line.
 > > ## Solution
