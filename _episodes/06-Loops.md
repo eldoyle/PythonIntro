@@ -169,15 +169,15 @@ print('after the loop, letter is', letter)
 
 ## Exercises
 > ## From 1 to N
-> Python has a built-in function called `range` that creates a sequence of numbers. range can accept 1-3 parameters. 
+> Python has a built-in function called `range()` that creates a sequence of numbers. `range()` can accept 1-3 parameters. 
 > 
-> If one parameter is input, `range` creates an array of that length, starting at zero and incrementing by 1. If 2 parameters 
-> are input, > `range` starts at the first and ends just before the second, incrementing by one. If `range()` is passed 3 
-> parameters, it starts at the first one, ends just before the second one, and increments by the third one. 
+> If one parameter is input, `range()` creates an array of that length, starting at zero and incrementing by 1. If 2 parameters 
+> are input, `range()` starts at the first and ends just before the second, incrementing by one. If `range()` is passed 3 
+> parameters, it starts at the first number, ends just before the second one, and increments by the third one. 
 > 
 > For example, `range(3)` produces the numbers 0, 1, 2.  `range(2, 5)` produces 2, 3, 4, and `range(3, 10, 3)` produces 3, 6, 9. 
 > 
-> Using `range`, write a loop that uses range to print the first 3 natural numbers: 1, 2, 3.
+> Using `range()`, write a loop that prints the first 3 natural numbers: 1, 2, 3.
 > > ## Solution
 > > ~~~
 > > #Create the range
@@ -191,9 +191,8 @@ print('after the loop, letter is', letter)
 {: .challenge}
 
 > ## Reverse a String
-> Knowing that two strings can be concatenated using the + operator, write a for loop that takes a string and produces a new 
-> string with the characters in reverse order, so `'Newton'` becomes `'notweN'`.
-> Hint: don’t forget that you can use + to concatenate (add) strings together!
+> Knowing that two strings can be concatenated (added together) using the `+` operator, write a for loop that takes a string and 
+> produces a new string with the characters in reverse order, so `'Newton'` becomes `'notweN'`.
 > > ## Solution
 > > ~~~
 > > #Create an empty string that we will add on to
