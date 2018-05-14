@@ -43,7 +43,7 @@ print("this will always get printed")
 ~~~
 {: .language-python}
 
-Wee can use `elif` (short for "else if") to check multiple conditions.  Python will check each condition one at a time until it 
+We can use `elif` (short for "else if") to check multiple conditions.  Python will check each condition one at a time until it 
 finds one that is true.  It will then execute the code under that first true statement, and then be done with the for loop.  If 
 no true statement is found, it will execute the code under the `else` statement
 ~~~
