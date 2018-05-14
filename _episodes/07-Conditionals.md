@@ -158,8 +158,8 @@ the only values in Python that are true and false. In fact, any value can be use
 > * In general, an `else` statement is not required for if/elif code blocks.  If an `else` is present, code underneath the 
 > `else` statement will only be executed if none of the preceding `if` or `elif` statements are true.
 > * If you wish to check multiple conditions that are not alternatives to each other (i.e. each statement should be checked
-> regardless of the previous statement) you may stack up multiple if statments.  If you use if/if , *each `if` statement will be 
-> checked for truth*.
+> regardless of the previous statement) you may stack up multiple if statments.  **If you use if/if , each `if` statement will 
+> be checked for truth**.
 {: .callout}
 
 > ## Which path?
