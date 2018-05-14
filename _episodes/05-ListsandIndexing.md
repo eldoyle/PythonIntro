@@ -16,10 +16,10 @@ keypoints:
 ---
 ## Lists
 The variable types we have seen so far, such as floats, ints, and strings let us store one piece of data in a single variable.  
-However, it is often useful to store multiple pieces of data in a single variable.  For example, image we have root areas for 
-four different roots.  Instead of making four different variables, we can use a list to keep them all together.  This is handy 
-because we only have to keep track of one variable name! In the [next lesson]({{ page.root }}\06-Loops) you'll learn how to 
-perform the same operations on each item in a list.
+However, it is often useful to store multiple pieces of data in a single variable.  For example, image we have calculated total 
+colony are in pixels for four different images of plates.  Instead of making four different variables, we can use a list to keep 
+them all together.  This is handy because we only have to keep track of one variable name! In the [next lesson]({{ page.root }}\06-Loops) 
+you'll learn how to perform the same operations on each item in a list.
 
 ### Creating lists
 Lists are denoted using square brackets, with the items separated by commas.  The code below will create and print a populated
@@ -32,7 +32,7 @@ print('Areas are:', areas)
 
 We can also make lists of strings, or even lists of lists!
 ~~~
-samples = ['Trial16', 'Trial20', 'Trial293']
+samples = ['Plate16', 'Plate20', 'Plate293']
 print('Sample names are:', samples)
 ~~~
 {: .language-python}
@@ -57,20 +57,20 @@ print('Before:', samples)
 
 Returns the output
 ~~~
- ('Before:', ['Trial16', 'Trial20', 'Trial293'])
+ ('Before:', ['Plate16', 'Plate20', 'Plate293'])
 ~~~
 {: .output}
 
 Now, add an item:
 ~~~
-samples.append('Trial17')
+samples.append('Plate17')
 print("After:", samples)
 ~~~ 
 {: .language-python}
 
 This returns the output
 ~~~
-('After:', ['Trial16', 'Trial20', 'Trial293', 'Trial17'])
+('After:', ['Plate16', 'Plate20', 'Plate293', 'Plate17'])
 ~~~
 {: .output}
 
@@ -94,15 +94,15 @@ We can also modify a list by removing items
 
 ~~~
 print("Samples before:", samples)
-samples.remove('Trial20')
+samples.remove('Plate20')
 print("Samples after:", samples)
 ~~~
 {: .language-python}
 
 Returns the output
 ~~~
-('Samples before:', ['Trial16', 'Trial20', 'Trial293', 'Trial17'])
-('Samples after:', ['Trial16', 'Trial293', 'Trial17'])
+('Samples before:', ['Plate16', 'Plate20', 'Plate293', 'Plate17'])
+('Samples after:', ['Plate16', 'Plate293', 'Plate17'])
 ~~~
 {: .output}
 
@@ -118,7 +118,7 @@ print(samples[1])
 
 This code returns the output
 ~~~
-'Trial293'
+'Plate293'
 ~~~
 {: .output}
 
@@ -133,7 +133,7 @@ begins counting at 0.
 > > print(samples[2]) #Returns the first item, at index position 2 (the list contains 3 items)
 > > ~~~
 > > {: .language-python}
-> > `samples[0]` returns the output `'Trial16'` and `samples[2]` returns the output `'Trial17'`.
+> > `samples[0]` returns the output `'Plate16'` and `samples[2]` returns the output `'Plate17'`.
 > {: .solution}
 {: .challenge}
 
@@ -149,7 +149,7 @@ begins counting at 0.
 >
 > Returns the output
 > ~~~
-> 'Trial17'
+> 'Plate17'
 > ~~~
 > {: .output}
 {: .callout}
@@ -163,24 +163,24 @@ begins counting at 0.
 > > print(samples[-3]) #Returns the third-to-last item (which is the same as the first item in this example)
 > > ~~~
 > > {: .language-python}
-> > `samples[-2]` returns the output `'Trial293'` and `samples[-3]` returns the output `'Trial16'`.
+> > `samples[-2]` returns the output `'Plate293'` and `samples[-3]` returns the output `'Plate16'`.
 > {: .solution}
 {: .challenge}
 
 We can also use list indexing to replace specific items in the list.  For example,
 
 ~~~
-samples = ['Trial16', 'Trial293', 'Trial17']
+samples = ['Plate16', 'Plate293', 'Plate17']
 print("List before:", samples)
-samples[2] = 'Trial216'
+samples[2] = 'Plate219'
 print("List after:", samples)
 ~~~
 {: .language-python}
 
 Returns the output
 ~~~
-('List before:', ['Trial16', 'Trial293', 'Trial17'])
-('List after:', ['Trial16', 'Trial293', 'Trial216'])
+('List before:', ['Plate16', 'Plate293', 'Plate17'])
+('List after:', ['Plate16', 'Plate293', 'Plate219'])
 ~~~
 {: .output}
 
@@ -189,7 +189,7 @@ We can also use similar syntax to return a slice or subsection of the list.  We 
 items we want with a colon.  Note that the second index is up to, but not inclusive.  For example,
 ~~~
 areas = [6929.6, 8536.47, 11359.3, 17743.4]
-areas[0:2]
+print(areas[0:2])
  ~~~
 {: .language-python}
 
@@ -203,8 +203,8 @@ This returns a list of `areas[0]` and `areas[1]`.  It does not include `areas[2]
 
 If we want to start at the beginning of the list, we can leave out the first coordinate.  Similarly, if we want to start our slice at a specific index and go to the end of the list, we can leave out the second coordinate.
 ~~~
-print(areas[:2])
-print(areas[1:])
+print(areas[:2]) #starts at the beginning and includes indexes 0 and 1, but not 2  
+print(areas[1:]) #starts at index 1 and goes through the end of the list
 ~~~
 {: .language-python}
 
@@ -231,7 +231,7 @@ The length of areas is 4
 
 Note that this returns the expected length of the list.  Even though `areas[3]` is the last item of the list (0-based counting!), the length is returned as 4.
 
-We can also use similar indexing principles to access specific characters or substrings of a string variable 
+We can also use similar indexing principles to access specific characters or substrings of a string variable. 
 
 ## Exercises
 > ## Indexing characters in a string
