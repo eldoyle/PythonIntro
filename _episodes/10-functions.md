@@ -29,8 +29,9 @@ def fahr_to_kelvin(temp):
 {: .language-python}
 
 The function contains the keyword `def` and a function name (in this case, `fahr_to_kelvin`).  The **input parameters** that 
-must be passed to the function are listed inside of the parentheses.  The inputs are the values or data that the function will 
-operate *on*.  It also contains a return statement, which tells us what value function will output.
+must be passed to the function are listed inside of the parentheses.  The inputs are placeholder variables.  When we actually 
+use the function later, we will have to supply a value for temp that the function will operate *on*.  It also contains a return 
+statement, which tells us what value function will output.
 
 Notice that typing the function doesn’t do anything.  In order to use the function, we have to **call** it, or tell Python to 
 perform the function on an input.  To call it, we use the name of the function with the desired inputs inside the parentheses
@@ -40,15 +41,15 @@ fahr_to_kelvin(0)
 fahr_to_kelvin(-324)
 ~~~
 {: .language-python}
-The value inside of the parentheses is a placeholder variable.  It is the value that will be assigned to the variable name 
-`temp` in the function definition above.
+The value inside of the parentheses is assigned to the variable name `temp` in the function definition above so that the program 
+can perform the temperature conversion calculation and return a number representing the converted temperature.
 
-Now, if we need to redo this calculation over and over on different numbers, we can just call the function instead of typing in 
-the entire calculation and potentially making mistakes.
+Now, if we need to redo this calculation over and over on different numbers, we can just call the function on each of those 
+numbers instead of typing in the entire calculation and potentially making mistakes.
 
 > ## Temperature conversion
-> Create a second function that will convert temperatures from Fahrenheit to Celsius.  Test your function on a few different 
-> numbers.
+> Create a second function that will convert temperatures from Fahrenheit to Celsius.  Test your function by callling it on a
+> few different numbers.
 > > ## Solution
 > > The code below shows you how to write the function and then call it:
 > > ~~~
@@ -88,13 +89,13 @@ the entire calculation and potentially making mistakes.
 {: .challenge}
 
 ## Importing functions
-Now that we have written a few functions, we can even import them and use them in other scripts!
+Now that we have written a few functions, we can even import them and use them in other scripts!  
 
-1. Save your current file as *funtion_examples.py*.  
+1. Save your current file as *function_examples.py*.  
 2. Open a new script file in Spyder.  
 3.  At the top of your script, include this line:
 ~~~
-from functions_examples import fahr_to_kelvin
+from function_examples import fahr_to_kelvin
 ~~~
 {: .language-python}
 
