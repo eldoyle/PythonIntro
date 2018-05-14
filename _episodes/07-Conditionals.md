@@ -15,7 +15,8 @@ keypoints:
 - "Code under other conditions will not be executed, even if they are also true"
 ---
 
-Conditionals are another powerful tool to use in our computer programs: they allow the program to make choices and run part of the code only if a specific condition or conditions are met
+## Conditionals
+Conditionals are another powerful tool to use in our computer programs: they allow the program to make choices and run part of the code only if a specific condition or conditions are met.
 
 The syntax of in if statement looks like this.  Note that the indentation is very important!
 ~~~
@@ -23,6 +24,7 @@ if <condition>:
 	do this if condition 1 is true
 else:
 	do this if the condition is not true
+	there can be multiple statements nested under the if or else statement
 		
 this is not part of the if/else block and will always be executed
 ~~~
@@ -42,7 +44,8 @@ print("this will always get printed")
 {: .language-python}
 
 Wee can use `elif` (short for "else if") to check multiple conditions.  Python will check each condition one at a time until it 
-finds one that is true.  It will then execute the code under that statement, and then be done with the for loop.
+finds one that is true.  It will then execute the code under that first true statement, and then be done with the for loop.  If 
+no true statement is found, it will execute the code under the `else` statement
 ~~~
 number = 29
 if number < 10:
@@ -61,8 +64,8 @@ print('We are done checking if/else conditions')
 {: .language-python}
 
 When you run this code, only the statment under the second elif (`elif number < 30`) is printed.  Once a true condition is
-encountered, the code under that condition is executed (`print('the number is between 20 and 30")`).  Python skips over the
-remaining `else` statement and then proceeds to the last print statment, which is not part of the if/elif/else block.
+encountered, the code under that condition is executed (in this case, `print('the number is between 20 and 30")`).  Python skips 
+over the remaining `else` statement and then proceeds to the last print statment, which is not part of the if/elif/else block.
 
 Even if multiple conditions are true, Python will only execute the code under the first true if/elif statement it encounters:
 ~~~
@@ -76,9 +79,9 @@ elif number < 20:
 elif number < 30:
 	print("the number is between 20 and 30")
 
-
 elif number == 15:
 	print("the number is exactly 15")
+	
 else:
 	print('It is a big number')
     
@@ -86,8 +89,8 @@ print('We are done checking if/else conditions')
 ~~~
 {: .language-python}
 
-Notice that when you run this code, only the statment under the first elif (`elif number < 20`) is printed, *even though the
-next elif statement is also true!*
+Notice that when you run this code, only the statement under the first elif is printed (*'the number is between 10 and 20'*), 
+*even though the next two elif statements are also true!*
 
 > ## “How many paths”
 > Consider the code below.  Which letters (A, B, and/or C) would be printed?  Why?
@@ -103,7 +106,8 @@ next elif statement is also true!*
 > ~~~
 > {: .language-python}
 > > ## Solution
-> > Only the letter 'C' should be printed.  The first two statements (4>5 and 4==5) are not true.  The third statment (4<5) is > > > true, so the print statment underneath it will be executed.  The final else statment is not executed.
+> > Only the letter 'C' should be printed.  The first two statements (4>5 and 4==5) are not true.  The third statment (4<5) is
+> > true, so the print statment underneath it will be executed.  The final else statment is not executed.
 > {: .solution}
 {: .challenge}
 
@@ -148,13 +152,17 @@ the only values in Python that are true and false. In fact, any value can be use
 > ## Which parts do I need?
 > In general all if statement blocks must start with an `if` statement!  However, the other parts aren't always needed.
 > * An `if` statement is not required be followed by an `else`.  However, `else` must always be preceded by an `if`!
-> * In general, an `else` statement is not required for if/elif code blocks.
-> * You can stack up multiple if statments.  If you use if/if instead of if/elif, *both if statments will be executed* if they 
-> are true.
+> * You may have as many `elif` statments as you like following your `if` statement.  `elif` indicates that these are
+> alternatives to each other, and only the code under the first true `if` or `elif` will be executed.
+> * In general, an `else` statement is not required for if/elif code blocks.  If an `else` is present, code underneath the 
+> `else` statment will only be executed if none of the preceding `if` or `elif` statements are true.
+> * If you wish to check multiple conditions that are not alternatives to each other (i.e. each statement should be checked
+> regardless of the previous statement) you may stack up multiple if statments.  If you use if/if instead of if/elif, *each `if`  
+> statment will be checked for truth*.
 {: .callout}
 
 > ## Which path?
-> Look at the code below.  Which print statements will be executed ans why?  If you are not sure, try running it!
+> Look at the code below.  Which print statements will be executed and why?  If you are not sure, try running it!
 > ~~~
 > number = 5
 >
@@ -162,8 +170,8 @@ the only values in Python that are true and false. In fact, any value can be use
 >     print('number is smaller than 10')
 > if number <= 20:
 >     print('number is smaller than 20')
-> if number <= 30:
->     print('number is smaller than 30')
+> if number <= 40:
+>     print('number is smaller than 40')
 > elif number > 30 and  number < 100:
 >     print('number is medium-sized')
 > else:
@@ -174,7 +182,7 @@ the only values in Python that are true and false. In fact, any value can be use
 > > The code above should generate the following output:
 > > > number is smaller than 10  
 > > > number is smaller than 20  
-> > > number is smaller than 30  
+> > > number is smaller than 40  
 > > {: .output}
 > > The first three if statements are independent of each other.  They will all be checked, regardless of whether or not a
 > > previous if statment was true.  The `elif` and `else` statements go with the third `if` statement.  `elif` will only be
@@ -200,9 +208,9 @@ the only values in Python that are true and false. In fact, any value can be use
 > {: .language-python}
 >
 > Write code to put each of the image names in `images` into the appropriate list.  Your code should 
-> 1) Loop through all of the images.
-> 2) For each image, check the file extension (the part after the "."), and append the filename to the appropriate list
-> 3) Print the final lists.  They should have these values:
+> 1. Loop through all of the images.  
+> 2. For each image, check the file extension (the part after the "."), and append the filename to the appropriate list.  
+> 3. Print the final lists.  They should have these values:
 > > bmps = ['image3.bmp']  
 > > jpgs = ['image2.jpg', 'image4.jpg']  
 > > pngs = ['image1.png', 'image5.png']  
