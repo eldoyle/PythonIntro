@@ -56,6 +56,7 @@ elif number < 20:
 
 elif number < 30:
 	print("the number is between 20 and 30")
+	
 else:
 	print('It is a big number')
     
@@ -152,13 +153,13 @@ the only values in Python that are true and false. In fact, any value can be use
 > ## Which parts do I need?
 > In general all if statement blocks must start with an `if` statement!  However, the other parts aren't always needed.
 > * An `if` statement is not required be followed by an `else`.  However, `else` must always be preceded by an `if`!
-> * You may have as many `elif` statments as you like following your `if` statement.  `elif` indicates that these are
+> * You may have as many `elif` statements as you like following your `if` statement.  `elif` indicates that these are
 > alternatives to each other, and only the code under the first true `if` or `elif` will be executed.
 > * In general, an `else` statement is not required for if/elif code blocks.  If an `else` is present, code underneath the 
-> `else` statment will only be executed if none of the preceding `if` or `elif` statements are true.
+> `else` statement will only be executed if none of the preceding `if` or `elif` statements are true.
 > * If you wish to check multiple conditions that are not alternatives to each other (i.e. each statement should be checked
-> regardless of the previous statement) you may stack up multiple if statments.  If you use if/if instead of if/elif, *each `if`  
-> statment will be checked for truth*.
+> regardless of the previous statement) you may stack up multiple if statments.  If you use if/if , *each `if` statement will be 
+> checked for truth*.
 {: .callout}
 
 > ## Which path?
@@ -186,7 +187,7 @@ the only values in Python that are true and false. In fact, any value can be use
 > > {: .output}
 > > The first three if statements are independent of each other.  They will all be checked, regardless of whether or not a
 > > previous if statment was true.  The `elif` and `else` statements go with the third `if` statement.  `elif` will only be
-> > checked if the third `if` is not true, and `else` will only be checked if the the third `if` and the `else` are not true.
+> > checked if the third `if` is not true, and `else` will only be checked if the the third `if` and the `elif` are not true.
 > > 
 > > What value of number would cause only the statement under `elif` to be printed?  What would cause only the `else` statement 
 > > to be printed?
