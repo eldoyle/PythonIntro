@@ -9,5 +9,8 @@ This lesson shows some basics to get you started with the Python programming lan
 
 > ## Prerequisites
 >
-> Before beginning these lessons, you should understand the basic concepts of files and directories, including the idea of a working directory.  You should be able to start a Python interpreter before beginning.  This lesson refers to Python 3.
+> Before beginning these lessons, you should have either the DIVAS virtual machine OR Python and a Python IDE installed on your 
+> computer (see the Setup page).  The lessons will show you how to start the Spyder IDE within the DIVAS virtual machine.  If you 
+> do not have the DIVAS virtual machine installed, any Python IDE will work. These example code and outputs shown in the lessons 
+> refer to Python 3. 
 {: .prereq}
