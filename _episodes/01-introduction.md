@@ -49,6 +49,7 @@ the total percent area covered by the bacterial colonies, or even tracking colon
 accomplished by a computer program!  And once you have analyed your images to get colony counts or total area, you could write 
 and use a second program to analyze the data (for example, to compare colony number and total growth at different timepoints or
 under different growth conditions).
+![Plate11](../fig/11.tif)
 
 ### Example 2: Analyzing a titration 
 The video below (click on the image to see the video) shows the progress of a titration reaction.  Rather than watch the 
