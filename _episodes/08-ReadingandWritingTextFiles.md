@@ -24,18 +24,18 @@ Right now, we will practice working with a comma-delimited text file (.csv) that
 what you learn in this lesson can be applied to any general text file.  In the [next lesson]({{ page.root }}/09-numpy), you will 
 learn another way to read and process .csv data.
 
-> ## Paths to files
-> In order to open a file, we need to tell Python exactly where the file is located, relative to where Python is currently 
-> working (the working directory).  In Spyder, we can do this by setting our current working directory to the folder where the 
-> file is located.  Or, when we provide the file name, we can give a complete path to the file.
-> 
-> For now, we will set our working directory to the correct folder where our input file is located.
-{: .callout}
+## Paths to files
+In order to open a file, we need to tell Python exactly where the file is located, relative to where Python is currently 
+working (the working directory).  In Spyder, we can do this by setting our current working directory to the folder where the
+file is located.  Or, when we provide the file name, we can give a complete path to the file.
 
-Set working directory (top right corner of the Spyder window) to 
-`/home/diva/Desktop/divas/projects/002/morph03`
-
-This is also where we will have to save and run our file opening script.
+> ## Lesson Setup
+> We will work with the practice file **Plates_output_simple.csv**.
+> 1. Locate the file *Plates_output_simple.csv* in the directory **home/Desktop/workshops/bash-git-python**.
+> 2. Copy the file to your working directory, **home/Desktop/workshops/YourName**.
+> 3. Make sure that your working directory is also set to the folder home/Desktop/workshops/YourName.
+> 4. As you are working, make sure that you save your file opening script(s) to this directory.
+{: .callout}  
 
 ### Opening and reading files is a three-step process
 We will open and read the file in three steps.
