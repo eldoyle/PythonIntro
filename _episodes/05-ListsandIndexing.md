@@ -10,9 +10,10 @@ objectives:
 - "Learn to modify lists by adding or deleting items"
 - "Be able to access a specific item or items in a list using list indexing and slicing"
 keypoints:
-- "Lists can be used to group numbers (ints or floats), strings, or other kinds of values together in one variable"
+- "Lists can be used to group numbers (ints or floats), strings, lists, or other kinds of values together in one variable"
 - "Lists are ordered- objects stay in the order you add them"
 - "Lists are indexed using 0-based indexing"
+- "You can use square bracket notation to return a single item in a list or subset of items"
 ---
 ## Lists
 The ***variable types*** we have seen so far, such as *floats*, *ints* (short for integers), and *strings* let us store one piece 
@@ -311,5 +312,42 @@ We can also use similar indexing principles to access specific characters or sub
 > > However, this will also change the original list `areas`!  This is because `areas2=areas` does not create a brand-new copy
 > > of the list.  Instead, it points to the same location in memory as the original variable name `areas`.
 > > {: .language-python}
+> {: .solution}
+{: .challenge}
+
+> ## Lists of lists
+> The code below creates a list of lists:
+> ~~~
+> salsas = [['tomatoes', 'onion', 'cilantro', 'jalepeno'], 
+>           ['mango', 'cucumber', 'jalepeno', 'red onion', 'lime juice'],
+>           ['avocado', 'lime juice', 'onion', 'salt', 'jalepeno']]
+> 
+> print(salsas[1]) #prints the second list (index 1 in the first list)
+> print(salsas[1][0]) #prints the first item (index 0) of the second list
+> ~~~
+> {: .language-python}  
+> and returns the following output:
+> > ['mango', 'cucumber', 'jalepeno', 'red onion', 'lime juice']
+> > mango
+> {: .output}
+>
+> Write code that will print each instance of the word `'jalepeno'` in the list of lists `salsas`.
+> > ## Solution
+> > ~~~
+> > salsas = [['tomatoes', 'onion', 'cilantro', 'jalepeno'], 
+> >           ['mango', 'cucumber', 'jalepeno', 'red onion', 'lime juice'],
+> >           ['avocado', 'lime juice', 'onion', 'salt', 'jalepeno']]
+> > 
+> > print(salsas[0][3])
+> > print(salsas[1][2])
+> > print(salsas[2][4])
+> > ~~~
+> > {: .language-python}
+> > How does this code work?  As we have seen before, `salsas[0]`, `salsas[1]`, and `salsas[2]` refer to specific items in the 
+> > list `salsas`.  But in this case, each item in `salsas` is itself list!  Therefore, `salsas[0]` refers to the list
+> > `['tomatoes', 'onion', 'cilantro', 'jalepeno']`.  So `salsas[0][3]` refers to the item at index 3 of that list.
+> > 
+> > The number in the first set of square brackets selects the individual list that we want to look at; the number in the second
+> > set of square brackets selects a specific item within that list.
 > {: .solution}
 {: .challenge}
