@@ -106,9 +106,9 @@ Notice that when you run this code, only the statement under the first elif is p
 > ~~~
 > {: .language-python}
 > > ## Solution
-> > Only the second statement 'Plate is countable' should be printed.  The first statement (count < 30) are not true.  The second
+> > Only the second statement 'Plate is countable' should be printed.  The first statement (count < 30) is not true.  The second
 > > statement (count < 300) is true, so the print statment underneath it will be executed.  The final else statment is not 
-> > executed.
+> > checked because one of the preceding statements was true.
 > {: .solution}
 {: .challenge}
 
@@ -168,9 +168,46 @@ else:
     print("number is medium")
 ~~~
 {: .language-python}  
-> number is medium
+> number is medium  
 > number is medium
 {: .output}
+
+> ## Combining conditionals
+> Previously, we saw code to check whether or not a plate count was in the "countable" range, between 30 or 300 colonies:
+> ~~~
+> count = 207
+> if count < 30:
+>     print("count is too small")
+> elif count < 300:
+>     print("Plate is countable")
+> else:
+>     print("count is too large")
+> ~~~
+> {: .language-python}  
+> Modify this code to check countability using a single if statement.  
+> > ## Solution
+> > There are a couple of ways you could tackle this.  One is to use an `and` statement:
+> > ~~~
+> > count = 207
+> > if count > 30 and count < 300:
+> >     print("Plate is countable")
+> > else:
+> >     print("count is too small or too large")
+> > ~~~
+> > {: .language-python}
+> > You could also use an `or` statement:
+> > ~~~
+> > count = 207
+> > if count < 30 or count > 300:
+> >     print("count is too small or too large")
+> > else:
+> >     print("Plate is countable")
+> > ~~~
+> > {: .language-python}
+> {: .solution}
+{: .challenge}
+
+
 
 > ## Which parts do I need?
 > In general all if statement blocks must start with an `if` statement!  However, the other parts aren't always needed.
@@ -215,6 +252,7 @@ else:
 > > to be printed?
 > {: .solution}
 {: .challenge}
+
  
 > ## Combining loops and conditionals: Sorting image files into bins
 > 
