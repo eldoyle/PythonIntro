@@ -65,7 +65,7 @@ print('We are done checking if/else conditions')
 {: .language-python}
 
 When you run this code, only the statment under the second elif (`elif number < 30`) is printed.  Once a true condition is
-encountered, the code under that condition is executed (in this case, `print('the number is between 20 and 30")`).  Python skips 
+encountered, the code under that condition is executed (in this case, `print('the number is between 20 and 30')`).  Python skips 
 over the remaining `else` statement and then proceeds to the last print statement, which is not part of the if/elif/else block.
 
 Even if multiple conditions are true, Python will only execute the code under the first true if/elif statement it encounters:
