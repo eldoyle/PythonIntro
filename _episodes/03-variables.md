@@ -235,8 +235,8 @@ You should do your best to give your variables descriptive, useful names that de
 > > variable name `time`.
 > > 
 > > On line 3, `avgCount` is reassigned.  This line of code takes the value stored in `avgCount` (currently 47.5), multiplies it 
-> > by 2, and then stores the new value **95** to the variable name `avgCount`.  The effect is that the value stored in 
-> > `avgCount` is updated to be **95**.  
+> > by 2, and then stores the new value **95.0** to the variable name `avgCount`.  The effect is that the value stored in 
+> > `avgCount` is updated to be **95.0**.  
 > > 
 > > The 4th line similarly takes the old value of `time`, subtracts 24, and reassigns the variable name `time` to point to this 
 > > new value (98).
