@@ -50,13 +50,15 @@ accomplished by a computer program!  And once you have analyed your images to ge
 and use a second program to analyze the data (for example, to compare colony number and total growth at different timepoints or
 under different growth conditions).  
 
-![Plate11](../fig/11.tif)       
-![Plate302](../fig/302.tif)
+![Plate1](../fig/00-colonies01.jpg)       
+![Plate3](../fig/00-colonies03.jpg)
 
 ### Example 2: Analyzing a titration 
 The video below (click on the image to see the video) shows the progress of a titration reaction.  Rather than watch the 
 reaction's progress yourself, you could write a program to monitor the color of the solution, graph the change in color over 
 time, and even send you a an alert notification when the reaction is complete!
+
+[![Titration video](../fig/00-titration.jpg)](https://youtu.be/NLSY5S8CABk?t=554)
 
 ### Image processing and data analysis in a single workflow. 
 As you work through the Python Intro tutorials, you will encounter these examples at different points.  At each point, you will
