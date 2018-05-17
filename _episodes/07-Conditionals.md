@@ -66,7 +66,7 @@ print('We are done checking if/else conditions')
 
 When you run this code, only the statment under the second elif (`elif number < 30`) is printed.  Once a true condition is
 encountered, the code under that condition is executed (in this case, `print('the number is between 20 and 30")`).  Python skips 
-over the remaining `else` statement and then proceeds to the last print statment, which is not part of the if/elif/else block.
+over the remaining `else` statement and then proceeds to the last print statement, which is not part of the if/elif/else block.
 
 Even if multiple conditions are true, Python will only execute the code under the first true if/elif statement it encounters:
 ~~~
@@ -107,7 +107,7 @@ Notice that when you run this code, only the statement under the first elif is p
 > {: .language-python}
 > > ## Solution
 > > Only the second statement 'Plate is countable' should be printed.  The first statement (count < 30) is not true.  The second
-> > statement (count < 300) is true, so the print statment underneath it will be executed.  The final else statment is not 
+> > statement (count < 300) is true, so the print statement underneath it will be executed.  The final else statement is not 
 > > checked because one of the preceding statements was true.
 > {: .solution}
 {: .challenge}
@@ -217,7 +217,7 @@ else:
 > * In general, an `else` statement is not required for if/elif code blocks.  If an `else` is present, code underneath the 
 > `else` statement will only be executed if none of the preceding `if` or `elif` statements are true.
 > * If you wish to check multiple conditions that are not alternatives to each other (i.e. each statement should be checked
-> regardless of the previous statement) you may stack up multiple if statments.  **If you use if/if , each `if` statement will 
+> regardless of the previous statement) you may stack up multiple if statements.  **If you use if/if , each `if` statement will 
 > be checked for truth**.
 {: .callout}
 
@@ -245,7 +245,7 @@ else:
 > > > number is smaller than 40  
 > > {: .output}
 > > The first three if statements are independent of each other.  They will all be checked, regardless of whether or not a
-> > previous if statment was true.  The `elif` and `else` statements go with the third `if` statement.  `elif` will only be
+> > previous if statement was true.  The `elif` and `else` statements go with the third `if` statement.  `elif` will only be
 > > checked if the third `if` is not true, and `else` will only be checked if the the third `if` and the `elif` are not true.
 > > 
 > > What value of number would cause only the statement under `elif` to be printed?  What would cause only the `else` statement 
@@ -253,8 +253,39 @@ else:
 > {: .solution}
 {: .challenge}
 
- 
-> ## Combining loops and conditionals: Sorting image files into bins
+> ## Combining loops and conditionals part 1: Checking plate counts
+> We can combine for loops and conditionals to check a condition for each item in a list.
+> For example, the code below, will print each fruit in the list of fruits that has exactly six letters:
+> ~~~
+> fruits = ['apple', 'cherry', 'peach', 'orange', 'banana', 'mango']
+> for fruit in fruits:
+>     if len(fruit) == 6:
+>         print(fruit)
+> ~~~
+> {: .language-python}
+> > cherry  
+> > orange  
+> > banana  
+> > {: .output}
+> 
+> In a previous example, you wrote code to check whether or not a plate count was countable (between 30 and 300 colonies).
+> Modify that code to check countability for each count in a list of plate counts.  Use the list below:  
+> `plateCounts = [43, 207, 6, 1247] `
+> > ## Solution
+> > We can simply nest our if statement code underneath the for loop:
+> > ~~~  
+> > plateCounts = [43, 207, 6, 1247]    
+> > for count in plateCounts:
+> >     if count > 30 and count < 300:
+> >         print("Plate is countable")
+> >     else:
+> >         print("count is too small or too large")
+> > ~~~
+> > {: .language-python}
+> {: .solution} 
+{: .challenge}
+
+> ## Combining loops and conditionals part 2: Sorting image files into bins
 > 
 > Imagine that we have a list of image files that are different types of images (you will learn more about the different image 
 > formats later in the week).  
