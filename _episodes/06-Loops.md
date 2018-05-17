@@ -201,7 +201,7 @@ print('after the loop, letter is', letter)
 > > 
 > > #Loop through word, adding each letter to the end of the string
 > > for letter in word:
-> >     newWord = newWord + letter #The order of these is important!
+> >     newWord = letter + newWord #The order of these is important!
 > >     
 > > print(newWord) #Print the final value of newWord
 > > ~~~
