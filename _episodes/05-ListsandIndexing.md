@@ -15,11 +15,11 @@ keypoints:
 - "Lists are indexed using 0-based indexing"
 ---
 ## Lists
-The variable types we have seen so far, such as floats, ints, and strings let us store one piece of data in a single variable.  
-However, it is often useful to store multiple pieces of data in a single variable.  For example, image we have calculated total 
-colony are in pixels for four different images of plates.  Instead of making four different variables, we can use a list to keep 
-them all together.  This is handy because we only have to keep track of one variable name! In the [next lesson]({{ page.root }}\06-Loops) 
-you'll learn how to perform the same operations on each item in a list.
+The ***variable types*** we have seen so far, such as *floats*, *ints* (short for integers), and *strings* let us store one piece 
+of data in a single variable.  However, it is often useful to store multiple pieces of data in a single variable.  For example, 
+imagine we have calculated total colony area in pixels for four different images of plates.  Instead of making four different 
+variables, we can use a list to keep them all together.  This is handy because we only have to keep track of one variable name! 
+In the [next lesson]({{ page.root }}\06-Loops) you'll learn how to perform the same operations on each item in a list.
 
 ### Creating lists
 Lists are denoted using square brackets, with the items separated by commas.  The code below will create and print a populated
@@ -77,16 +77,16 @@ This returns the output
 We can even make an empty list and add objects to it!
 
 ~~~
-genotypes = []
-genotypes.append('Mo17')
-genotypes.append('B73')
-print(genotypes)
+plateCounts = []
+plateCounts.append(43)
+plateCounts.append(296)
+print(plateCounts)
 ~~~
 {: .language-python}
 
 Returns the output
 ~~~
-['Mo17', 'B73']
+[43, 296]
 ~~~
 {: .output}
 
@@ -118,12 +118,12 @@ print(samples[1])
 
 This code returns the output
 ~~~
-'Plate293'
+Plate293
 ~~~
 {: .output}
 
 Notice that giving the index “1” returned the second item in the list.  This is because Python (like many programming languages) 
-begins counting at 0.  
+**begins counting at 0**.  
 
 > ## List Indexing
 > How would you get the first item in the list `samples`?  How would you get the last item?
@@ -133,7 +133,7 @@ begins counting at 0.
 > > print(samples[2]) #Returns the first item, at index position 2 (the list contains 3 items)
 > > ~~~
 > > {: .language-python}
-> > `samples[0]` returns the output `'Plate16'` and `samples[2]` returns the output `'Plate17'`.
+> > `samples[0]` returns the output `Plate16` and `samples[2]` returns the output `Plate17`.
 > {: .solution}
 {: .challenge}
 
@@ -149,7 +149,7 @@ begins counting at 0.
 >
 > Returns the output
 > ~~~
-> 'Plate17'
+> Plate17
 > ~~~
 > {: .output}
 {: .callout}
@@ -163,7 +163,7 @@ begins counting at 0.
 > > print(samples[-3]) #Returns the third-to-last item (which is the same as the first item in this example)
 > > ~~~
 > > {: .language-python}
-> > `samples[-2]` returns the output `'Plate293'` and `samples[-3]` returns the output `'Plate16'`.
+> > `samples[-2]` returns the output `Plate293` and `samples[-3]` returns the output `Plate16`.
 > {: .solution}
 {: .challenge}
 
@@ -254,7 +254,7 @@ We can also use similar indexing principles to access specific characters or sub
 > `element = 'oxygen'`
 > Explain what `element[1:-1]` does.
 > > ## Solution
-> > If you create and run code with a print statement, you'll get the following output:
+> > If you create and run code with a print statement, you'll get the following output:  
 > > `element[1:-1]` will return all but the first and last characters: `'xyge'`.  
 > > 
 > > Remember that position 1 is the *second* character of the string (0-based counting!) and that the slice goes *up to*, but 
