@@ -1,6 +1,6 @@
 ---
 title: "Starting Python in the DIVAS VM"
-teaching: 0
+teaching: 30
 exercises: 0
 questions:
 - "Where and how do I write and run Python code?"
