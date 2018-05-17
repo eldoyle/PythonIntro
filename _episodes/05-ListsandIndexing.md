@@ -344,7 +344,7 @@ We can also use similar indexing principles to access specific characters or sub
 > > ~~~
 > > {: .language-python}
 > > How does this code work?  As we have seen before, `salsas[0]`, `salsas[1]`, and `salsas[2]` refer to specific items in the 
-> > list `salsas`.  But in this case, each item in `salsas` is itself list!  Therefore, `salsas[0]` refers to the list
+> > list `salsas`.  But in this case, each item in `salsas` is itself a list!  Therefore, `salsas[0]` refers to the list
 > > `['tomatoes', 'onion', 'cilantro', 'jalepeno']`.  So `salsas[0][3]` refers to the item at index 3 of that list.
 > > 
 > > The number in the first set of square brackets selects the individual list that we want to look at; the number in the second
