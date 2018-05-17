@@ -43,7 +43,7 @@ The best way to learn Python is to read, write, and experiment with Python code 
 we will focus on two image-based examples.
 
 ### Example 1: Bactera growing on a plate
-The image below shows a number of bacterial colonies growing on a plate.  Image that you have conducted a large experiment, with 
+The images below show a number of bacterial colonies growing on plates. Imagine that you have conducted a large experiment, with 
 multiple plates growing under different conditions.  You might be interested in counting colonies on each plate, in computing
 the total percent area covered by the bacterial colonies, or even tracking colony growth over time.  All of these tasks could be 
 accomplished by a computer program!  And once you have analyed your images to get colony counts or total area, you could write 
