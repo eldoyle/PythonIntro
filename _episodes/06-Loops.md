@@ -122,7 +122,7 @@ descriptive names that will make it clear what your code is doing.
 > >      areaInMm = area*mm2PerPixel
 > > 
 > >      #Print the final area in mm2
-> >      print('area in pixels is :' + str(area) + 'The area in mm2 is'  + str(AreaInMm)) #print description + number
+> >      print('area in pixels is: ' + str(area) + '. The area in mm2 is: '  + str(AreaInMm)) #print description + number
 > > ~~~
 > > {: .language-python}
 > {: .solution}
@@ -195,6 +195,7 @@ print('after the loop, letter is', letter)
 > produces a new string with the characters in reverse order, so `'Newton'` becomes `'notweN'`.
 > > ## Solution
 > > ~~~
+> > word = 'Newton'
 > > #Create an empty string that we will add on to
 > > newWord = ''
 > > 
