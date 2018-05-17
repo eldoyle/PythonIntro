@@ -94,21 +94,21 @@ Notice that when you run this code, only the statement under the first elif is p
 *even though the next two elif statements are also true!*
 
 > ## “How many paths”
-> Consider the code below.  Which letters (A, B, and/or C) would be printed?  Why?
+> Consider the code below.  Which statement(s) would be printed?  Why?
 > ~~~
-> if 4 > 5:
->     print('A')
-> elif 4 == 5:
->     print('B')
-> elif 4 < 5:
->     print('C')
+> count = 207
+> if count < 30:
+>     print("count is too small")
+> elif count < 300:
+>     print("Plate is countable")
 > else:
->     print("none of these is true")
+>     print("count is too large")
 > ~~~
 > {: .language-python}
 > > ## Solution
-> > Only the letter 'C' should be printed.  The first two statements (4>5 and 4==5) are not true.  The third statment (4<5) is
-> > true, so the print statment underneath it will be executed.  The final else statment is not executed.
+> > Only the second statement 'Plate is countable' should be printed.  The first statement (count < 30) are not true.  The second
+> > statement (count < 300) is true, so the print statment underneath it will be executed.  The final else statment is not 
+> > executed.
 > {: .solution}
 {: .challenge}
 
@@ -123,8 +123,8 @@ Other possible operators are:
 + `!=` is not equal to
 
 ## Booleans
-`True` and `False` are special words in Python called booleans which represent true and false statements. However, they aren’t 
-the only values in Python that are true and false. In fact, any value can be used in an if or elif.
+`True` and `False` are special words in Python called **booleans** which represent true and false statements. However, they 
+aren’t the only values in Python that are true and false. In fact, any value can be used in an *if* or *elif* statement.
 
 > ## What values are True?
 > After reading and running the code below, explain what the rule is for which values are considered true and which are 
@@ -135,7 +135,7 @@ the only values in Python that are true and false. In fact, any value can be use
 > if 'word':
 >     print('word is true')
 > if []:
-<     print('empty list is true')
+>     print('empty list is true')
 > if [1, 2, 3]:
 >     print('non-empty list is true')
 > if 0:
@@ -149,6 +149,28 @@ the only values in Python that are true and false. In fact, any value can be use
 > > above are considered false.  
 > {: .solution}
 {: .challenge}
+
+## Checking multiple conditions with one statement
+We can combine and check multiple conditions in one statement, using the keywords `and` and `or`.
+* Statements joined by `and` will be evaluated as True if and only if **both statements are True**.
+* Statements joined by `or` will be evaluated as True if **one or both of the statements are True**.
+
+~~~
+number = 10
+if number > 5 and number < 20:
+    print("number is medium")
+else:
+    print("the number is small or large")
+    
+if number < 5 or number > 20:
+    print("number is large or small")
+else:
+    print("number is medium")
+~~~
+{: .language-python}  
+> number is medium
+> number is medium
+{: .output}
 
 > ## Which parts do I need?
 > In general all if statement blocks must start with an `if` statement!  However, the other parts aren't always needed.
