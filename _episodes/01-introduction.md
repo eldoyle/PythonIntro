@@ -60,7 +60,7 @@ time, and even send you a an alert notification when the reaction is complete!
 
 [![Titration video](../fig/00-titration.jpg)](https://youtu.be/NLSY5S8CABk?t=554)
 
-### Image processing and data analysis in a single workflow. 
+### Image processing and data analysis in a single workflow 
 As you work through the Python Intro tutorials, you will encounter these examples at different points.  At each point, you will
 be asked to apply the tools you have just learned to tackle analysis of one of these image-based data sets.  For our purposes
 of learning basic Python skills, we will assume that you have already analyzed the images: that is, you have already counted 
@@ -72,5 +72,20 @@ do image processing: for example, to write code that will "look" at an image and
 measure solution color every few seconds.
 
 When put together, these two sets of skills will allow you to construct complete workflows that allow you to collect data and 
-measurements directly from images and then output and analyze the data to answer experimental questions.  
+measurements directly from images and then output and analyze the data to answer experimental questions.
+
+> ## How to use these lessons
+> It would be impossible for us to cover every single programming or Python concept that you might need to know.  You also 
+> shouldn’t expect yourself to remember every single thing that was covered.  The goal of these lessons is to expose you to some 
+> fundamental concepts of programming, using Python,  Later when you need to accomplish a task you can remember that you 
+> probably learned something about it, and then you can go look up the details in your notes or somewhere else on the internet.
+>
+> Just because we show you one way to do something doesn’t mean that’s the only way, or even the best way, to do it!  Good 
+> programmers are constantly learning new ways to do things.
+> 
+> Don’t feel like you have to reinvent the wheel every time and write all of your code from scratch.  Someone has probably 
+> written code that is similar to what you want to do, and it’s probably on the internet.  Just make sure you understand what 
+> the code is doing before you copy it into your program!
+{: .callout}
+
 
