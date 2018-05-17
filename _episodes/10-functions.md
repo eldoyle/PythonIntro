@@ -28,13 +28,14 @@ def fahr_to_kelvin(temp):
 ~~~
 {: .language-python}
 
-The function contains the keyword `def` and a function name (in this case, `fahr_to_kelvin`).  The **input parameters** that 
-must be passed to the function are listed inside of the parentheses.  The inputs are placeholder variables.  When we actually 
-use the function later, we will have to supply a value for temp that the function will operate *on*.  It also contains a return 
-statement, which tells us what value function will output.
+The function contains the keyword `def` and a function name (in this case, `fahr_to_kelvin`).  The **input parameters** (or 
+arguments that must be passed to the function are listed inside of the parentheses.  In the function definition, these
+paramaters are placeholder variables.  When we actually use the function later, we will have to supply a value for temp that the 
+function will operate *on*.  Finally, the function definition also contains a return statement, which tells us what value(s) 
+function will output.
 
 Notice that typing the function doesn’t do anything.  In order to use the function, we have to **call** it, or tell Python to 
-perform the function on an input.  To call it, we use the name of the function with the desired inputs inside the parentheses
+perform the function on an input.  To call it, we use the name of the function with the desired arguments inside the parentheses
 (in this case, a number representing a temperature in degrees Fahrenheit).
 ~~~
 fahr_to_kelvin(0)
