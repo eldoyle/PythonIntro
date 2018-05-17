@@ -86,6 +86,7 @@ measurements directly from images and then output and analyze the data to answer
 > Don’t feel like you have to reinvent the wheel every time and write all of your code from scratch.  Someone has probably 
 > written code that is similar to what you want to do, and it’s probably on the internet.  Just make sure you understand what 
 > the code is doing before you copy it into your program!
-{: .callout}
+{: .callout}  
 
-
+Plate images are from the paper "High-throughput imaging of bacterial colonies grown on filter plates with application to serum 
+bactericidal assays." Liu X, Wang S, Sendi L, Caulfield MJ.  J Immunological Methods, 2004. 
