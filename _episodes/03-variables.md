@@ -194,10 +194,10 @@ Will result in an error message
 ~~~
 Traceback (most recent call last):
 
-  File "<ipython-input-28-5359e87c9757>", line 1, in <module>
+  File "<ipython-input-17-5359e87c9757>", line 1, in <module>
     name + remainder
 
-TypeError: cannot concatenate 'str' and 'float' objects
+TypeError: Can't convert 'int' object to str implicitly
 ~~~
 {: .output}
 
@@ -224,29 +224,29 @@ You should do your best to give your variables descriptive, useful names that de
 > ## Variable Switching
 > Draw diagrams showing what variables refer to what values after each statement in the following program:
 > ~~~
-> mass = 47.5
-> age = 122
-> mass = mass * 2.0
-> age = age - 20
+> avgCount = 47.5
+> time = 122
+> avgCount = avgCount * 2.0
+> time = time - 24
 > ~~~
 > {: .language-python}
 > > ## Solution
-> > On line 1 of the code, the value **47.5** is assigned to the variable `mass`.  Similarly, line 2 assigns **122** to the
-> > variable name `age`.
+> > On line 1 of the code, the value **47.5** is assigned to the variable `avgCount`.  Similarly, line 2 assigns **122** to the
+> > variable name `time`.
 > > 
-> > On line 3, `mass` is reassigned.  This line of code takes the value stored in `mass` (currently 47.5), multiplies it by 2,
-> > and then stores the new value **95** to the variable name `mass`.  The effect is that the value stored in `mass` is updated 
-> > to be **95**.  
+> > On line 3, `avgCount` is reassigned.  This line of code takes the value stored in `avgCount` (currently 47.5), multiplies it 
+> > by 2, and then stores the new value **95** to the variable name `avgCount`.  The effect is that the value stored in 
+> > `avgCount` is updated to be **95**.  
 > > 
-> > The 4th line similarly takes the old value of `age`, subtracts 20, and reassigns the variable name age to point to this new
-> > value (102).
+> > The 4th line similarly takes the old value of `time`, subtracts 24, and reassigns the variable name `time` to point to this 
+> > new value (98).
 > {: .solution}
 {: .challenge}
 
 > ## Sorting Out References
 > What does the following program print out?  Why?
 > ~~~
-> first, second = 'Grace', 'Hopper'
+> first, second = 'Plate302', 'Ecoli'
 > third, fourth = second, first
 > print(third, fourth)
 > ~~~
@@ -254,9 +254,12 @@ You should do your best to give your variables descriptive, useful names that de
 > > ## Solution
 > > If you run the code above, you should get printed output that looks like this:
 > > ~~~
-> > Hopper Grace
+> > Ecoli Plate302
 > > ~~~
-> > To understand what is happening, you can think of the first line of code as storing the value “Grace” somewhere in your computer’s memory and then assigning it the handle `first`.  At the same time, it stores the value “Hopper” and assigns it the handle `second`.  Then, the second line of code creates new handles pointing to those same values.  So `third` points at the same value/memory location as `second` (“Hopper”) and `fourth` points at the same value/location as `first` (“Grace”).
+> > To understand what is happening, you can think of the first line of code as storing the value “Plate302” somewhere in your 
+> > computer’s memory and then assigning it the handle `first`.  At the same time, it stores the value “Ecoli” and assigns it the 
+> > handle `second`.  Then, the second line of code creates new handles pointing to those same values.  So `third` points at the 
+> > same value/memory location as `second` (“Ecoli”) and `fourth` points at the same value/location as `first` (“Plate302”).
 > {: .solution}
 {: .challenge}
 
