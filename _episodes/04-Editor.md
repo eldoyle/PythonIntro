@@ -44,7 +44,9 @@ The first time you run a script, Spyder will ask you to save your code.  This is
 
 By default, the Working Directory is where Spyder will save your scripts and look for files.  You can change your working
 directory by using the buttons at the top-right of Spyder.  It is a good idea to create one folder that you can easily find to
-store all of your Python projects.  On the DIVAS VM, your working directory is automatically set to </home/diva>.
+store all of your Python projects.
+
+If you have not already done so, **set your current Working Directory to */home/Desktop/workshops/YourDirectory*. **
 
 > ## Know your Working Directory
 > Later, when we use scripts to open files or import functions from other .py files, you will need to either 1) Make sure the 
