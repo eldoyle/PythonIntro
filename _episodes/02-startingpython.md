@@ -52,7 +52,7 @@ multiple lines/commands.  This is where we will eventually be writing most of ou
 in, and for understanding the behavior of your code (debugging).
 * The Working Directory (top right address bar) is where Spyder will save your scripts and look for files.  You can change your 
 working directory by using the buttons at the top-left of Spyder.  It is a good idea to create one folder that you can easily 
-find to store all of your Python projects.   On the DIVAS VM, your working directory is automatically set to <Path>. We will 
+find to store all of your Python projects.   On the DIVAS VM, your working directory is automatically set to *home/diva*. We will 
 reset this to be home/Desktop/workshops/<your_directory>
   
 ![TheSpyderWindowLayout](../fig/SpyderWindowSetup.jpg)
