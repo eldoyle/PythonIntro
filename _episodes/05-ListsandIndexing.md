@@ -327,7 +327,7 @@ We can also use similar indexing principles to access specific characters or sub
 > ~~~
 > {: .language-python}  
 > and returns the following output:
-> > ['mango', 'cucumber', 'jalepeno', 'red onion', 'lime juice']
+> > ['mango', 'cucumber', 'jalepeno', 'red onion', 'lime juice']  
 > > mango
 > {: .output}
 >
