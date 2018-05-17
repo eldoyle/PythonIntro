@@ -37,6 +37,11 @@ file is located.  Or, when we provide the file name, we can give a complete path
 > 4. As you are working, make sure that you save your file opening script(s) to this directory.
 {: .callout}  
 
+### The File Setup
+Let's open and examine the structure of the file Plates_output_simple.csv.  If you open the file in a text editor, you will see
+that the file contains several lines of textIf you open the file in a spreadsheet program such as
+LibreOfficeCalc or Excel, you can see that the file is organized into columns.
+
 ### Opening and reading files is a three-step process
 We will open and read the file in three steps.
 1. We will create a variable to hold the name of the file that we want to open.  
@@ -55,7 +60,7 @@ function)!
 Here is an example of opening, reading, and closing a file.
 ~~~
 #Create a variable for the file name
-filename = 'Root_Density_Data_full.csv' #This is simply a string of text
+filename = 'Plates_output_simple.csv' #This is simply a string of text
 
 #Open the file
 infile = open(filename, 'r') # 'r' tells Python we are opening the file to read it, infile is the opened file object that we will be able to read
