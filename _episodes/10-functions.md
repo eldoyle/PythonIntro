@@ -136,4 +136,8 @@ print(fahr_to_kelvin(15))
 > {: .solution}
 {: .challenge}
 
+> ## Challenge: Plate statistics
+> Open and read the Plates_output_simple.csv file.  Split the file into separate files, one with all of the 'control' condition
+> rows, and one with all of the 'expt' condition rows.
 
+> 
