@@ -289,7 +289,7 @@ Go open the file you just wrote and and check that the lines are spaced correctl
 > > ['colonies03.tif', '3', 'exp', '24', '792', '3', '78\n']  
 > > ['colonies06.tif', '2', 'exp', '48', '85', '5.2', '46\n']  
 > {: .output}  
-> We can get rid of these newlines by using the `.strip()` function, which will get rid of newline characters:
+> We can get rid of these newlines by using the `.strip()` function, which will get rid of newline characters:  
 > ~~~
 > #Create a variable for the file name
 > filename = 'Plates_output_simple.csv'
