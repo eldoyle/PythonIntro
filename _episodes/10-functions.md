@@ -1,6 +1,6 @@
 ---
 title: "Defining Functions"
-teaching: 0
+teaching: 30
 exercises: 30
 questions:
 - "How can I write my own functions?"
