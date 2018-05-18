@@ -39,8 +39,25 @@ file is located.  Or, when we provide the file name, we can give a complete path
 
 ### The File Setup
 Let's open and examine the structure of the file Plates_output_simple.csv.  If you open the file in a text editor, you will see
-that the file contains several lines of textIf you open the file in a spreadsheet program such as
-LibreOfficeCalc or Excel, you can see that the file is organized into columns.
+that the file contains several lines of text.  
+![DataFileRaw](../fig/Plates_output_file_raw.jpg)
+
+However, this is fairly difficult to read.  If you open the file in a spreadsheet program such as LibreOfficeCalc or Excel, you 
+can see that the file is organized into columns, with each column separated by the commas in the image above (hence the file 
+extension **.csv**, which stands for comma-separated values).
+![DataFileColumns](../fig/Plates_output_file.jpg)
+
+The file contains one header row, followed by eight rows of data.  Each row represents a single plate.  If we look at the 
+column headings, we can see that we have collected data for each plate:
+* The name of the image from which the data was collected
+* The plate number (there were 4 plates, with each plate imaged at two different time points)
+* The growth condition (either control or experimental)
+* The observation timepoint (either 24 or 48 hours)
+* Colony count for the plate
+* The average colony size for the plate
+* The percentage of the plate covered by bacterial colonies
+
+We will read in this data file and then work to analyze the data.
 
 ### Opening and reading files is a three-step process
 We will open and read the file in three steps.
