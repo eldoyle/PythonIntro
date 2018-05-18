@@ -255,7 +255,7 @@ else:
 
 > ## Combining loops and conditionals part 1: Checking plate counts
 > We can combine for loops and conditionals to check a condition for each item in a list.
-> For example, the code below, will print each fruit in the list of fruits that has exactly six letters:
+> For example, the code below will print each fruit in the list of fruits that has exactly six letters:
 > ~~~
 > fruits = ['apple', 'cherry', 'peach', 'orange', 'banana', 'mango']
 > for fruit in fruits:
