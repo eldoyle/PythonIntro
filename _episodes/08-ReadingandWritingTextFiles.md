@@ -428,7 +428,7 @@ outfile.close() #Close the file when we’re done!
 > nameString = ', '.join(names) #the ', ' tells Python to join the list with each item separated by a comma + space
 > print(nameString)
 > ~~~
-> {: language-python}  
+> {: .language-python}  
 > > 'Erin, Mark, Tessa'
 > {: .output}
 > > ## Solution
