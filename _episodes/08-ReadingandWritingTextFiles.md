@@ -1,6 +1,6 @@
 ---
 title: "Reading and Writing Text Files"
-teaching: 0
+teaching: 60
 exercises: 30
 questions:
 - "How can I read in data that is stored in a file or write data out to a file?"
@@ -82,7 +82,7 @@ Here is an example of opening, reading, and closing a file.
 filename = 'Plates_output_simple.csv' #This is simply a string of text
 
 #Open the file
-infile = open(filename, 'r') # 'r' tells Python we are opening the file to read it, infile is the opened file object that we will be able to read
+infile = open(filename, 'r') # 'r' says we are opening the file to read, infile is the opened file object that we will read from
 
 #Store the data from the file in a variable
 data = infile.read()
@@ -290,27 +290,27 @@ Go open the file you just wrote and and check that the lines are spaced correctl
 > > ['colonies06.tif', '2', 'exp', '48', '85', '5.2', '46\n']  
 > {: .output}  
 > We can get rid of these newlines by using the `.strip()` function, which will get rid of newline characters:
-> > ~~~
-> > #Create a variable for the file name
-> > filename = 'Plates_output_simple.csv'
-> > 
-> > ##Open the file
-> > infile = open(filename, 'r') 
-> > 
-> > lines = infile.readlines() 
-> > 
-> > for line in lines[1:]: #skip the first line, which is the header
-> >     sline = line.strip() #get rid of trailing newline characters at the end of the line
-> >     sline = sline.split(',')  # separates line into a list of items.  ',' tells it to split the lines at the commas
-> >     
-> >     colonyCount = int(sline[4]) #store the colony count for the line as an integer
-> >     
-> >     if colonyCount > 30:
-> >         print(sline)
-> >   	
-> > #close the file
-> > infile.close()
-> > ~~~
+> ~~~
+> #Create a variable for the file name
+> filename = 'Plates_output_simple.csv'
+> 
+> ##Open the file
+> infile = open(filename, 'r') 
+> 
+> lines = infile.readlines() 
+> 
+> for line in lines[1:]: #skip the first line, which is the header
+>     sline = line.strip() #get rid of trailing newline characters at the end of the line
+>     sline = sline.split(',')  # separates line into a list of items.  ',' tells it to split the lines at the commas
+>     
+>     colonyCount = int(sline[4]) #store the colony count for the line as an integer
+>     
+>     if colonyCount > 30:
+>         print(sline)
+>   	
+> #close the file
+> infile.close()
+> ~~~
 > {: .language-python}
 {: .callout}
 
@@ -420,6 +420,7 @@ outfile.close() #Close the file when we’re done!
 {: .challenge}
 
 > ## Challenge Problem
+> Open and read in the data from Plates_output_simple.csv.
 > Write a new csv-formatted file that contains only the rows for the control condition and includes only the columns for Time, 
 > colonyCount, avgColonySize, and percentColonyArea.
 > Hint: you can use the .join() function to join a list of items into a string.
