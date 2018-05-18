@@ -141,8 +141,8 @@ column 3.
 > How would you print out the last two columns of the middle and bottom two rows of the array `data`?
 >
 > Your output should look like this:
-> > [[ 154.  155.]  
-> >  [ 171.  172.]]
+> > [[ 154.  155.]    
+> >  [ 171.  172.]]  
 > {: .output}
 > > ## Solution:
 > > `print(data[1:3, 13:15])` will print the values that you want.  Since the array has 3 rows, the middle row is located at 
@@ -235,6 +235,8 @@ print(np.mean(data, axis=1)) #axis=1 applies the function to each row
 > > print(np.mean(data2, axis=1)) #axis=1 applies the function to each row
 > > ~~~
 > > {: .language-python}
+> {: .solution}
+{: .challenge}
 
 > ## Which channel?
 > Read in the Titration_color_data_simple.csv file as a numpy array.  
