@@ -136,8 +136,14 @@ print(fahr_to_kelvin(15))
 > {: .solution}
 {: .challenge}
 
-> ## Challenge: Plate statistics
-> Open and read the Plates_output_simple.csv file.  Split the file into separate files, one with all of the 'control' condition
-> rows, and one with all of the 'expt' condition rows.
-
+> ## Challenge: Finding max color change
+> Write a function that examines one color channel (one row) of the file Titration_color_data_simple.csv and returns the frame 
+> that has largest change in intensity from the frame before it.  
+> 
+> For example, if you had the data `intensities = [140, 142, 139, 128, 129, 126]` representing frames 1, 2, 3, 4, 5, and 6, for a 
+> single channel you should return the number `3` because the biggest difference is 139-128 = 11 between frames 3 and 4.
+> 
+> You should be able to read in the entire dataset (either using standard read commands or as a numpy array) and then run your 
+> function on each color channel individually.
+{: .challenge}
 > 
