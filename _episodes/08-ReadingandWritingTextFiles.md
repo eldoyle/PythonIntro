@@ -280,7 +280,39 @@ outfile.close() #Close the file when we’re done!
 ~~~
 {: .language-python}
 
-Go open the file you just wrote and and check that the lines are spaced correctly.
+Go open the file you just wrote and and check that the lines are spaced correctly.:
+
+> ## Dealing with newline characters when you read a file
+> You may have noticed in the last file reading example that the printed output included newline characters at the end of each
+> line of the file:
+> > ['colonies02.tif', '2', 'exp', '24', '84', '3.2', '22\n']  
+> > ['colonies03.tif', '3', 'exp', '24', '792', '3', '78\n']  
+> > ['colonies06.tif', '2', 'exp', '48', '85', '5.2', '46\n']  
+> {: .output}  
+> We can get rid of these newlines by using the `.strip()` function, which will get rid of newline characters:
+> > ~~~
+> > #Create a variable for the file name
+> > filename = 'Plates_output_simple.csv'
+> > 
+> > ##Open the file
+> > infile = open(filename, 'r') 
+> > 
+> > lines = infile.readlines() 
+> > 
+> > for line in lines[1:]: #skip the first line, which is the header
+> >     sline = line.strip()
+> >     sline = sline.split(',')  # separates line into a list of items.  ',' tells it to split the lines at the commas
+> >     
+> >     colonyCount = int(sline[4]) #store the colony count for the line as an integer
+> >     
+> >     if colonyCount > 30:
+> >         print(sline)
+> >   	
+> > #close the file
+> > infile.close()
+> > ~~~
+> {: .language-python}
+{: .callout}
 
 ### Writing numbers to files
 Just like Python automatically reads files in as strings, the `write()`function expects to only write strings.  If we want to 
