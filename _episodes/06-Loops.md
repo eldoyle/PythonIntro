@@ -1,7 +1,7 @@
 ---
 title: "For Loops"
-teaching: 0
-exercises: ""
+teaching: 60
+exercises: 30
 questions:
 - "How can I repeat the same operations on every item in a list?"
 objectives:
