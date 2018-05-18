@@ -300,7 +300,7 @@ Go open the file you just wrote and and check that the lines are spaced correctl
 > > lines = infile.readlines() 
 > > 
 > > for line in lines[1:]: #skip the first line, which is the header
-> >     sline = line.strip()
+> >     sline = line.strip() #get rid of trailing newline characters at the end of the line
 > >     sline = sline.split(',')  # separates line into a list of items.  ',' tells it to split the lines at the commas
 > >     
 > >     colonyCount = int(sline[4]) #store the colony count for the line as an integer
@@ -373,13 +373,99 @@ outfile.close() #Close the file when we’re done!
 
 
 > ## Pulling it all together
-> Read in the data from the file DIRT_output_selected_images_simple.csv that we have been working with.  Use .readlines() to 
-> create a list of lines in the file.  Then use a for loop to allow you to loop through each line one at a time.
+> Read in the data from the file *Plates_output_simple.csv* that we have been working with. Write a new csv-formatted file that 
+> contains only the rows for control plates.  
+> You will need to do the following steps:
+> 1. Open the file.
+> 2. Use `.readlines()` to create a list of lines in the file.  Then close the file!  
+> 3. Open a file to write your output into.  
+> 4. Write the header line of the output file.  
+> 5. Use a for loop to allow you to loop through each line in the list of lines from the input file.  
+> 6. For each line, check if the growth condition was experimental or control.  
+> 7. For the control lines, write the line of data to the output file.  
+> 8. Close the output file when you're done!  
 > 
-> Write a new csv-formatted file that only contains the rows with MAX_WIDTH less than 200 .
-> Challenge: Write a new csv-formatted file that contains only the rows with MAX_WIDTH less than 200 and includes only the 
-> columns for AREA, AVG_DENSITY, and MAX_WIDTH.
 > > ## Solution
-> > Write out solution
+> > Here's one way to do it:
+> > ~~~
+> > #Create a variable for the file name
+> > filename = 'Plates_output_simple.csv'
+> > 
+> > ##Open the file
+> > infile = open(filename, 'r') 
+> > 
+> > lines = infile.readlines() #We will process the lines of the file later
+> > 	
+> > #close the input file
+> > infile.close()
+> > 
+> > #Create the file we will write to
+> > filename = 'ControlPlatesData.txt' 
+> > outfile = open(filename, 'w')
+> > 
+> > outfile.write(lines[0]) #This will write the header line of the file 
+> > 
+> > for line in lines[1:]: #skip the first line, which is the header
+> >     sline = line.split(',')  # separates line into a list of items.  ',' tells it to split the lines at the commas
+> >     
+> >     condition = sline[2] #store the condition for the line as a string
+> >     
+> >     if condition == "control":
+> >         outfile.write(line) #The variable line is already formatted correctly!
+> > 
+> > outfile.close() #Close the file when we’re done!
+> > ~~~
+> > {: .language-python}
+> {: .solution}
+{: .challenge}
+
+> ## Challenge Problem
+> Write a new csv-formatted file that contains only the rows for the control condition and includes only the columns for Time, 
+> colonyCount, avgColonySize, and percentColonyArea.
+> Hint: you can use the .join() function to join a list of items into a string.
+> ~~~
+> names = ['Erin', 'Mark', 'Tessa']
+> nameString = ', '.join(names) #the ', ' tells Python to join the list with each item separated by a comma + space
+> print(nameString)
+> ~~~
+> {: language-python}  
+> > 'Erin, Mark, Tessa'
+> {: .output}
+> > ## Solution
+> > ~~~
+> > #Create a variable for the input file name
+> > filename = 'Plates_output_simple.csv'
+> > 
+> > ##Open the file
+> > infile = open(filename, 'r') 
+> > 
+> > lines = infile.readlines() #We will process the lines of the file later
+> >   	
+> > #close the file
+> > infile.close()
+> > 
+> > # Create the file we will write to
+> > filename = 'ControlPlatesData_Reduced.txt'
+> > outfile = open(filename, 'w')
+> > 
+> > #Write the header line
+> > headerList = lines[0].split(',')[3:] #This will return the list of column headers from 'time' on
+> > headerString = ','.join(headerList) #join the items in the list with commas
+> > outfile.write(headerString) #There is already a newline at the end, so no need to add one
+> > 
+> > #Write the remaining lines
+> > for line in lines[1:]: #skip the first line, which is the header
+> >     sline = line.split(',')  # separates line into a list of items.  ',' tells it to split the lines at the commas
+> >     
+> >     condition = sline[2] #store the colony count for the line as an integer
+> >     
+> >     if condition == "control":
+> >         dataList = sline[3:]
+> >         dataString = ','.join(dataList)
+> >         outfile.write(dataString) #The variable line is already formatted correctly!
+> > 
+> > outfile.close() #Close the file when we’re done!
+> > ~~~
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
