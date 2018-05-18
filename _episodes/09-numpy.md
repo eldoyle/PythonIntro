@@ -28,25 +28,30 @@ file!).
 We can import numpy and all of its functions by including the command `import numpy as np` at the beginning of our code.
 This will let us call functions in the numpy library as `np.<function>()`.
 
-## Using the numpy library to load a dataset
-We are going to look at the file DIRT_output_selected_images_simple.csv.
-Open the file and take it look. We will use the numpy library to load specific columns:  
-X_PIXEL: x pixels in scale marker  
-Y_PIXEL: y pixels in scale marker  
-X_SCALE: mm per pixel (x)  
-Y_SCALE: mm per pixel (y)  
-DIA_STEM: stem diameter  
-DIA_STEM_ SIMPLE: stem diameter  
-AREA: the number of root (light) pixels  
-AVG_DENSITY: the ratio of root to background pixels within the root ball  
-WIDTH_MED: the median width of the rootball  
-WIDTH_MAX: the maximum width of the rootball  
+> ## Lesson Setup
+> We will work with the practice file **Titration_color_data_simple.csv**.
+> 1. Locate the file *Titration_color_data_simple* in the directory **home/Desktop/workshops/bash-git-python**.
+> 2. Copy the file to your working directory, **home/Desktop/workshops/YourName**.
+> 3. Make sure that your working directory is also set to the folder home/Desktop/workshops/YourName.
+> 4. As you are working, make sure that you save your file opening script(s) to this directory.
+{: .callout}  
+
+### The File Setup
+Let's open and examine the structure of the file *Titration_color_data_simple.csv*.  If you open the file in a text editor, you 
+
+If you open the file, you will see that it contains a header row, followed by three rows of data.
+
+Each row represents a single color channel (either red, green, or blue) measured over time.  Each column represents a different 
+frame of the image.  The goal of the file is to track the color of the titration solution over time, to identify the point
+when the reaction is finished.
+
+We will read in this data file and then work to analyze the data.
 
 The code below will open and load the datafile.
 ~~~
 import numpy as np
 
-data = np.loadtxt(fname = 'DIRT_output_selected_images_simple.csv', delimiter =',', skiprows = 1, usecols=(1,2,3,4,5,6,7,8,9,10))
+data = np.loadtxt(fname = 'Titration_color_data_simple.csv', delimiter =',', skiprows = 1, usecols=(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15))
 
 print(data)
 ~~~
@@ -64,7 +69,7 @@ the numpy library (which we asked Python to abbeviate as *np*). This dotted nota
 the component parts of things as thing.component (in this case, *libraryName.functionName()*, since the function is a part of 
 the library).
 
-We supplied *np.loadtxt* with 4 parameters: 
+We supplied *np.loadtxt* with four parameters: 
 * fname is the name of the file we want to read
 * delimiter is the text that separates values on a line (in this case a comma). 
 
@@ -73,8 +78,8 @@ These both need to be character strings, so we put them in quotes.
 * skiprows = 1 tells python to skip 1 row of the file that contains the column names (numpy can only handle numbers, not 
 a mix of text strings and numbers).
 * usecols=(...) tells Python to only read in these columns.
-    * Note that if we are reading in a csv file that contains only numbers (no column names or row names, we can omit the last 
-    two arguments skiprows and usecols)
+    * Note that if we are reading in a csv file that contains only numbers (no column names or row names), we can omit the last 
+    two arguments skiprows and usecols
 
 Also notice that *np.loadtxt()* handled all of the file opening and parsing for us in a single command!
 
@@ -84,18 +89,20 @@ The command `data.shape` will return a tuple that tells us the number of rows an
 ~~~
 import numpy as np
 
-data = np.loadtxt(fname = 'DIRT_output_selected_images_simple.csv', delimiter =',', skiprows = 1, usecols=(1,2,3,4,5,6,7,8,9,10))
+data = np.loadtxt(fname = 'Titration_color_data_simple.csv', delimiter =',', skiprows = 1, usecols=(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15))
 
 print(data.shape)
 ~~~
 {: .language-python}
+~~~
+{: .language-python}
 
-This useful command can be used to quickly check that our data was read in correctly.  The output `(4,10)` tells us that we have 
-an array of data with 4 rows and 10 columns.
+This useful command can be used to quickly check that our data was read in correctly.  The output `(3,15)` tells us that we have 
+an array of data with 3 rows and 15 columns.
 
 We can look up specific values in the array using indexing.  For example, we can look up the very first element by using the 
 command `print(data[0,0])` which returns
-> 165
+> 190.0
 {: .output}  
 
 
@@ -103,7 +110,7 @@ command `print(data[0,0])` which returns
 > What does `print(data[2,0])` return?  What does it tell you about the indexing (which number is the row and which number is 
 > the column?
 > > ## Solution
-> > `print(data[2,0])` prints out **168** which is the first value (index 0) in the third row (index 2).
+> > `print(data[2,0])` prints out **175.0** which is the first value (index 0) in the third row (index 2).  
 > > In general, numpy arrays are indexed by *[row, column]*, using zero-based indexing.
 > {: .solution}
 {: .challenge}
@@ -111,7 +118,7 @@ command `print(data[0,0])` which returns
 > ## The very end
 > How would you print out the last (bottom right) number of the array?
 > > ## Solution
-> > `print(data[3,9])` prints out **168** which is the tenth and last value (index 9) in the fourth, bottom row (index 3).  
+> > `print(data[2,14])` prints out **172.0** which is the fifteenth and last value (index 14) in the bottom row (index 2).  
 > > 
 > > Note that you could also have done something like this if you did already know the number of rows and colunmns:
 > > ~~~
@@ -133,29 +140,30 @@ Remember that the indexing is 0-based, and the ranges are up to but not inclusiv
 column 3.
 
 > ## Taking a subset
-> How would you print out the last two columns of the middle two rows of the array `data`?
+> How would you print out the last two columns of the middle and bottom two rows of the array `data`?
 >
 > Your output should look like this:
-> > [[ 82.3171  185.823]  
-> > [ 64.7318 151.812]]
+> > [[ 154.  155.]  
+> >  [ 171.  172.]]
 > {: .output}
 > > ## Solution:
-> > `print(data[1:3, 8:10])` will print the values that you want.  Since the array has 4 rows, the middle rows are located at 
-> > indexes 1 and 2 (remember: 0-based indexing).  We include 1:3 because indexing is *up to, but not inclusive*.  Similarly,
-> > since we have 10 columns, 8:10 will return the last two columns, located at indexes 8 and 9.
+> > `print(data[1:3, 13:15])` will print the values that you want.  Since the array has 3 rows, the middle row is located at 
+> > index 1 and the bottom row at index 2 (remember: 0-based indexing).  We include 1:3 because indexing is *up to, but not 
+> > inclusive*.    
+> > Similarly, since we have 15 columns, 13:15 will return the last two columns, located at indexes 13 and 14.
 > {: .solution}
 {: .challenge}
 
 ## Calling Functions on the numpy array
-Python is able to do simple arithmetic operations on numpy arrays.  For example, we can multiply each value in the array * 2
+Python is able to do simple arithmetic operations on numpy arrays.  For example, we can divide each value in the array by 2
 ~~~
-doubledata = data*2
+scaleData = data/2
 print(data)
-print(doubledata)
+print(scaleData)
 ~~~
 {: .language-python}
 
-We can do similar operations using `+`, `-`, and `/` (the division operator).
+We can do similar operations using `+`, `-`, and `*` (the multiplication operator).
 
 However, we often want to do more complicated operations, such as taking an average, or finding the minimum or maximum value.
 For example, the code below will find the average value of the entire dataset.
@@ -183,7 +191,6 @@ Other useful functions include the following:
 maxval = np.max(data) #returns the maximum value
 minval = np.min(data) #returns the minimum value
 stdev = np.std(data)  #returns the standard deviation of all values
-
 print('maximum value:', maxval)
 print('minimum value:', minval)
 print('standard deviation:', stdev)
@@ -198,9 +205,9 @@ set.
 What if we want to apply the function to each row or each column individually?
 One way is to create a variable storing just the row or column we are interested in.
 ~~~
-widths = data[:,8] #the widths column
-avgWidth = np.mean(widths)
-print('The average width is: ', str(avgWidth))
+reds = data[0,:] #the RedIntensity row
+avgRed = np.mean(reds)
+print('The average red intensity is: ', str(avgRed))
 ~~~
 {: .language-python}
 
@@ -217,9 +224,46 @@ print(np.mean(data, axis=1)) #axis=1 applies the function to each row
 
 > ## Applying functions to subsets of data
 > Create a new dataset called `data2` that contains only the last 6 columns of the dataset `data`.  
-> Compute the minimum value for each column in `data2` and the standard deviation for each row.
+> Compute the minimum value for each column in `data2` and the average value for each row.
 > > ## Solution
-> > Write solution  
+> > ~~~
+> > import numpy as np
+> > 
+> > data = np.loadtxt(fname = 'Titration_color_data_simple.csv', delimiter =',', skiprows = 1, usecols=(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15))
+> > 
+> > data2 = data[:, -6:] #create the column subset
+> > 
+> > print(np.min(data2, axis=0))  #axis=0 applies the function to each column
+> > print(np.mean(data2, axis=1)) #axis=1 applies the function to each row
+> > ~~~
+> > {: .language-python}
+
+> ## Which channel?
+> Read in the Titration_color_data_simple.csv file as a numpy array.  
+> Use the numpy functions you have learned to identify the color channel that experiences the largest change.
+> > ## Solution
+> > ~~~
+> > import numpy as np
+> > 
+> > data = np.loadtxt(fname = 'Titration_color_data_simple.csv', delimiter =',', skiprows = 1, usecols=(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15))
+> > 
+> > #apply the min and max function to each row, then take the difference to find the change
+> > mins = np.min(data, axis=1) #axis=0 applies the function to each column
+> > maxes = np.max(data, axis=1) #axis=1 applies the function to each row
+> > 
+> > difference = maxes-mins
+> > print(difference)
+> > 
+> > stdev = np.min(data, axis=1)
+> > print(stdev)
+> > ~~~
+> > {: .language-python}  
+> > 
+> > > [ 11.  36.   8.]  
+> > > [  2.43493098  12.68945319   2.59401019]  
+> > {: .output}
+> > The output of this program shows that the second row, which represents that green channel, has both the largest max-min
+> > difference, and the highest standard deviation.
 > {: .solution}
 {: .challenge}
 
