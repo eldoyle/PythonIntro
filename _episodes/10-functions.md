@@ -38,8 +38,8 @@ Notice that typing the function doesn’t do anything.  In order to use the func
 perform the function on an input.  To call it, we use the name of the function with the desired arguments inside the parentheses
 (in this case, a number representing a temperature in degrees Fahrenheit).
 ~~~
-fahr_to_kelvin(0)
-fahr_to_kelvin(-324)
+print(fahr_to_kelvin(0))
+print(fahr_to_kelvin(-324))
 ~~~
 {: .language-python}
 The value inside of the parentheses is assigned to the variable name `temp` in the function definition above so that the program 
@@ -57,7 +57,7 @@ numbers instead of typing in the entire calculation and potentially making mista
 > > def fahr_to_celsius(temp):
 > >      return (temp - 32) * (5/9)
 > > 
-> > fahr_to_celsius(72)
+> > print(fahr_to_celsius(72))
 > > ~~~
 > > {: .language-python}
 > > If you need some test values, try the following:  
@@ -79,7 +79,7 @@ numbers instead of typing in the entire calculation and potentially making mista
 > >      ktemp = ctemp + 273.15
 > >      return [ftemp, ktemp, ctemp]
 > > 
-> > temp_converter(72)
+> > print(temp_converter(72))
 > > ~~~
 > > {: .language-python}
 > > If you need some test values, try the following:  
@@ -125,12 +125,12 @@ print(fahr_to_kelvin(15))
 > > 
 > > #Define the function
 > > def temp_converter(ftemp):
-> >      ctemp = fahr_to_celius(ftemp)
+> >      ctemp = fahr_to_celsius(ftemp)
 > >      ktemp = fahr_to_kelvin(ftemp)
-> >      return [temp, ktemp, ctemp]
+> >      return [ftemp, ktemp, ctemp]
 > > 
 > > #call the function
-> > temp_converter(72)
+> > print(temp_converter(72))
 > > ~~~
 > > {: .language-python}
 > {: .solution}
