@@ -40,11 +40,13 @@ file is located.  Or, when we provide the file name, we can give a complete path
 ### The File Setup
 Let's open and examine the structure of the file Plates_output_simple.csv.  If you open the file in a text editor, you will see
 that the file contains several lines of text.  
+
 ![DataFileRaw](../fig/Plates_output_file_raw.jpg)
 
 However, this is fairly difficult to read.  If you open the file in a spreadsheet program such as LibreOfficeCalc or Excel, you 
 can see that the file is organized into columns, with each column separated by the commas in the image above (hence the file 
 extension **.csv**, which stands for comma-separated values).
+
 ![DataFileColumns](../fig/Plates_output_file.jpg)
 
 The file contains one header row, followed by eight rows of data.  Each row represents a single plate.  If we look at the 
