@@ -94,8 +94,6 @@ data = np.loadtxt(fname = 'Titration_color_data_simple.csv', delimiter =',', ski
 print(data.shape)
 ~~~
 {: .language-python}
-~~~
-{: .language-python}
 
 This useful command can be used to quickly check that our data was read in correctly.  The output `(3,15)` tells us that we have 
 an array of data with 3 rows and 15 columns.
