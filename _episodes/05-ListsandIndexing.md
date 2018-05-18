@@ -1,6 +1,6 @@
 ---
 title: "Lists and Indexing"
-teaching: 0
+teaching: 60
 exercises: 0
 questions:
 - "How can we group similar values or data into one variable?"
