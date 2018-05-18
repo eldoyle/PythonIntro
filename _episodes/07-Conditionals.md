@@ -1,7 +1,7 @@
 ---
 title: "Conditionals"
 teaching: 60
-exercises: 0
+exercises: 30
 questions:
 - "How can I make my program make choices?"
 objectives:
