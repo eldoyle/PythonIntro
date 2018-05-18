@@ -49,7 +49,7 @@ extension **.csv**, which stands for comma-separated values).
 
 ![DataFileColumns](../fig/Plates_output_file.png)
 
-The file contains one header row, followed by eight rows of data.  Each row represents a single plate.  If we look at the 
+The file contains one header row, followed by eight rows of data.  Each row represents a single plate image.  If we look at the 
 column headings, we can see that we have collected data for each plate:
 * The name of the image from which the data was collected
 * The plate number (there were 4 plates, with each plate imaged at two different time points)
@@ -114,7 +114,7 @@ There are a variety of commands that allow us to read in data from files.
 Mixing these commands can have some unexpected results.
 ~~~
 #Create a variable for the file name
-filename = 'Root_Density_Data_full.csv'
+filename = 'Plates_output_simple.csv'
 
 #Open the file
 infile = open(filename, 'r') 
@@ -153,7 +153,7 @@ that we will want to handle each line in the same way.
 The example below demonstrates this approach:
 ~~~
 #Create a variable for the file name
-filename = "Root_Density_Data_full.csv"
+filename = "Plates_output_simple.csv"
 
 #Open the file
 infile = open(filename, 'r') 
@@ -161,7 +161,7 @@ infile = open(filename, 'r')
 lines = infile.readlines() 
 
 for line in lines: #lines is a list with each item representing a line of the file
-	if 'C' in line:
+	if 'control' in line:
 		print(line) #print lines for control condition
 
 infile.close() #close the file when you're done!
@@ -174,7 +174,7 @@ useful if we want to access specific columns of the file.
 
 ~~~
 #Create a variable for the file name  
-filename = "Root_Density_Data_full.csv"
+filename = "Plates_output_simple.csv"
 
 #Open the file
 infile = open(filename, 'r') 
@@ -183,7 +183,7 @@ lines = infile.readlines()
 
 for line in lines:
 	sline = line.split(',')  # separates line into a list of items.  ',' tells it to split the lines at the commas
-		print(sline) #each line is now a list
+	print(sline) #each line is now a list
 
 infile.close()  #Always close the file!
 ~~~
@@ -199,18 +199,37 @@ infile.close()  #Always close the file!
 {: .callout}
   
 > ## Converting text to numbers
-> When we called the `readlines()` command in the previous code, Python read in the contents of the file as a string.  If we 
+> When we called the `readlines()` command in the previous code, Python reads in the contents of the file as a string.  If we 
 > want our code to recognize something in the file as a number, we need to tell it this!  
 > 
 > For example, `float('5.0')` will tell Python to treat the text string '5.0' as the number 5.0.  `int(sline[4])` will tell 
 > our code to treat the text string stored in the 5th position of the list *sline* as an integer (non-decimal) number.
 > 
-> For each line in the file, the MAX_WIDTH is stored in the 10th column (index 4 with our 0-based counting).  
-> Modify the code above to print the line only if the MAX_WIDTH is less than 200.
+> For each line in the file, the ColonyCount is stored in the 5th column (index 4 with our 0-based counting).  
+> Modify the code above to print the line only if the ColonyCount is greater than 30.
 > > ## Solution
-> > Write solution  
-> {: .solution}
-{: .challenge}
+> > ~~~
+> > #Create a variable for the file name
+> > filename = 'Plates_output_simple.csv'
+> > 
+> > ##Open the file
+> > infile = open(filename, 'r') 
+> > 
+> > lines = infile.readlines() 
+> > 
+> > for line in lines[1:]: #skip the first line, which is the header
+> >     sline = line.split(',')  # separates line into a list of items.  ',' tells it to split the lines at the commas
+> >     colonyCount = int(sline[4]) #store the colony count for the line as an integer
+> >     
+> >     if colonyCount > 30:
+> >         print(sline)
+> >    	
+> > #close the file
+> > infile.close()
+> > ~~~
+> > {: .language-python}  
+> {: .solution}  
+{: .challenge}  
 
 ## Writing data out to a file
 Often, we will want to write data to a new file.  This is especially useful if we have done a lot of computations or data 
