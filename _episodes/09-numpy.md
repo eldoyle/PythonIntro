@@ -1,7 +1,7 @@
 ---
 title: "Analyzing Data with Numpy"
-teaching: 30
-exercises: 0
+teaching: 60
+exercises: 30
 questions:
 - "How can I analyze a data table?"
 objectives:
@@ -37,9 +37,8 @@ This will let us call functions in the numpy library as `np.<function>()`.
 {: .callout}  
 
 ### The File Setup
-Let's open and examine the structure of the file *Titration_color_data_simple.csv*.  If you open the file in a text editor, you 
-
-If you open the file, you will see that it contains a header row, followed by three rows of data.
+Let's open and examine the structure of the file *Titration_color_data_simple.csv*. If you open the file, you will see that it 
+contains a header row, followed by three rows of data.
 
 Each row represents a single color channel (either red, green, or blue) measured over time.  Each column represents a different 
 frame of the image.  The goal of the file is to track the color of the titration solution over time, to identify the point
