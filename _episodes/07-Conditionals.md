@@ -1,6 +1,6 @@
 ---
 title: "Conditionals"
-teaching: 30
+teaching: 60
 exercises: 0
 questions:
 - "How can I make my program make choices?"
@@ -302,7 +302,8 @@ else:
 > Write code to put each of the image names in `images` into the appropriate list.  Your code should 
 > 1. Loop through all of the images.  
 > 2. For each image, check the file extension (the part after the "."), and append the filename to the appropriate list.  
-> 3. Print the final lists.  They should have these values:
+> 3. Print the final lists.  They should have these values:  
+>
 > > bmps = ['image3.bmp']  
 > > jpgs = ['image2.jpg', 'image4.jpg']  
 > > pngs = ['image1.png', 'image5.png']  
