@@ -1,6 +1,6 @@
 ---
 title: "Running code in the editor"
-teaching: 0
+teaching: 30
 exercises: 0
 questions:
 - "How can I use the editor window to write and run multiple lines of code at once?"
